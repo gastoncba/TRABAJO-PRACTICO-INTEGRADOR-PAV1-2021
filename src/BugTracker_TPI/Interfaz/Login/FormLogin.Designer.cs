@@ -101,7 +101,7 @@ namespace BugTracker_TPI
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblUsuario);
             this.Name = "FormLogin";
-            this.Text = "Form1";
+            this.Text = "Iniciar Sesión";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormLogin_FormClosing);
             this.Load += new System.EventHandler(this.FormLogin_Load);
             this.ResumeLayout(false);

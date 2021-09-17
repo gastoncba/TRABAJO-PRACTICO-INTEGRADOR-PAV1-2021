@@ -459,11 +459,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Almacen Informatico\\Downloads\\FACULTAD\\PAV 1\\TPI\\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\\BugTracker_TPI\\BugTracker_TPI\\BugTracker_TPI.csproj",
+      "projectUniqueName": "C:\\Users\\Almacen Informatico\\Downloads\\FACULTAD\\PAV 1\\TPI\\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\\src\\BugTracker_TPI\\BugTracker_TPI.csproj",
       "projectName": "BugTracker_TPI",
-      "projectPath": "C:\\Users\\Almacen Informatico\\Downloads\\FACULTAD\\PAV 1\\TPI\\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\\BugTracker_TPI\\BugTracker_TPI\\BugTracker_TPI.csproj",
+      "projectPath": "C:\\Users\\Almacen Informatico\\Downloads\\FACULTAD\\PAV 1\\TPI\\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\\src\\BugTracker_TPI\\BugTracker_TPI.csproj",
       "packagesPath": "C:\\Users\\Almacen Informatico\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Almacen Informatico\\Downloads\\FACULTAD\\PAV 1\\TPI\\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\\BugTracker_TPI\\BugTracker_TPI\\obj\\",
+      "outputPath": "C:\\Users\\Almacen Informatico\\Downloads\\FACULTAD\\PAV 1\\TPI\\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\\src\\BugTracker_TPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Almacen Informatico\\AppData\\Roaming\\NuGet\\NuGet.Config",
