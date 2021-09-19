@@ -6,31 +6,33 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using BugTracker_TPI.Interfaz.Cursos;
+using BugTracker_TPI.Entidades;
 
 namespace BugTracker_TPI.Interfaz
 {
     public partial class PantallaPrincipal : Form
     {
-        public PantallaPrincipal()
+       
+        public PantallaPrincipal(string usuario)
         {
-            InitializeComponent(); 
+            InitializeComponent();
+            lblUsuario.Text = usuario.ToString();
 
         }
 
-        private void PantallaPrincipal_Load(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-            FormLogin login = new FormLogin();
-            login.ShowDialog();
-     
-        }
+       
 
         private void PantallaPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult rpta;
-            rpta = MessageBox.Show("Seguro que desea salir?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (rpta == DialogResult.No)
-                e.Cancel = true;
+            DialogResult rpta = MessageBox.Show("Seguro que desea salir?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (rpta == DialogResult.Yes)
+            {
+                e.Cancel = false;
+                
+            }
+            Application.Exit();
+            
+            
         }
 
         private void cursosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -41,5 +43,10 @@ namespace BugTracker_TPI.Interfaz
             formCursos.ShowDialog();
         }
 
+        private void btnCursos_Click(object sender, EventArgs e)
+        {
+            FormCursos formCursos = new FormCursos();
+            formCursos.ShowDialog();
+        }
     }
 }
