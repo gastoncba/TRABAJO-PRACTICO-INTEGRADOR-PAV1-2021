@@ -37,11 +37,11 @@ namespace BugTracker_TPI.Interfaz.Cursos
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cboCategorias = new System.Windows.Forms.ComboBox();
             this.txtVigencia = new System.Windows.Forms.MaskedTextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkTodos = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -88,16 +88,17 @@ namespace BugTracker_TPI.Interfaz.Cursos
             this.dgvCursos.RowTemplate.Height = 25;
             this.dgvCursos.Size = new System.Drawing.Size(614, 160);
             this.dgvCursos.TabIndex = 6;
+            this.dgvCursos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCursos_CellClick);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cboCategorias);
             this.groupBox1.Controls.Add(this.txtVigencia);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnEliminar);
+            this.groupBox1.Controls.Add(this.btnModificar);
+            this.groupBox1.Controls.Add(this.btnNuevo);
             this.groupBox1.Controls.Add(this.btnConsultar);
-            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.checkTodos);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.dgvCursos);
             this.groupBox1.Controls.Add(this.label2);
@@ -126,32 +127,36 @@ namespace BugTracker_TPI.Interfaz.Cursos
             this.txtVigencia.Size = new System.Drawing.Size(100, 23);
             this.txtVigencia.TabIndex = 12;
             // 
-            // button3
+            // btnEliminar
             // 
-            this.button3.Location = new System.Drawing.Point(188, 304);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "eliminar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnEliminar.Enabled = false;
+            this.btnEliminar.Location = new System.Drawing.Point(188, 304);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 11;
+            this.btnEliminar.Text = "eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // button2
+            // btnModificar
             // 
-            this.button2.Location = new System.Drawing.Point(107, 304);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "modificar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnModificar.Enabled = false;
+            this.btnModificar.Location = new System.Drawing.Point(107, 304);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.TabIndex = 10;
+            this.btnModificar.Text = "modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // button1
+            // btnNuevo
             // 
-            this.button1.Location = new System.Drawing.Point(26, 304);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "nuevo ";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnNuevo.Location = new System.Drawing.Point(26, 304);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
+            this.btnNuevo.TabIndex = 9;
+            this.btnNuevo.Text = "nuevo ";
+            this.btnNuevo.UseVisualStyleBackColor = true;
             // 
             // btnConsultar
             // 
@@ -161,16 +166,18 @@ namespace BugTracker_TPI.Interfaz.Cursos
             this.btnConsultar.TabIndex = 8;
             this.btnConsultar.Text = "consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
-            // checkBox1
+            // checkTodos
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(91, 83);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(155, 19);
-            this.checkBox1.TabIndex = 7;
-            this.checkBox1.Text = "Mostrar todos los cursos";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkTodos.AutoSize = true;
+            this.checkTodos.Location = new System.Drawing.Point(91, 83);
+            this.checkTodos.Name = "checkTodos";
+            this.checkTodos.Size = new System.Drawing.Size(155, 19);
+            this.checkTodos.TabIndex = 7;
+            this.checkTodos.Text = "Mostrar todos los cursos";
+            this.checkTodos.UseVisualStyleBackColor = true;
+            this.checkTodos.CheckedChanged += new System.EventHandler(this.checkTodos_CheckedChanged);
             // 
             // FormCursos
             // 
@@ -180,6 +187,7 @@ namespace BugTracker_TPI.Interfaz.Cursos
             this.Controls.Add(this.groupBox1);
             this.Name = "FormCursos";
             this.Text = "Cursos";
+            this.Load += new System.EventHandler(this.FormCursos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -196,10 +204,10 @@ namespace BugTracker_TPI.Interfaz.Cursos
         private System.Windows.Forms.DataGridView dgvCursos;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnConsultar;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox checkTodos;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.MaskedTextBox txtVigencia;
         private System.Windows.Forms.ComboBox cboCategorias;
     }
