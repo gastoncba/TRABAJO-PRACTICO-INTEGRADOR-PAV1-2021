@@ -32,14 +32,14 @@ namespace BugTracker_TPI.Interfaz
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.btnCursos = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnCategorias = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -63,6 +63,17 @@ namespace BugTracker_TPI.Interfaz
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(483, 125);
             this.panel2.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(82, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 25);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Bienvenido:";
             // 
             // label2
             // 
@@ -101,7 +112,7 @@ namespace BugTracker_TPI.Interfaz
             this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel3.Controls.Add(this.button3);
             this.panel3.Controls.Add(this.btnCursos);
-            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.btnCategorias);
             this.panel3.Location = new System.Drawing.Point(29, 157);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(483, 347);
@@ -136,30 +147,20 @@ namespace BugTracker_TPI.Interfaz
             this.btnCursos.UseVisualStyleBackColor = false;
             this.btnCursos.Click += new System.EventHandler(this.btnCursos_Click);
             // 
-            // button1
+            // btnCategorias
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(60, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(347, 60);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Categorias";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(82, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 25);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Bienvenido:";
+            this.btnCategorias.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCategorias.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCategorias.Image = ((System.Drawing.Image)(resources.GetObject("btnCategorias.Image")));
+            this.btnCategorias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCategorias.Location = new System.Drawing.Point(60, 19);
+            this.btnCategorias.Name = "btnCategorias";
+            this.btnCategorias.Size = new System.Drawing.Size(347, 60);
+            this.btnCategorias.TabIndex = 0;
+            this.btnCategorias.Text = "Categorias";
+            this.btnCategorias.UseVisualStyleBackColor = false;
+            this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
             // 
             // PantallaPrincipal
             // 
@@ -191,7 +192,7 @@ namespace BugTracker_TPI.Interfaz
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnCursos;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCategorias;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.PictureBox pictureBox1;

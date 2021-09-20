@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using BugTracker_TPI.Interfaz.Cursos;
 using BugTracker_TPI.Entidades;
+using BugTracker_TPI.Interfaz.Categorias;
 
 namespace BugTracker_TPI.Interfaz
 {
@@ -47,6 +48,13 @@ namespace BugTracker_TPI.Interfaz
         {
             FormCursos formCursos = new FormCursos();
             formCursos.ShowDialog();
+        }
+
+        private void btnCategorias_Click(object sender, EventArgs e)
+        {
+            frmCategorias formCategorias = new frmCategorias();
+            formCategorias.ShowDialog();
+            
         }
     }
 }
