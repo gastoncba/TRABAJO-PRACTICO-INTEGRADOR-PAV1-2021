@@ -24,11 +24,34 @@ namespace BugTracker_TPI.AccesoBD
             return listadoCategoria;
         }
 
+        internal IList<Categoria> obtenerCatFilt( Dictionary<string,object> filtro)
+        {
+            List<Categoria> categoriaFilt = new List<Categoria>();
+
+            string strSql = string.Concat("SELECT c.id_categoria, c.nombre, c.descripcion FROM Categorias c WHERE borrado = 0");
+
+            if(filtro.ContainsKey("id_categoria"))
+            {
+                strSql += "AND (c.id_categoria = @id_categoria)";
+            }
+
+            var resultado = DataManager.GetInstance().ConsultaSQL(strSql, filtro);
+
+            foreach (DataRow row in resultado.Rows)
+            {
+                categoriaFilt.Add(MappingCategoria(row));
+            }
+
+            return categoriaFilt;
+
+        }
+
+
         private Categoria MappingCategoria(DataRow row)
         {
             Categoria oCategoria = new Categoria
             {
-                id_categoria = Convert.ToChar(row["id_categoria"].ToString()),
+                id_categoria = Convert.ToInt32(row["id_categoria"].ToString()),
                 nombre = row["nombre"].ToString(),
                 descripcion = row["descripcion"].ToString(),
 

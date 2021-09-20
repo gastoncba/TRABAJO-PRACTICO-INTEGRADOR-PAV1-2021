@@ -18,5 +18,10 @@ namespace BugTracker_TPI.BusinessLayer
         {
             return oCategoriaDao.obtenerCategorias();
         }
+
+        public IList<Categoria> obtenerConFiltros(Dictionary<string,object> filtro)
+        {
+            return oCategoriaDao.obtenerCatFilt(filtro);
+        }
     }
 }

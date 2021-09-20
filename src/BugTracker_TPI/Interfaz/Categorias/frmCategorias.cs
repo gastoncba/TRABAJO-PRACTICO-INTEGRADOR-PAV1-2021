@@ -40,10 +40,27 @@ namespace BugTracker_TPI.Interfaz.Categorias
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
+            var filtros = new Dictionary<string, object>();
             if (ckdCategorias.Checked)
             {
                 grdCategorias.DataSource = oCategoriaService.obtenerTodas();
             }
+            else
+            {
+                if(cmbCategorias.Text != string.Empty)
+                {
+                    filtros.Add("id_categoria", cmbCategorias.SelectedValue);
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, seleccione una categoria a buscar");
+                }
+            }
+            if (filtros.Count > 0)
+            {
+                grdCategorias.DataSource = oCategoriaService.obtenerConFiltros(filtros);
+            }
+
 
 
         }
