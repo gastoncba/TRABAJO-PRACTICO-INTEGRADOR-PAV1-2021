@@ -107,5 +107,12 @@ namespace BugTracker_TPI.Interfaz.Categorias
                 cmbCategorias.Enabled = true;
             }
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmCategoriaABMC fmCategoriaAlta = new frmCategoriaABMC();
+            fmCategoriaAlta.ShowDialog();
+
+        }
     }
 }

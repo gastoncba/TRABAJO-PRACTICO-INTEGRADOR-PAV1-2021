@@ -69,7 +69,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
             this.grdCategorias.Name = "grdCategorias";
             this.grdCategorias.RowHeadersWidth = 51;
             this.grdCategorias.RowTemplate.Height = 29;
-            this.grdCategorias.Size = new System.Drawing.Size(753, 321);
+            this.grdCategorias.Size = new System.Drawing.Size(438, 321);
             this.grdCategorias.TabIndex = 2;
             // 
             // btnAgregar
@@ -80,6 +80,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
             this.btnAgregar.Size = new System.Drawing.Size(78, 72);
             this.btnAgregar.TabIndex = 3;
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnModificar
             // 
@@ -124,7 +125,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 530);
+            this.ClientSize = new System.Drawing.Size(511, 530);
             this.Controls.Add(this.ckdCategorias);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnEliminar);
