@@ -80,11 +80,12 @@ namespace BugTracker_TPI
         private void FormLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
             //aca lo que se hace es basicamente preguntar si se pudo loguear o no
-            if(UsuarioLogueado == null)
-            {
-                Application.Exit();
-            }
-            
+            //if(UsuarioLogueado == null)
+            //{
+            //    Application.Exit();
+            //}
+            Application.Exit();
+
 
             
         }

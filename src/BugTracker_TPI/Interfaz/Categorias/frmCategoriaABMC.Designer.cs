@@ -40,24 +40,30 @@ namespace BugTracker_TPI.Interfaz.Categorias
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(53, 48);
+            this.lblNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNombre.Location = new System.Drawing.Point(53, 49);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(64, 20);
+            this.lblNombre.Size = new System.Drawing.Size(77, 23);
             this.lblNombre.TabIndex = 0;
-            this.lblNombre.Text = "Nombre";
+            this.lblNombre.Text = "Nombre:";
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(30, 117);
+            this.lblDescripcion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblDescripcion.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblDescripcion.Location = new System.Drawing.Point(28, 114);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(87, 20);
+            this.lblDescripcion.Size = new System.Drawing.Size(102, 23);
             this.lblDescripcion.TabIndex = 2;
-            this.lblDescripcion.Text = "Descripción";
+            this.lblDescripcion.Text = "Descripción:";
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(133, 165);
+            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnAceptar.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAceptar.Location = new System.Drawing.Point(146, 165);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(94, 29);
             this.btnAceptar.TabIndex = 4;
@@ -67,6 +73,8 @@ namespace BugTracker_TPI.Interfaz.Categorias
             // 
             // btnCancelar
             // 
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnCancelar.Location = new System.Drawing.Point(268, 165);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(94, 29);
@@ -77,14 +85,14 @@ namespace BugTracker_TPI.Interfaz.Categorias
             // 
             // txtCatNueva
             // 
-            this.txtCatNueva.Location = new System.Drawing.Point(133, 48);
+            this.txtCatNueva.Location = new System.Drawing.Point(146, 45);
             this.txtCatNueva.Name = "txtCatNueva";
             this.txtCatNueva.Size = new System.Drawing.Size(216, 27);
             this.txtCatNueva.TabIndex = 6;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(133, 110);
+            this.txtDescripcion.Location = new System.Drawing.Point(146, 110);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(216, 27);
             this.txtDescripcion.TabIndex = 7;
@@ -93,7 +101,8 @@ namespace BugTracker_TPI.Interfaz.Categorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 206);
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.ClientSize = new System.Drawing.Size(413, 206);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtCatNueva);
             this.Controls.Add(this.btnCancelar);

@@ -13,6 +13,7 @@ namespace BugTracker_TPI.Interfaz
 {
     public partial class PantallaPrincipal : Form
     {
+        public bool exit = false;
        
         public PantallaPrincipal(string usuario)
         {
@@ -25,24 +26,25 @@ namespace BugTracker_TPI.Interfaz
 
         private void PantallaPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult rpta = MessageBox.Show("Seguro que desea salir?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (rpta == DialogResult.Yes)
+            if (exit == false)
             {
-                e.Cancel = false;
-                
+                DialogResult rpta = MessageBox.Show("Seguro que desea salir?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (rpta == DialogResult.Yes)
+                {
+                    exit = true;
+                    e.Cancel = false;
+                    Application.Exit();
+                }
             }
-            Application.Exit();
-            
-            
         }
 
-        private void cursosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //cuando se hace click en la pestaña de cursos de debe abrir la pantalla de abmc de los cursos
-            //para ello se crea una nueva instancia del form de cursos
-            FormCursos formCursos = new FormCursos();
-            formCursos.ShowDialog();
-        }
+        //private void cursosToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    //cuando se hace click en la pestaña de cursos de debe abrir la pantalla de abmc de los cursos
+        //    //para ello se crea una nueva instancia del form de cursos
+        //    FormCursos formCursos = new FormCursos();
+        //    formCursos.ShowDialog();
+        //}
 
         private void btnCursos_Click(object sender, EventArgs e)
         {

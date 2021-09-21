@@ -32,7 +32,7 @@ namespace BugTracker_TPI.AccesoBD
 
             if(filtro.ContainsKey("nombre"))
             {
-                strSql += "AND (c.nombre = @nombre)";
+                strSql += "AND (c.nombre LIKE '%' + @nombre + '%')";
             }
 
             var resultado = DataManager.GetInstance().ConsultaSQL(strSql, filtro);

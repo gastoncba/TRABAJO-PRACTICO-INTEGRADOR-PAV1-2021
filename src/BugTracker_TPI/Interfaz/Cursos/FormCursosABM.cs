@@ -1,5 +1,6 @@
 ﻿using BugTracker_TPI.Negocio;
 using BugTracker_TPI.Entidades;
+using BugTracker_TPI.BusinessLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,7 +37,7 @@ namespace BugTracker_TPI.Interfaz.Cursos
 
         private void FormCursosABM_Load(object sender, EventArgs e)
         {
-            LlenarCombo(cboCategorias, oCategoriaService.obtenerTodos(), "NombreCategoria", "IdCategoria");
+            LlenarCombo(cboCategorias, oCategoriaService.obtenerTodas(), "nombre", "id_categoria");
 
             switch(formMode)
             {
@@ -82,7 +83,7 @@ namespace BugTracker_TPI.Interfaz.Cursos
                 txtNombre.Text = oCursoSeleccionado.NombreCurso;
                 txtDescripcion.Text = oCursoSeleccionado.Descripcion;
                 txtVigencia.Text = oCursoSeleccionado.FechaVigencia.ToString("dd/MM/yyyy");
-                cboCategorias.Text = oCursoSeleccionado.Categoria.NombreCategoria;
+                cboCategorias.Text = oCursoSeleccionado.Categoria.nombre;
             }
         }
 
@@ -117,7 +118,7 @@ namespace BugTracker_TPI.Interfaz.Cursos
                                 oCurso.Descripcion = txtDescripcion.Text;
                                 oCurso.FechaVigencia = Convert.ToDateTime(txtVigencia.Text);
                                 oCurso.Categoria = new Categoria();
-                                oCurso.Categoria.IdCategoria = (int) cboCategorias.SelectedValue;
+                                oCurso.Categoria.id_categoria = (int) cboCategorias.SelectedValue;
 
                                 if (oCursoService.crearCurso(oCurso))
                                 {
@@ -140,7 +141,7 @@ namespace BugTracker_TPI.Interfaz.Cursos
                             oCursoSeleccionado.NombreCurso = txtNombre.Text;
                             oCursoSeleccionado.Descripcion = txtDescripcion.Text;
                             oCursoSeleccionado.FechaVigencia = Convert.ToDateTime(txtVigencia.Text);
-                            oCursoSeleccionado.Categoria.IdCategoria = (int) cboCategorias.SelectedValue;
+                            oCursoSeleccionado.Categoria.id_categoria = (int) cboCategorias.SelectedValue;
 
                             if(oCursoService.actualizarCurso(oCursoSeleccionado))
                             {

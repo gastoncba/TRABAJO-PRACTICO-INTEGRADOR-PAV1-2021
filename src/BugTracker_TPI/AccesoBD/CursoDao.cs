@@ -83,8 +83,8 @@ namespace BugTracker_TPI.AccesoBD
                 FechaVigencia = Convert.ToDateTime(row["fecha_vigencia"].ToString()),
                 Categoria = new Categoria()
                 {
-                    IdCategoria = Convert.ToInt32(row["id_categoria"].ToString()),
-                    NombreCategoria = row["categoria"].ToString(),
+                    id_categoria = Convert.ToInt32(row["id_categoria"].ToString()),
+                    nombre = row["categoria"].ToString(),
                 }
             };
             return oCurso;
@@ -115,7 +115,7 @@ namespace BugTracker_TPI.AccesoBD
             parametros.Add("nombre", curso.NombreCurso);
             parametros.Add("descripcion", curso.Descripcion);
             parametros.Add("fecha_vigencia", curso.FechaVigencia);
-            parametros.Add("id_categoria", curso.Categoria.IdCategoria);
+            parametros.Add("id_categoria", curso.Categoria.id_categoria);
 
             return (DataManager.GetInstance().EjecutarSQL(sentencia_sql, parametros) == 1);
 
@@ -137,7 +137,7 @@ namespace BugTracker_TPI.AccesoBD
             parametros.Add("nombre", curso.NombreCurso);
             parametros.Add("descripcion", curso.Descripcion);
             parametros.Add("fecha_vigencia", curso.FechaVigencia);
-            parametros.Add("id_categoria", curso.Categoria.IdCategoria);
+            parametros.Add("id_categoria", curso.Categoria.id_categoria);
 
             return (DataManager.GetInstance().EjecutarSQL(sentencia_sql, parametros) == 1);
         }

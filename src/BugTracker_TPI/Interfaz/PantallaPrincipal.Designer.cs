@@ -69,7 +69,7 @@ namespace BugTracker_TPI.Interfaz
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(82, 28);
+            this.label1.Location = new System.Drawing.Point(104, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 25);
             this.label1.TabIndex = 3;
@@ -80,7 +80,7 @@ namespace BugTracker_TPI.Interfaz
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(221, 39);
+            this.label2.Location = new System.Drawing.Point(257, 39);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(209, 28);
             this.label2.TabIndex = 2;
@@ -103,7 +103,7 @@ namespace BugTracker_TPI.Interfaz
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(14, 20);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(190, 67);
+            this.pictureBox1.Size = new System.Drawing.Size(226, 67);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 

@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using BugTracker_TPI.Negocio;
 using BugTracker_TPI.Entidades;
+using BugTracker_TPI.BusinessLayer;
 
 namespace BugTracker_TPI.Interfaz.Cursos
 {
@@ -150,7 +151,7 @@ namespace BugTracker_TPI.Interfaz.Cursos
         {
             //aca cuando se carga la el form de los cursos 
             //se carga la tambien al mismo tiempo el combo de las categorias.
-            LlenarCombo(cboCategorias, categoriaService.obtenerTodos(), "NombreCategoria", "IdCategoria");
+            LlenarCombo(cboCategorias, categoriaService.obtenerTodas(), "nombre", "id_categoria");
             this.CenterToParent();
         }
 

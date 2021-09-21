@@ -20,6 +20,8 @@ namespace BugTracker_TPI.Interfaz.Categorias
             InitializeComponent();
             InitializeDataGridView();
             oCategoriaService = new CategoriaService();
+            btnModificar.Enabled = false;
+            btnEliminar.Enabled = false;
         }
 
         private void frmCategorias_Load(object sender, EventArgs e)
@@ -42,6 +44,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
         private void btnConsultar_Click(object sender, EventArgs e)
         {
             var filtros = new Dictionary<string, object>();
+            
             if (!ckdCategorias.Checked) 
             {
 
@@ -55,12 +58,23 @@ namespace BugTracker_TPI.Interfaz.Categorias
                 if (filtros.Count > 0)
                 {
                     grdCategorias.DataSource = oCategoriaService.obtenerConFiltros(filtros);
+                    if (grdCategorias.Rows.Count == 0)
+                    {
+                        MessageBox.Show("No se han encontrado resultados para tu búsqueda", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                    }
+                    else
+                    {
+                        btnEliminar.Enabled = true;
+                        btnModificar.Enabled = true;
+                    }
                 }
-                
             }
             else
             {
                 grdCategorias.DataSource = oCategoriaService.obtenerTodas();
+                btnEliminar.Enabled = true;
+                btnModificar.Enabled = true;
             }
 
 
@@ -92,8 +106,9 @@ namespace BugTracker_TPI.Interfaz.Categorias
             // ajustar el contenio de las celdas que no sean encabezado
             // cambia el tamaño de todas las alturas de fila
 
-            grdCategorias.AutoResizeRows(
-                DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
+            //grdCategorias.AutoResizeRows(
+            //    DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
+            grdCategorias.AutoResizeColumns(DataGridViewAutoSizeColumnsMo‌​de.AllCells);
         }
         
 

@@ -45,7 +45,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(33, 36);
+            this.label1.Location = new System.Drawing.Point(24, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 25);
             this.label1.TabIndex = 0;
@@ -54,18 +54,21 @@ namespace BugTracker_TPI.Interfaz.Categorias
             // grdCategorias
             // 
             this.grdCategorias.AllowUserToOrderColumns = true;
+            this.grdCategorias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grdCategorias.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grdCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdCategorias.Location = new System.Drawing.Point(24, 120);
             this.grdCategorias.Name = "grdCategorias";
             this.grdCategorias.RowHeadersWidth = 51;
             this.grdCategorias.RowTemplate.Height = 29;
-            this.grdCategorias.Size = new System.Drawing.Size(438, 321);
+            this.grdCategorias.Size = new System.Drawing.Size(418, 321);
             this.grdCategorias.TabIndex = 2;
             // 
             // btnAgregar
             // 
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
-            this.btnAgregar.Location = new System.Drawing.Point(37, 446);
+            this.btnAgregar.Location = new System.Drawing.Point(200, 456);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(78, 72);
             this.btnAgregar.TabIndex = 3;
@@ -74,8 +77,9 @@ namespace BugTracker_TPI.Interfaz.Categorias
             // 
             // btnModificar
             // 
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
-            this.btnModificar.Location = new System.Drawing.Point(121, 447);
+            this.btnModificar.Location = new System.Drawing.Point(284, 457);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(70, 71);
             this.btnModificar.TabIndex = 4;
@@ -84,8 +88,9 @@ namespace BugTracker_TPI.Interfaz.Categorias
             // 
             // btnEliminar
             // 
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.Location = new System.Drawing.Point(197, 447);
+            this.btnEliminar.Location = new System.Drawing.Point(360, 456);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(82, 71);
             this.btnEliminar.TabIndex = 5;
@@ -94,20 +99,25 @@ namespace BugTracker_TPI.Interfaz.Categorias
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(368, 36);
+            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnConsultar.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnConsultar.Location = new System.Drawing.Point(347, 41);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(94, 29);
+            this.btnConsultar.Size = new System.Drawing.Size(95, 28);
             this.btnConsultar.TabIndex = 6;
             this.btnConsultar.Text = "Consultar";
+            this.btnConsultar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnConsultar.UseVisualStyleBackColor = true;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // ckdCategorias
             // 
             this.ckdCategorias.AutoSize = true;
-            this.ckdCategorias.Location = new System.Drawing.Point(368, 89);
+            this.ckdCategorias.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.ckdCategorias.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ckdCategorias.Location = new System.Drawing.Point(347, 75);
             this.ckdCategorias.Name = "ckdCategorias";
-            this.ckdCategorias.Size = new System.Drawing.Size(70, 24);
+            this.ckdCategorias.Size = new System.Drawing.Size(84, 28);
             this.ckdCategorias.TabIndex = 7;
             this.ckdCategorias.Text = "Todas";
             this.ckdCategorias.UseVisualStyleBackColor = true;
@@ -115,16 +125,17 @@ namespace BugTracker_TPI.Interfaz.Categorias
             // 
             // txtCategoria
             // 
-            this.txtCategoria.Location = new System.Drawing.Point(121, 34);
+            this.txtCategoria.Location = new System.Drawing.Point(112, 41);
             this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(158, 27);
+            this.txtCategoria.Size = new System.Drawing.Size(196, 27);
             this.txtCategoria.TabIndex = 8;
             // 
             // frmCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(511, 530);
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.ClientSize = new System.Drawing.Size(474, 530);
             this.Controls.Add(this.txtCategoria);
             this.Controls.Add(this.ckdCategorias);
             this.Controls.Add(this.btnConsultar);
