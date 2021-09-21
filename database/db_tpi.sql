@@ -1,7 +1,7 @@
-create database [test2]
+create database [BugTracker]
 go
 
-USE [test2]
+USE [BugTracker]
 GO
 /****** Object:  Table [dbo].[Asignaciones]    Script Date: 16/9/2021 16:57:16 ******/
 SET ANSI_NULLS ON
@@ -123,7 +123,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Categorias](
-	[id_categoria] [int] NOT NULL,
+	[id_categoria] [int] IDENTITY(1,1)NOT NULL,
 	[nombre] [varchar](50) NULL,
 	[descripcion] [nvarchar](50) NULL,
 	[borrado] [bit] NULL,
