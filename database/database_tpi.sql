@@ -1,6 +1,13 @@
+<<<<<<< HEAD:database/database_tpi.sql
 /*****Reemplazar Nombre_DB por el nombre que va a tener la base de datos ******/
 
 CREATE DATABASE [BugTracker]
+=======
+create database [BugTracker]
+go
+
+USE [BugTracker]
+>>>>>>> 4586e5b99d81652584288ecf9e7af4402dd217a5:database/db_tpi.sql
 GO
 
 USE [BugTracker]
@@ -125,7 +132,11 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Categorias](
+<<<<<<< HEAD:database/database_tpi.sql
 	[id_categoria] [int] IDENTITY(1,1) NOT NULL,
+=======
+	[id_categoria] [int] IDENTITY(1,1)NOT NULL,
+>>>>>>> 4586e5b99d81652584288ecf9e7af4402dd217a5:database/db_tpi.sql
 	[nombre] [varchar](50) NULL,
 	[descripcion] [nvarchar](50) NULL,
 	[borrado] [bit] NULL,

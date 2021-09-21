@@ -8,7 +8,7 @@ namespace BugTracker_TPI.Negocio
 {
     class UsuarioService
     {
-        private UsuarioDao oUsuarioDao;
+        public UsuarioDao oUsuarioDao;
         public UsuarioService()
         {
             oUsuarioDao = new UsuarioDao();

@@ -17,9 +17,12 @@ namespace BugTracker_TPI
     {
         //atributo usuarioService para lo logica de los usuarios
         private readonly UsuarioService usuarioService;
+        
+        
 
         //atributo usuario logueado actual 
-        public string UsuarioLogueado { get; internal set; }
+        public static string UsuarioLogueado { get; internal set; }
+       
 
         public FormLogin()
         {
@@ -51,7 +54,11 @@ namespace BugTracker_TPI
                 UsuarioLogueado = usr.NombreUsuario;
 
                 //si esta todo OK, lo que se hace cerrar el login 
-                this.Close();
+                this.Hide();
+                PantallaPrincipal pantalla = new PantallaPrincipal(UsuarioLogueado);
+                pantalla.Show();
+
+
             }
             else
             {
@@ -67,6 +74,7 @@ namespace BugTracker_TPI
         private void FormLogin_Load(object sender, EventArgs e)
         {
             this.CenterToParent(); // para centrar la pantalla del login
+
         }
 
         private void FormLogin_FormClosing(object sender, FormClosingEventArgs e)
@@ -76,6 +84,9 @@ namespace BugTracker_TPI
             {
                 Application.Exit();
             }
+            
+
+            
         }
     }
 }
