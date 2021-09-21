@@ -13,10 +13,10 @@ namespace BugTracker_TPI.Interfaz.Categorias
 {
     public partial class frmCategoriaABMC : Form
     {
-        private FormMode formMode = FormMode.nuevo;
+        public FormMode formMode = FormMode.nuevo;
 
-        private readonly CategoriaService oCategoriaService;
-        private Categoria categoriaSelected;
+        public readonly CategoriaService oCategoriaService;
+        public Categoria categoriaSelected;
         public frmCategoriaABMC()
         {
             InitializeComponent();
@@ -26,7 +26,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
 
         private void frmCategoriaABMC_Load(object sender, EventArgs e)
         {
-            LlenarCombo(cmbCategorias, oCategoriaService.obtenerTodas(), "nombre", "id_categoria");
+           // LlenarCombo(txtCatNueva, oCategoriaService.obtenerTodas(), "nombre", "id_categoria");
             switch (formMode)
             {
                 case FormMode.nuevo:
@@ -40,8 +40,8 @@ namespace BugTracker_TPI.Interfaz.Categorias
                         this.Text = "Actualizar Categoria";
                         // Recuperar usuario seleccionado en la grilla 
                         MostrarDatos();
-                        cmbCategorias.Enabled = true;
-                        lblDescripcion.Enabled = true;
+                        txtCatNueva.Enabled = true;
+                        txtDescripcion.Enabled = true;
                         break;
                     }
 
@@ -49,20 +49,20 @@ namespace BugTracker_TPI.Interfaz.Categorias
                     {
                         MostrarDatos();
                         this.Text = "Habilitar/Deshabilitar Usuario";
-                        cmbCategorias.Enabled = false;
-                        lblDescripcion.Enabled = false;
+                        txtCatNueva.Enabled = false;
+                        txtDescripcion.Enabled = false;
                         break;
                     }
             }
         }
 
-        private void LlenarCombo(ComboBox cbo, Object source, string display, String value)
-        {
-            cbo.DataSource = source;
-            cbo.DisplayMember = display;
-            cbo.ValueMember = value;
-            cbo.SelectedIndex = -1;
-        }
+        //private void LlenarCombo(ComboBox cbo, Object source, string display, String value)
+        //{
+        //    cbo.DataSource = source;
+        //    cbo.DisplayMember = display;
+        //    cbo.ValueMember = value;
+        //    cbo.SelectedIndex = -1;
+        //}
         public enum FormMode
         {
             nuevo,
@@ -73,9 +73,115 @@ namespace BugTracker_TPI.Interfaz.Categorias
         {
             if (categoriaSelected != null)
             {
-                cmbCategorias.Text = categoriaSelected.nombre;
-                lblDescripcion.Text = categoriaSelected.descripcion;
+                txtCatNueva.Text = categoriaSelected.nombre;
+                txtDescripcion.Text = categoriaSelected.descripcion;
             }
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            switch(formMode)
+            {
+                case FormMode.nuevo:
+                    {
+                        if (existeCategoria() == false)
+                        {
+                            if (ValidarCampos())
+                            {
+                                var oCategoria = new Categoria();
+                                oCategoria.nombre = txtCatNueva.Text;
+                                oCategoria.descripcion = txtDescripcion.Text;
+                                
+
+                            if (oCategoriaService.crearCategoria(oCategoria))
+                                {
+                                    MessageBox.Show(" Categoria agregada", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    this.Close();
+                                } 
+                            }
+
+                        }
+                        else                       
+                            MessageBox.Show("La categoria insertada ya existe, ingrese otro nuevo");
+                        break;    
+                    }
+                case FormMode.actualizar:
+                    {
+                        if (ValidarCampos())
+                        {
+                            categoriaSelected.nombre = txtCatNueva.Text;
+                            categoriaSelected.descripcion = txtDescripcion.Text;
+                            if (oCategoriaService.actualizarCategoria(categoriaSelected))
+                            {
+                                MessageBox.Show("Categoria actualizada", " Informacion");
+                                this.Dispose();
+                            }
+                            else
+                                MessageBox.Show("Error al actualizar la categoria", "Informacion");
+                        }
+                        break;
+                    }
+                case FormMode.eliminar:
+                    {
+                        if (MessageBox.Show(" Seguro que desea eliminar/deshabilitar la categoria seleccionada?","Aviso", MessageBoxButtons.OKCancel,MessageBoxIcon.Question) == DialogResult.OK)
+                        {
+                            if (oCategoriaService.eliminarCategoria(categoriaSelected))
+                            {
+                                MessageBox.Show("Categoria eliminada/deshabilitada", "Informacion");
+                                this.Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Error al eliminar la categoria indicada");
+                            }
+                        }
+                    }
+                        break;
+
+            }
+        }
+
+        public void InitializeForm(FormMode op, Categoria categoriaSeleccionada)
+        {
+            formMode = op;
+            categoriaSelected = categoriaSeleccionada;
+        }
+
+        private bool ValidarCampos()
+        {
+            if (txtCatNueva.Text == string.Empty)
+            {
+                txtCatNueva.BackColor = Color.Red;
+                txtCatNueva.Focus();
+                return false;
+            }
+            else
+            {
+                txtCatNueva.BackColor = Color.White;
+                
+            }
+            if (lblDescripcion.Text == string.Empty)
+            {
+                lblDescripcion.BackColor = Color.Red;
+                lblDescripcion.Focus();
+                return false;
+            }
+            else
+            {
+                lblDescripcion.BackColor = Color.White;
+                return true;
+            }
+                
+
+        }
+        private bool existeCategoria()
+        {
+            return oCategoriaService.obtenerCategoria(txtCatNueva.Text) != null;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

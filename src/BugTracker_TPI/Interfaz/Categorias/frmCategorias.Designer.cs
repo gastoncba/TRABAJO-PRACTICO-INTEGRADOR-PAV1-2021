@@ -31,13 +31,13 @@ namespace BugTracker_TPI.Interfaz.Categorias
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCategorias));
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbCategorias = new System.Windows.Forms.ComboBox();
             this.grdCategorias = new System.Windows.Forms.DataGridView();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.ckdCategorias = new System.Windows.Forms.CheckBox();
+            this.txtCategoria = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.grdCategorias)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,16 +50,6 @@ namespace BugTracker_TPI.Interfaz.Categorias
             this.label1.Size = new System.Drawing.Size(82, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre:";
-            // 
-            // cmbCategorias
-            // 
-            this.cmbCategorias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmbCategorias.FormattingEnabled = true;
-            this.cmbCategorias.Location = new System.Drawing.Point(121, 36);
-            this.cmbCategorias.Name = "cmbCategorias";
-            this.cmbCategorias.Size = new System.Drawing.Size(202, 28);
-            this.cmbCategorias.TabIndex = 1;
             // 
             // grdCategorias
             // 
@@ -90,6 +80,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
             this.btnModificar.Size = new System.Drawing.Size(70, 71);
             this.btnModificar.TabIndex = 4;
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnEliminar
             // 
@@ -99,6 +90,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
             this.btnEliminar.Size = new System.Drawing.Size(82, 71);
             this.btnEliminar.TabIndex = 5;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnConsultar
             // 
@@ -121,18 +113,25 @@ namespace BugTracker_TPI.Interfaz.Categorias
             this.ckdCategorias.UseVisualStyleBackColor = true;
             this.ckdCategorias.CheckedChanged += new System.EventHandler(this.ckdCategorias_CheckedChanged);
             // 
+            // txtCategoria
+            // 
+            this.txtCategoria.Location = new System.Drawing.Point(121, 34);
+            this.txtCategoria.Name = "txtCategoria";
+            this.txtCategoria.Size = new System.Drawing.Size(158, 27);
+            this.txtCategoria.TabIndex = 8;
+            // 
             // frmCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(511, 530);
+            this.Controls.Add(this.txtCategoria);
             this.Controls.Add(this.ckdCategorias);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.grdCategorias);
-            this.Controls.Add(this.cmbCategorias);
             this.Controls.Add(this.label1);
             this.Name = "frmCategorias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -147,12 +146,12 @@ namespace BugTracker_TPI.Interfaz.Categorias
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmbCategorias;
         private System.Windows.Forms.DataGridView grdCategorias;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.CheckBox ckdCategorias;
+        private System.Windows.Forms.TextBox txtCategoria;
     }
 }

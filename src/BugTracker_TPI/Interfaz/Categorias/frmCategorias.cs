@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using BugTracker_TPI.BusinessLayer;
 using BugTracker_TPI.AccesoBD;
+using BugTracker_TPI.Entidades;
 
 namespace BugTracker_TPI.Interfaz.Categorias
 {
@@ -23,7 +24,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
 
         private void frmCategorias_Load(object sender, EventArgs e)
         {
-            LlenarCombo(cmbCategorias, oCategoriaService.obtenerTodas(), "nombre", "id_categoria");
+           // LlenarCombo(cmbCategorias, oCategoriaService.obtenerTodas(), "nombre", "id_categoria");
         }
 
         private void LlenarCombo(ComboBox cbo, Object source, string display, String value)
@@ -41,26 +42,26 @@ namespace BugTracker_TPI.Interfaz.Categorias
         private void btnConsultar_Click(object sender, EventArgs e)
         {
             var filtros = new Dictionary<string, object>();
-            if (ckdCategorias.Checked)
+            if (!ckdCategorias.Checked) 
             {
-                grdCategorias.DataSource = oCategoriaService.obtenerTodas();
+
+                //var filtros = new Dictionary<string, object>();
+                
+                if (txtCategoria.Text != string.Empty)
+                {
+                    filtros.Add("nombre", txtCategoria.Text);
+                }
+
+                if (filtros.Count > 0)
+                {
+                    grdCategorias.DataSource = oCategoriaService.obtenerConFiltros(filtros);
+                }
+                
             }
             else
             {
-                if(cmbCategorias.Text != string.Empty)
-                {
-                    filtros.Add("id_categoria", cmbCategorias.SelectedValue);
-                }
-                else
-                {
-                    MessageBox.Show("Por favor, seleccione una categoria a buscar");
-                }
+                grdCategorias.DataSource = oCategoriaService.obtenerTodas();
             }
-            if (filtros.Count > 0)
-            {
-                grdCategorias.DataSource = oCategoriaService.obtenerConFiltros(filtros);
-            }
-
 
 
         }
@@ -98,13 +99,13 @@ namespace BugTracker_TPI.Interfaz.Categorias
 
         private void ckdCategorias_CheckedChanged(object sender, EventArgs e)
         {
-            if ( ckdCategorias.Checked)
+            if (ckdCategorias.Checked)
             {
-                cmbCategorias.Enabled = false;
+                txtCategoria.Enabled = false;
             }
             else
             {
-                cmbCategorias.Enabled = true;
+                txtCategoria.Enabled = true;
             }
         }
 
@@ -112,6 +113,45 @@ namespace BugTracker_TPI.Interfaz.Categorias
         {
             frmCategoriaABMC fmCategoriaAlta = new frmCategoriaABMC();
             fmCategoriaAlta.ShowDialog();
+
+            //forzar para que se actualice la grilla
+            btnConsultar_Click(sender, e);
+
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            frmCategoriaABMC formulario = new frmCategoriaABMC();
+
+            // para obtener la categoria que selecciono en la grilla y modificarla:
+            var categoria = (Categoria)grdCategorias.CurrentRow.DataBoundItem;
+
+            //cargar el formulario
+            formulario.InitializeForm(frmCategoriaABMC.FormMode.actualizar, categoria);
+
+            //mostrar
+            formulario.ShowDialog();
+
+            // esto es para que se actualice la grilla
+            btnConsultar_Click(sender, e);
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            frmCategoriaABMC formulario = new frmCategoriaABMC();
+
+            //para obtener la categoria que selecciono en la grilla y modificarla:
+            var categoria = (Categoria)grdCategorias.CurrentRow.DataBoundItem;
+
+            //cargar el formulario
+            formulario.InitializeForm(frmCategoriaABMC.FormMode.eliminar, categoria);
+
+            //mostrar
+            formulario.ShowDialog();
+
+            //esto es para que se actualice la grilla
+            btnConsultar_Click(sender, e);
 
         }
     }
