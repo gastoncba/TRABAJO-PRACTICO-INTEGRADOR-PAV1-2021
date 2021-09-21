@@ -35,13 +35,14 @@ namespace BugTracker_TPI.Interfaz.Cursos
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.dgvCursos = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblTotalCursos = new System.Windows.Forms.Label();
             this.cboCategorias = new System.Windows.Forms.ComboBox();
             this.txtVigencia = new System.Windows.Forms.MaskedTextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
-            this.checkTodos = new System.Windows.Forms.CheckBox();
+            this.checkDadosDeBaja = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +59,7 @@ namespace BugTracker_TPI.Interfaz.Cursos
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(218, 33);
+            this.label2.Location = new System.Drawing.Point(27, 62);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 15);
             this.label2.TabIndex = 1;
@@ -67,7 +68,7 @@ namespace BugTracker_TPI.Interfaz.Cursos
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(424, 33);
+            this.label3.Location = new System.Drawing.Point(28, 94);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 15);
             this.label3.TabIndex = 2;
@@ -77,28 +78,29 @@ namespace BugTracker_TPI.Interfaz.Cursos
             // 
             this.txtNombre.Location = new System.Drawing.Point(91, 30);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 23);
+            this.txtNombre.Size = new System.Drawing.Size(121, 23);
             this.txtNombre.TabIndex = 3;
             // 
             // dgvCursos
             // 
             this.dgvCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCursos.Location = new System.Drawing.Point(26, 124);
+            this.dgvCursos.Location = new System.Drawing.Point(36, 157);
             this.dgvCursos.Name = "dgvCursos";
             this.dgvCursos.RowTemplate.Height = 25;
-            this.dgvCursos.Size = new System.Drawing.Size(614, 160);
+            this.dgvCursos.Size = new System.Drawing.Size(440, 160);
             this.dgvCursos.TabIndex = 6;
             this.dgvCursos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCursos_CellClick);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblTotalCursos);
             this.groupBox1.Controls.Add(this.cboCategorias);
             this.groupBox1.Controls.Add(this.txtVigencia);
             this.groupBox1.Controls.Add(this.btnEliminar);
             this.groupBox1.Controls.Add(this.btnModificar);
             this.groupBox1.Controls.Add(this.btnNuevo);
             this.groupBox1.Controls.Add(this.btnConsultar);
-            this.groupBox1.Controls.Add(this.checkTodos);
+            this.groupBox1.Controls.Add(this.checkDadosDeBaja);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.dgvCursos);
             this.groupBox1.Controls.Add(this.label2);
@@ -106,31 +108,42 @@ namespace BugTracker_TPI.Interfaz.Cursos
             this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(666, 333);
+            this.groupBox1.Size = new System.Drawing.Size(502, 395);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros";
             // 
+            // lblTotalCursos
+            // 
+            this.lblTotalCursos.AutoSize = true;
+            this.lblTotalCursos.Location = new System.Drawing.Point(36, 324);
+            this.lblTotalCursos.Name = "lblTotalCursos";
+            this.lblTotalCursos.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblTotalCursos.Size = new System.Drawing.Size(32, 15);
+            this.lblTotalCursos.TabIndex = 14;
+            this.lblTotalCursos.Text = "Total";
+            this.lblTotalCursos.Visible = false;
+            // 
             // cboCategorias
             // 
             this.cboCategorias.FormattingEnabled = true;
-            this.cboCategorias.Location = new System.Drawing.Point(282, 30);
+            this.cboCategorias.Location = new System.Drawing.Point(91, 59);
             this.cboCategorias.Name = "cboCategorias";
             this.cboCategorias.Size = new System.Drawing.Size(121, 23);
             this.cboCategorias.TabIndex = 13;
             // 
             // txtVigencia
             // 
-            this.txtVigencia.Location = new System.Drawing.Point(488, 30);
+            this.txtVigencia.Location = new System.Drawing.Point(92, 91);
             this.txtVigencia.Mask = "00/00/0000";
             this.txtVigencia.Name = "txtVigencia";
-            this.txtVigencia.Size = new System.Drawing.Size(100, 23);
+            this.txtVigencia.Size = new System.Drawing.Size(120, 23);
             this.txtVigencia.TabIndex = 12;
             // 
             // btnEliminar
             // 
             this.btnEliminar.Enabled = false;
-            this.btnEliminar.Location = new System.Drawing.Point(188, 304);
+            this.btnEliminar.Location = new System.Drawing.Point(198, 355);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 11;
@@ -141,7 +154,7 @@ namespace BugTracker_TPI.Interfaz.Cursos
             // btnModificar
             // 
             this.btnModificar.Enabled = false;
-            this.btnModificar.Location = new System.Drawing.Point(107, 304);
+            this.btnModificar.Location = new System.Drawing.Point(117, 355);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 10;
@@ -151,16 +164,17 @@ namespace BugTracker_TPI.Interfaz.Cursos
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(26, 304);
+            this.btnNuevo.Location = new System.Drawing.Point(36, 355);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(75, 23);
             this.btnNuevo.TabIndex = 9;
             this.btnNuevo.Text = "nuevo ";
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(513, 83);
+            this.btnConsultar.Location = new System.Drawing.Point(401, 120);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(75, 23);
             this.btnConsultar.TabIndex = 8;
@@ -168,22 +182,22 @@ namespace BugTracker_TPI.Interfaz.Cursos
             this.btnConsultar.UseVisualStyleBackColor = true;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
-            // checkTodos
+            // checkDadosDeBaja
             // 
-            this.checkTodos.AutoSize = true;
-            this.checkTodos.Location = new System.Drawing.Point(91, 83);
-            this.checkTodos.Name = "checkTodos";
-            this.checkTodos.Size = new System.Drawing.Size(155, 19);
-            this.checkTodos.TabIndex = 7;
-            this.checkTodos.Text = "Mostrar todos los cursos";
-            this.checkTodos.UseVisualStyleBackColor = true;
-            this.checkTodos.CheckedChanged += new System.EventHandler(this.checkTodos_CheckedChanged);
+            this.checkDadosDeBaja.AutoSize = true;
+            this.checkDadosDeBaja.Location = new System.Drawing.Point(36, 120);
+            this.checkDadosDeBaja.Name = "checkDadosDeBaja";
+            this.checkDadosDeBaja.Size = new System.Drawing.Size(135, 19);
+            this.checkDadosDeBaja.TabIndex = 7;
+            this.checkDadosDeBaja.Text = "Incluir dados de baja";
+            this.checkDadosDeBaja.UseVisualStyleBackColor = true;
+            this.checkDadosDeBaja.CheckedChanged += new System.EventHandler(this.checkBaja_CheckedChanged);
             // 
             // FormCursos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(713, 363);
+            this.ClientSize = new System.Drawing.Size(536, 423);
             this.Controls.Add(this.groupBox1);
             this.Name = "FormCursos";
             this.Text = "Cursos";
@@ -204,11 +218,12 @@ namespace BugTracker_TPI.Interfaz.Cursos
         private System.Windows.Forms.DataGridView dgvCursos;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnConsultar;
-        private System.Windows.Forms.CheckBox checkTodos;
+        private System.Windows.Forms.CheckBox checkDadosDeBaja;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.MaskedTextBox txtVigencia;
         private System.Windows.Forms.ComboBox cboCategorias;
+        private System.Windows.Forms.Label lblTotalCursos;
     }
 }

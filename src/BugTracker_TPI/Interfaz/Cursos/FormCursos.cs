@@ -80,44 +80,60 @@ namespace BugTracker_TPI.Interfaz.Cursos
         private void btnConsultar_Click(object sender, EventArgs e)
         {
             DateTime fechaVigencia;
-            //primero 
-            if (checkTodos.Checked)
-            {
-                IList<Curso> cursosData = cursoService.obtenerTodos();
-                dgvCursos.DataSource = cursosData;
 
-            } else
+
+            if (string.IsNullOrEmpty(txtNombre.Text) && string.IsNullOrEmpty(cboCategorias.Text) && !DateTime.TryParse(txtVigencia.Text, out fechaVigencia))
             {
-                if(string.IsNullOrEmpty(txtNombre.Text) && string.IsNullOrEmpty(cboCategorias.Text) && !DateTime.TryParse(txtVigencia.Text, out fechaVigencia))
+                if(checkDadosDeBaja.Checked)
                 {
-                    MessageBox.Show("Complete al menos un campo", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    IList<Curso> cursosData = cursoService.obtenerTodos(true);
+                    dgvCursos.DataSource = cursosData;
                 } else
                 {
-                    Dictionary<string, object> parametros = new Dictionary<string, object>();
-
-                    if (DateTime.TryParse(txtVigencia.Text, out fechaVigencia))
-                    {
-                        parametros.Add("vigencia", fechaVigencia);
-                    }
-
-                    if (!string.IsNullOrEmpty(cboCategorias.Text))
-                    {
-                        var IDcateogoria = cboCategorias.SelectedValue;
-                        parametros.Add("idCategoria", IDcateogoria);
-                    }
-
-                    if (!string.IsNullOrEmpty(txtNombre.Text))
-                    {
-                        parametros.Add("curso", txtNombre.Text);
-                    }
-
-                    IList<Curso> cursosData = cursoService.filtrar(parametros);
+                    IList<Curso> cursosData = cursoService.obtenerTodos();
                     dgvCursos.DataSource = cursosData;
-
                 }
             }
 
+            else
+            {
+                Dictionary<string, object> parametros = new Dictionary<string, object>();
+
+                if (DateTime.TryParse(txtVigencia.Text, out fechaVigencia))
+                {
+                    parametros.Add("vigencia", fechaVigencia);
+                }
+
+                if (!string.IsNullOrEmpty(cboCategorias.Text))
+                {
+                    var IDcateogoria = cboCategorias.SelectedValue;
+                    parametros.Add("idCategoria", IDcateogoria);
+                }
+
+                if (!string.IsNullOrEmpty(txtNombre.Text))
+                {
+                    parametros.Add("curso", txtNombre.Text);
+                }
+
+
+                if (checkDadosDeBaja.Checked)
+                {
+                    parametros.Add("baja", 1);
+                }
+                else
+                {
+                    parametros.Add("baja", 0);
+                }
+
+
+                IList<Curso> cursosData = cursoService.filtrar(parametros);
+                dgvCursos.DataSource = cursosData;
+
+            }
+
+            lblTotalCursos.Visible = true;
+            lblTotalCursos.Text =  "Total de cursos encontrados: " + dgvCursos.Rows.Count + " Cursos";
+            
             if (!hayDatos())
             {
                 MessageBox.Show("No encontraron cursos", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -138,22 +154,9 @@ namespace BugTracker_TPI.Interfaz.Cursos
             this.CenterToParent();
         }
 
-        private void checkTodos_CheckedChanged(object sender, EventArgs e)
+        private void checkBaja_CheckedChanged(object sender, EventArgs e)
         {
-            {
-                if (checkTodos.Checked)
-                {
-                    txtNombre.Enabled = false;
-                    cboCategorias.Enabled = false;
-                    txtVigencia.Enabled = false;
-                }
-                else
-                {
-                    txtNombre.Enabled = true;
-                    cboCategorias.Enabled = true;
-                    txtVigencia.Enabled = true;
-                }
-            }
+            //
         }
 
         private void dgvCursos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -164,12 +167,35 @@ namespace BugTracker_TPI.Interfaz.Cursos
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            FormCursosABM formABM = new FormCursosABM();
+            Curso cursoSelect = (Curso) dgvCursos.CurrentRow.DataBoundItem;
+            formABM.InicializarFormulario(FormCursosABM.FormMode.modificar, cursoSelect);
+            formABM.ShowDialog();
 
+            //se actualiza la grilla
+            btnConsultar_Click(sender, e);
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            FormCursosABM formABM = new FormCursosABM();
+            Curso cursoSelect = (Curso)dgvCursos.CurrentRow.DataBoundItem;
+            formABM.InicializarFormulario(FormCursosABM.FormMode.eliminar, cursoSelect);
+            formABM.ShowDialog();
 
+            //se actualiza la grilla
+            btnConsultar_Click(sender, e);
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            FormCursosABM formABM = new FormCursosABM();
+            formABM.ShowDialog();
+
+            //se actualiza la grilla
+            btnConsultar_Click(sender, e);
+
+            
         }
     }
 }

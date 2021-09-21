@@ -115,6 +115,7 @@ namespace BugTracker_TPI.Interfaz.Cursos
             this.btnAceptar.TabIndex = 8;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
@@ -124,6 +125,7 @@ namespace BugTracker_TPI.Interfaz.Cursos
             this.btnCancelar.TabIndex = 9;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // FormCursosABM
             // 
@@ -142,6 +144,7 @@ namespace BugTracker_TPI.Interfaz.Cursos
             this.Controls.Add(this.lblNombre);
             this.Name = "FormCursosABM";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FormCursosABM_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

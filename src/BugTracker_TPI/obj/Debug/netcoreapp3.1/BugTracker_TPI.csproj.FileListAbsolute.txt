@@ -47,3 +47,4 @@ C:\Users\Almacen Informatico\Downloads\FACULTAD\PAV 1\TPI\TRABAJO-PRACTICO-INTEG
 C:\Users\Almacen Informatico\Downloads\FACULTAD\PAV 1\TPI\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Almacen Informatico\Downloads\FACULTAD\PAV 1\TPI\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\obj\Debug\netcoreapp3.1\BugTracker_TPI.csproj.CopyComplete
 C:\Users\Almacen Informatico\Downloads\FACULTAD\PAV 1\TPI\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\obj\Debug\netcoreapp3.1\BugTracker_TPI.genruntimeconfig.cache
+C:\Users\Almacen Informatico\Downloads\FACULTAD\PAV 1\TPI\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\obj\Debug\netcoreapp3.1\BugTracker_TPI.Interfaz.Cursos.FormCursosABM.resources

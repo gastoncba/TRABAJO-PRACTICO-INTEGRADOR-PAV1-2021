@@ -15,14 +15,40 @@ namespace BugTracker_TPI.Negocio
             cursoDao = new CursoDao();
         }
 
-        public IList<Curso> obtenerTodos()
+        public IList<Curso> obtenerTodos(bool incluirBorrados = false)
         {
-            return cursoDao.getAll();
+            if(incluirBorrados)
+            {
+                return cursoDao.getAll(incluirBorrados);
+            } else
+            {
+                return cursoDao.getAll();
+            }
         }
 
         public IList<Curso> filtrar(Dictionary<string, object> parametros)
         {
             return cursoDao.filter(parametros);
+        }
+
+        public bool crearCurso(Curso curso)
+        {
+            return cursoDao.create(curso);
+        }
+
+        public bool actualizarCurso(Curso curso)
+        {
+            return cursoDao.update(curso);
+        }
+
+        public bool eliminarCurso(Curso curso)
+        {
+            return cursoDao.delete(curso);
+        }
+
+        public bool existeCurso(String cursoNombre)
+        {
+            return cursoDao.exist(cursoNombre);
         }
     }
 
