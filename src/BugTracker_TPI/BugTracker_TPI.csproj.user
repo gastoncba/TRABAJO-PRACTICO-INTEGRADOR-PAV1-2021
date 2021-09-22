@@ -17,6 +17,12 @@
     <Compile Update="Interfaz\Login\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Interfaz\Objetivo\FormObjetivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Interfaz\Objetivo\FormObjetivoABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Interfaz\PantallaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
