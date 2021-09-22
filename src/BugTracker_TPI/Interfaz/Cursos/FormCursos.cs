@@ -180,5 +180,10 @@ namespace BugTracker_TPI.Interfaz.Cursos
 
             
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
