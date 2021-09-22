@@ -8,7 +8,8 @@ namespace BugTracker_TPI.AccesoBD
 {
     class CursoDao
     {
-        public IList<Curso> getAll(bool incluirBorrados = false)
+        
+        public IList<Curso> filter(Dictionary<string, object> parametros, bool incluirBorrados = false)
         {
             //armamos una lista vacia
             List<Curso> listadoCursos = new List<Curso>();
@@ -18,41 +19,18 @@ namespace BugTracker_TPI.AccesoBD
                                             "C.descripcion, ",
                                             "C.fecha_vigencia, ",
                                             "X.id_categoria, ",
-                                            "X.nombre as categoria ",
-                                            "FROM Cursos C INNER JOIN Categorias X ON C.id_categoria = X.id_categoria");
-            
-            if(!incluirBorrados)
+                                            "X.nombre as categoria, ",
+                                            "C.borrado ",
+                                            "FROM Cursos C INNER JOIN Categorias X ON C.id_categoria = X.id_categoria ");
+
+
+            if (incluirBorrados)
             {
-                consulta += " WHERE C.borrado = 0";
-            }
-
-            var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(consulta);
-
-            foreach (DataRow row in resultadoConsulta.Rows)
+                consulta += " WHERE (C.borrado = 0 OR C.borrado = 1) ";
+            } else
             {
-                listadoCursos.Add(ObjectMapping(row));
+                consulta += " WHERE (C.borrado = 0) ";
             }
-
-            return listadoCursos;
-        }
-
-        public IList<Curso> filter(Dictionary<string, object> parametros)
-        {
-            //armamos una lista vacia
-            List<Curso> listadoCursos = new List<Curso>();
-
-            String consulta = string.Concat("SELECT C.id_curso, ",
-                                            "C.nombre, ",
-                                            "C.descripcion, ",
-                                            "C.fecha_vigencia, ",
-                                            "X.id_categoria, ",
-                                            "X.nombre as categoria ",
-                                            "FROM Cursos C INNER JOIN Categorias X ON C.id_categoria = X.id_categoria ",
-                                            "WHERE");
-
-
-            if (parametros.ContainsKey("baja"))
-                consulta += " C.borrado = @baja ";
 
             if (parametros.ContainsKey("vigencia"))
                 consulta += " AND (C.fecha_vigencia >= @vigencia) ";
@@ -75,6 +53,13 @@ namespace BugTracker_TPI.AccesoBD
 
         public Curso ObjectMapping(DataRow row) 
         {
+            string disponible = "si";
+
+            if (row["borrado"].ToString() == "True")
+            {
+                disponible = "no";
+            }
+
             Curso oCurso = new Curso
             {
                 IdCurso = Convert.ToInt32(row["id_curso"].ToString()),
@@ -85,7 +70,8 @@ namespace BugTracker_TPI.AccesoBD
                 {
                     id_categoria = Convert.ToInt32(row["id_categoria"].ToString()),
                     nombre = row["categoria"].ToString(),
-                }
+                },
+                Borrado = disponible
             };
             return oCurso;
         }

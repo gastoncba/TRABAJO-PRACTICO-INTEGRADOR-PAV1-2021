@@ -30,8 +30,8 @@ namespace BugTracker_TPI.Interfaz.Cursos
         private void cargarDataGridView()
         {
             // declaramos la cant de columnas de la tabla.
-            //4 columnas ya que de los cursos vamos a mostrar nombre, descrpción, fecha vigencia y categoria
-            dgvCursos.ColumnCount = 4;
+            //4 columnas ya que de los cursos vamos a mostrar nombre, descrpción, fecha vigencia, categoria y borrado
+            dgvCursos.ColumnCount = 5;
             dgvCursos.ColumnHeadersVisible = true;
 
             // Configuramos la AutoGenerateColumns en false para que no se autogeneren las columnas
@@ -59,6 +59,9 @@ namespace BugTracker_TPI.Interfaz.Cursos
             dgvCursos.Columns[3].Name = "Categoria";
             dgvCursos.Columns[3].DataPropertyName = "Categoria";
 
+            dgvCursos.Columns[4].Name = "Disponible";
+            dgvCursos.Columns[4].DataPropertyName = "Borrado";
+
             // Se cambia el tamaño de la altura de los encabezados de columna.
             dgvCursos.AutoResizeColumnHeadersHeight();
 
@@ -82,54 +85,33 @@ namespace BugTracker_TPI.Interfaz.Cursos
         {
             DateTime fechaVigencia;
 
+            Dictionary<string, object> parametros = new Dictionary<string, object>();
 
-            if (string.IsNullOrEmpty(txtNombre.Text) && string.IsNullOrEmpty(cboCategorias.Text) && !DateTime.TryParse(txtVigencia.Text, out fechaVigencia))
+            if (DateTime.TryParse(txtVigencia.Text, out fechaVigencia))
             {
-                if(checkDadosDeBaja.Checked)
-                {
-                    IList<Curso> cursosData = cursoService.obtenerTodos(true);
-                    dgvCursos.DataSource = cursosData;
-                } else
-                {
-                    IList<Curso> cursosData = cursoService.obtenerTodos();
-                    dgvCursos.DataSource = cursosData;
-                }
+                parametros.Add("vigencia", fechaVigencia);
             }
 
+            if (!string.IsNullOrEmpty(cboCategorias.Text))
+            {
+                var IDcateogoria = cboCategorias.SelectedValue;
+                parametros.Add("idCategoria", IDcateogoria);
+            }
+
+            if (!string.IsNullOrEmpty(txtNombre.Text))
+            {
+                parametros.Add("curso", txtNombre.Text);
+            }
+
+            if (checkDadosDeBaja.Checked)
+            {
+                IList<Curso> cursosData = cursoService.filtrar(parametros, true);
+                dgvCursos.DataSource = cursosData;
+            }
             else
             {
-                Dictionary<string, object> parametros = new Dictionary<string, object>();
-
-                if (DateTime.TryParse(txtVigencia.Text, out fechaVigencia))
-                {
-                    parametros.Add("vigencia", fechaVigencia);
-                }
-
-                if (!string.IsNullOrEmpty(cboCategorias.Text))
-                {
-                    var IDcateogoria = cboCategorias.SelectedValue;
-                    parametros.Add("idCategoria", IDcateogoria);
-                }
-
-                if (!string.IsNullOrEmpty(txtNombre.Text))
-                {
-                    parametros.Add("curso", txtNombre.Text);
-                }
-
-
-                if (checkDadosDeBaja.Checked)
-                {
-                    parametros.Add("baja", 1);
-                }
-                else
-                {
-                    parametros.Add("baja", 0);
-                }
-
-
                 IList<Curso> cursosData = cursoService.filtrar(parametros);
                 dgvCursos.DataSource = cursosData;
-
             }
 
             lblTotalCursos.Visible = true;
