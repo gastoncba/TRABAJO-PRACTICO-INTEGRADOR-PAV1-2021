@@ -45,9 +45,11 @@ namespace BugTracker_TPI.Interfaz
             this.soporteToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // archivoToolStripMenuItem
             // 
@@ -68,20 +70,20 @@ namespace BugTracker_TPI.Interfaz
             // cursosToolStripMenuItem
             // 
             this.cursosToolStripMenuItem.Name = "cursosToolStripMenuItem";
-            this.cursosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cursosToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.cursosToolStripMenuItem.Text = "Cursos";
             this.cursosToolStripMenuItem.Click += new System.EventHandler(this.cursosToolStripMenuItem_Click);
             // 
             // categoriasToolStripMenuItem
             // 
             this.categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
-            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.categoriasToolStripMenuItem.Text = "Categorías";
             // 
             // objetivosToolStripMenuItem
             // 
             this.objetivosToolStripMenuItem.Name = "objetivosToolStripMenuItem";
-            this.objetivosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.objetivosToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.objetivosToolStripMenuItem.Text = "Objetivos";
             // 
             // PantallaPrincipal

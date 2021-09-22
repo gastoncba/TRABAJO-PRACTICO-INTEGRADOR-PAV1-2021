@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using BugTracker_TPI.Interfaz.Cursos;
+using BugTracker_TPI.Interfaz.Objetivo;
 
 namespace BugTracker_TPI.Interfaz
 {
@@ -41,5 +42,10 @@ namespace BugTracker_TPI.Interfaz
             formCursos.ShowDialog();
         }
 
+       
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

@@ -143,6 +143,7 @@ namespace BugTracker_TPI.Interfaz.Cursos
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblNombre);
             this.Name = "FormCursosABM";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FormCursosABM_Load);
             this.ResumeLayout(false);

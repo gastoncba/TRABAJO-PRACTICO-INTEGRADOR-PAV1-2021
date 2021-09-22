@@ -86,7 +86,6 @@ namespace BugTracker_TPI.Interfaz.Cursos
             this.dgvCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCursos.Location = new System.Drawing.Point(36, 157);
             this.dgvCursos.Name = "dgvCursos";
-            this.dgvCursos.RowTemplate.Height = 25;
             this.dgvCursos.Size = new System.Drawing.Size(440, 160);
             this.dgvCursos.TabIndex = 6;
             this.dgvCursos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCursos_CellClick);
@@ -200,6 +199,7 @@ namespace BugTracker_TPI.Interfaz.Cursos
             this.ClientSize = new System.Drawing.Size(536, 423);
             this.Controls.Add(this.groupBox1);
             this.Name = "FormCursos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cursos";
             this.Load += new System.EventHandler(this.FormCursos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).EndInit();
