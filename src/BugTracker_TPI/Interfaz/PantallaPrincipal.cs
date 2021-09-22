@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using BugTracker_TPI.Interfaz.Cursos;
 using BugTracker_TPI.Entidades;
 using BugTracker_TPI.Interfaz.Categorias;
+using BugTracker_TPI.Interfaz.Objetivo;
 
 namespace BugTracker_TPI.Interfaz
 {
@@ -57,6 +58,12 @@ namespace BugTracker_TPI.Interfaz
             frmCategorias formCategorias = new frmCategorias();
             formCategorias.ShowDialog();
             
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+          FormObjetivo frmObjetivo = new FormObjetivo();
+           frmObjetivo.ShowDialog();
         }
     }
 }
