@@ -2,6 +2,9 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+    <Compile Update="Interfaz\Actualizacion de objetivosXcurso\frmActObjXCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Interfaz\Categorias\frmCategoriaABMC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -15,6 +18,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Interfaz\Login\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Interfaz\Objetivos\FormObjetivos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Interfaz\PantallaPrincipal.cs">
