@@ -89,7 +89,6 @@ namespace BugTracker_TPI.Interfaz.Cursos
             this.dgvCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCursos.Location = new System.Drawing.Point(36, 157);
             this.dgvCursos.Name = "dgvCursos";
-            this.dgvCursos.RowTemplate.Height = 25;
             this.dgvCursos.Size = new System.Drawing.Size(440, 160);
             this.dgvCursos.TabIndex = 6;
             this.dgvCursos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCursos_CellClick);
@@ -116,6 +115,7 @@ namespace BugTracker_TPI.Interfaz.Cursos
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // lblTotalCursos
             // 
@@ -149,7 +149,6 @@ namespace BugTracker_TPI.Interfaz.Cursos
             // 
             this.btnEliminar.Enabled = false;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Image = global::BugTracker_TPI.Properties.Resources.borrar;
             this.btnEliminar.Location = new System.Drawing.Point(402, 345);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 70);
@@ -161,7 +160,6 @@ namespace BugTracker_TPI.Interfaz.Cursos
             // 
             this.btnModificar.Enabled = false;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Image = global::BugTracker_TPI.Properties.Resources.editar;
             this.btnModificar.Location = new System.Drawing.Point(321, 345);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 70);
@@ -173,7 +171,6 @@ namespace BugTracker_TPI.Interfaz.Cursos
             // 
             this.btnNuevo.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Image = global::BugTracker_TPI.Properties.Resources.agregar_archivo;
             this.btnNuevo.Location = new System.Drawing.Point(240, 345);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(75, 70);
