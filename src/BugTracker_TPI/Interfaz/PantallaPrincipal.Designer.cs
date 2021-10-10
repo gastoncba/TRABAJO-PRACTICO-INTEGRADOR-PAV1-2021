@@ -40,6 +40,7 @@ namespace BugTracker_TPI.Interfaz
             this.button3 = new System.Windows.Forms.Button();
             this.btnCursos = new System.Windows.Forms.Button();
             this.btnCategorias = new System.Windows.Forms.Button();
+            this.btnActualizacionAvances = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -47,9 +48,10 @@ namespace BugTracker_TPI.Interfaz
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(29, 23);
+            this.panel1.Location = new System.Drawing.Point(25, 17);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(486, 481);
+            this.panel1.Size = new System.Drawing.Size(425, 361);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -59,9 +61,10 @@ namespace BugTracker_TPI.Interfaz
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.lblUsuario);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(29, 26);
+            this.panel2.Location = new System.Drawing.Point(25, 20);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(483, 125);
+            this.panel2.Size = new System.Drawing.Size(423, 94);
             this.panel2.TabIndex = 0;
             // 
             // label1
@@ -69,9 +72,9 @@ namespace BugTracker_TPI.Interfaz
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(104, 28);
+            this.label1.Location = new System.Drawing.Point(91, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 25);
+            this.label1.Size = new System.Drawing.Size(91, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Bienvenido:";
             // 
@@ -80,9 +83,9 @@ namespace BugTracker_TPI.Interfaz
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(257, 39);
+            this.label2.Location = new System.Drawing.Point(225, 29);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(209, 28);
+            this.label2.Size = new System.Drawing.Size(168, 21);
             this.label2.TabIndex = 2;
             this.label2.Text = "Bug Tracking System";
             // 
@@ -91,9 +94,9 @@ namespace BugTracker_TPI.Interfaz
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.lblUsuario.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblUsuario.Location = new System.Drawing.Point(104, 53);
+            this.lblUsuario.Location = new System.Drawing.Point(91, 40);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(70, 23);
+            this.lblUsuario.Size = new System.Drawing.Size(60, 19);
             this.lblUsuario.TabIndex = 1;
             this.lblUsuario.Text = "Usuario";
             // 
@@ -101,21 +104,24 @@ namespace BugTracker_TPI.Interfaz
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(14, 20);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(226, 67);
+            this.pictureBox1.Size = new System.Drawing.Size(198, 50);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel3.Controls.Add(this.btnActualizacionAvances);
             this.panel3.Controls.Add(this.button3);
             this.panel3.Controls.Add(this.btnCursos);
             this.panel3.Controls.Add(this.btnCategorias);
-            this.panel3.Location = new System.Drawing.Point(29, 157);
+            this.panel3.Location = new System.Drawing.Point(25, 118);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(483, 347);
+            this.panel3.Size = new System.Drawing.Size(423, 275);
             this.panel3.TabIndex = 1;
             // 
             // button3
@@ -125,9 +131,10 @@ namespace BugTracker_TPI.Interfaz
             this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(60, 233);
+            this.button3.Location = new System.Drawing.Point(52, 175);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(347, 60);
+            this.button3.Size = new System.Drawing.Size(304, 45);
             this.button3.TabIndex = 2;
             this.button3.Text = "Objetivos";
             this.button3.UseVisualStyleBackColor = false;
@@ -139,9 +146,10 @@ namespace BugTracker_TPI.Interfaz
             this.btnCursos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCursos.Image = ((System.Drawing.Image)(resources.GetObject("btnCursos.Image")));
             this.btnCursos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCursos.Location = new System.Drawing.Point(60, 121);
+            this.btnCursos.Location = new System.Drawing.Point(52, 91);
+            this.btnCursos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCursos.Name = "btnCursos";
-            this.btnCursos.Size = new System.Drawing.Size(347, 60);
+            this.btnCursos.Size = new System.Drawing.Size(304, 45);
             this.btnCursos.TabIndex = 1;
             this.btnCursos.Text = "Cursos";
             this.btnCursos.UseVisualStyleBackColor = false;
@@ -154,25 +162,35 @@ namespace BugTracker_TPI.Interfaz
             this.btnCategorias.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCategorias.Image = ((System.Drawing.Image)(resources.GetObject("btnCategorias.Image")));
             this.btnCategorias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCategorias.Location = new System.Drawing.Point(60, 19);
+            this.btnCategorias.Location = new System.Drawing.Point(52, 14);
+            this.btnCategorias.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCategorias.Name = "btnCategorias";
-            this.btnCategorias.Size = new System.Drawing.Size(347, 60);
+            this.btnCategorias.Size = new System.Drawing.Size(304, 45);
             this.btnCategorias.TabIndex = 0;
             this.btnCategorias.Text = "Categorias";
             this.btnCategorias.UseVisualStyleBackColor = false;
             this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
             // 
+            // btnActualizacionAvances
+            // 
+            this.btnActualizacionAvances.Location = new System.Drawing.Point(52, 237);
+            this.btnActualizacionAvances.Name = "btnActualizacionAvances";
+            this.btnActualizacionAvances.Size = new System.Drawing.Size(304, 35);
+            this.btnActualizacionAvances.TabIndex = 3;
+            this.btnActualizacionAvances.Text = "Avances";
+            this.btnActualizacionAvances.UseVisualStyleBackColor = true;
+            this.btnActualizacionAvances.Click += new System.EventHandler(this.btnActualizacionAvances_Click);
+            // 
             // PantallaPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(535, 529);
+            this.ClientSize = new System.Drawing.Size(468, 397);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MinimizeBox = false;
             this.Name = "PantallaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -198,5 +216,6 @@ namespace BugTracker_TPI.Interfaz
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnActualizacionAvances;
     }
 }

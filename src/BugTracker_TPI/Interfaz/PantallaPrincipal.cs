@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using BugTracker_TPI.Interfaz.Cursos;
 using BugTracker_TPI.Entidades;
 using BugTracker_TPI.Interfaz.Categorias;
+using BugTracker_TPI.Interfaz.Avances;
 
 namespace BugTracker_TPI.Interfaz
 {
@@ -21,8 +22,6 @@ namespace BugTracker_TPI.Interfaz
             lblUsuario.Text = usuario.ToString();
 
         }
-
-       
 
         private void PantallaPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -57,6 +56,12 @@ namespace BugTracker_TPI.Interfaz
             frmCategorias formCategorias = new frmCategorias();
             formCategorias.ShowDialog();
             
+        }
+
+        private void btnActualizacionAvances_Click(object sender, EventArgs e)
+        {
+            frmActualizacionAvances frmAvances = new frmActualizacionAvances();
+            frmAvances.ShowDialog();
         }
     }
 }

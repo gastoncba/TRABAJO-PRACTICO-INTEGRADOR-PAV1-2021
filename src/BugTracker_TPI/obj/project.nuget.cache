@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BEHZEXznEpatmMXwm548w30m09Gx7qlDUy3KrA85zFMLHezxc0OjGm2qVUOjUHcdKrcQtaMF/eqfEVXXGZvo/w==",
+  "dgSpecHash": "/LV2+SVlXnsgPmiwiPeNu1rzQBRnNrCB+pQQ4QaFlpg9hSJBpvFpOBD3mys07gDemIfZmbLIwLn2Hg6ldjmhHQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Almacen Informatico\\Downloads\\FACULTAD\\PAV 1\\test2\\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\\src\\BugTracker_TPI\\BugTracker_TPI.csproj",
+  "projectFilePath": "C:\\Users\\Almacen Informatico\\Downloads\\FACULTAD\\PAV 1\\TPI\\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\\src\\BugTracker_TPI\\BugTracker_TPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Almacen Informatico\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Almacen Informatico\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

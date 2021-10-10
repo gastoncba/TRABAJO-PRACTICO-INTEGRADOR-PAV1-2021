@@ -15,6 +15,11 @@ namespace BugTracker_TPI.Negocio
             cursoDao = new CursoDao();
         }
 
+        public IList<Curso> mostrarTodos()
+        {
+            return cursoDao.getAll();
+        }
+
         public IList<Curso> filtrar(Dictionary<string, object> parametros, bool incluirBorrados = false)
         {
             if (incluirBorrados)

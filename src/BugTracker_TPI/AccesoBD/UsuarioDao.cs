@@ -35,6 +35,30 @@ namespace BugTracker_TPI.AccesoBD
             return null;
         }
 
+        public IList<Usuario> getAll()
+        {
+            List<Usuario> listadoUsuarios = new List<Usuario>();
+
+            String consulta = string.Concat(" SELECT u.id_usuario, ",
+                                          "        u.usuario, ",
+                                          "        u.email, ",
+                                          "        u.password, ",
+                                          "        p.id_perfil, ",
+                                          "        p.nombre perfil ",
+                                          "   FROM Usuarios u",
+                                          "  INNER JOIN Perfiles p ON u.id_perfil= p.id_perfil ",
+                                          "  WHERE u.borrado = 0");
+
+            var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(consulta);
+
+            foreach (DataRow row in resultadoConsulta.Rows)
+            {
+                listadoUsuarios.Add(ObjectMapping(row));
+            }
+
+            return listadoUsuarios;
+        }
+
         private Usuario ObjectMapping(DataRow row)
         {
             Usuario oUsuario = new Usuario

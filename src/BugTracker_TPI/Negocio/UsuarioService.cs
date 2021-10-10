@@ -25,5 +25,10 @@ namespace BugTracker_TPI.Negocio
 
             return null;
         }
+
+        public IList<Usuario> obtenerTodos()
+        {
+            return oUsuarioDao.getAll();
+        }
     }
 }

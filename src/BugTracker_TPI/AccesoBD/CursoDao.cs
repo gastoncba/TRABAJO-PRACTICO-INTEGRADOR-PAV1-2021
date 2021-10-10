@@ -9,6 +9,30 @@ namespace BugTracker_TPI.AccesoBD
     class CursoDao
     {
         
+        public IList<Curso> getAll()
+        {
+            //armamos una lista vacia
+            List<Curso> listadoCursos = new List<Curso>();
+
+            String consulta = string.Concat("SELECT C.id_curso, ",
+                                            "C.nombre, ",
+                                            "C.descripcion, ",
+                                            "C.fecha_vigencia, ",
+                                            "X.id_categoria, ",
+                                            "X.nombre as categoria, ",
+                                            "C.borrado ",
+                                            "FROM Cursos C INNER JOIN Categorias X ON C.id_categoria = X.id_categoria WHERE C.borrado = 0");
+
+            var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(consulta);
+
+            foreach (DataRow row in resultadoConsulta.Rows)
+            {
+                listadoCursos.Add(ObjectMapping(row));
+            }
+
+            return listadoCursos;
+        }
+
         public IList<Curso> filter(Dictionary<string, object> parametros, bool incluirBorrados = false)
         {
             //armamos una lista vacia
