@@ -56,6 +56,7 @@ C:\Users\Almacen Informatico\Downloads\FACULTAD\PAV 1\test2\TRABAJO-PRACTICO-INT
 C:\Users\Almacen Informatico\Downloads\FACULTAD\PAV 1\test2\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\obj\Debug\netcoreapp3.1\BugTracker_TPI.dll
 C:\Users\Almacen Informatico\Downloads\FACULTAD\PAV 1\test2\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\obj\Debug\netcoreapp3.1\BugTracker_TPI.pdb
 C:\Users\Almacen Informatico\Downloads\FACULTAD\PAV 1\test2\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\obj\Debug\netcoreapp3.1\BugTracker_TPI.genruntimeconfig.cache
+<<<<<<< HEAD
 C:\Users\Almacen Informatico\Downloads\FACULTAD\PAV 1\TPI\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\bin\Debug\netcoreapp3.1\BugTracker_TPI.exe
 C:\Users\Almacen Informatico\Downloads\FACULTAD\PAV 1\TPI\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\bin\Debug\netcoreapp3.1\BugTracker_TPI.deps.json
 C:\Users\Almacen Informatico\Downloads\FACULTAD\PAV 1\TPI\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\bin\Debug\netcoreapp3.1\BugTracker_TPI.runtimeconfig.json
@@ -87,3 +88,35 @@ C:\Users\Almacen Informatico\Downloads\FACULTAD\PAV 1\TPI\TRABAJO-PRACTICO-INTEG
 C:\Users\Almacen Informatico\Downloads\FACULTAD\PAV 1\TPI\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\obj\Debug\netcoreapp3.1\BugTracker_TPI.genruntimeconfig.cache
 C:\Users\Almacen Informatico\Downloads\FACULTAD\PAV 1\TPI\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\obj\Debug\netcoreapp3.1\BugTracker_TPI.Interfaz.CursadoAvances.frmActualizacionCursado.resources
 C:\Users\Almacen Informatico\Downloads\FACULTAD\PAV 1\TPI\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\obj\Debug\netcoreapp3.1\BugTracker_TPI.Interfaz.CursadoAvances.frmCursado.resources
+=======
+C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\bin\Debug\netcoreapp3.1\BugTracker_TPI.exe
+C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\bin\Debug\netcoreapp3.1\BugTracker_TPI.deps.json
+C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\bin\Debug\netcoreapp3.1\BugTracker_TPI.runtimeconfig.json
+C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\bin\Debug\netcoreapp3.1\BugTracker_TPI.runtimeconfig.dev.json
+C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\bin\Debug\netcoreapp3.1\BugTracker_TPI.dll
+C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\bin\Debug\netcoreapp3.1\BugTracker_TPI.pdb
+C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\obj\Debug\netcoreapp3.1\BugTracker_TPI.csprojAssemblyReference.cache
+C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\obj\Debug\netcoreapp3.1\BugTracker_TPI.Interfaz.Categorias.frmCategoriaABMC.resources
+C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\obj\Debug\netcoreapp3.1\BugTracker_TPI.Interfaz.Categorias.frmCategorias.resources
+C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\obj\Debug\netcoreapp3.1\BugTracker_TPI.Interfaz.Cursos.FormCursos.resources
+C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\obj\Debug\netcoreapp3.1\BugTracker_TPI.Interfaz.Cursos.FormCursosABM.resources
+C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\obj\Debug\netcoreapp3.1\BugTracker_TPI.FormLogin.resources
+C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\obj\Debug\netcoreapp3.1\BugTracker_TPI.Interfaz.Objetivo.FormObjetivo.resources
+C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\obj\Debug\netcoreapp3.1\BugTracker_TPI.Interfaz.Objetivo.FormObjetivoABM.resources
+C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\obj\Debug\netcoreapp3.1\BugTracker_TPI.Interfaz.PantallaPrincipal.resources
+C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\obj\Debug\netcoreapp3.1\BugTracker_TPI.Properties.Resources.resources
+C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\obj\Debug\netcoreapp3.1\BugTracker_TPI.csproj.GenerateResource.cache
+C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\obj\Debug\netcoreapp3.1\BugTracker_TPI.AssemblyInfoInputs.cache
+C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\obj\Debug\netcoreapp3.1\BugTracker_TPI.AssemblyInfo.cs
+C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\obj\Debug\netcoreapp3.1\BugTracker_TPI.csproj.CoreCompileInputs.cache
+C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\obj\Debug\netcoreapp3.1\BugTracker_TPI.csproj.CopyComplete
+C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\obj\Debug\netcoreapp3.1\BugTracker_TPI.dll
+C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\obj\Debug\netcoreapp3.1\BugTracker_TPI.pdb
+C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\obj\Debug\netcoreapp3.1\BugTracker_TPI.genruntimeconfig.cache
+>>>>>>> 63b2f51b087ca0b3c04e73ad9a3fc567a4458aeb
