@@ -135,7 +135,7 @@ namespace BugTracker_TPI.AccesoBD
         public bool add(UsuarioCurso usuarioCurso)
         {
             SqlTransaction transaccion = null;
-            SqlConnection cnn = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = test2; Integrated Security = True");
+            SqlConnection cnn = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = BugTracker; Integrated Security = True");
 
             bool flag = true;
 
@@ -188,7 +188,7 @@ namespace BugTracker_TPI.AccesoBD
         public bool update(UsuarioCurso usuarioCurso, object[] oldKeys, IList<Avance> eliminados)
         {
             SqlTransaction transaccion = null;
-            SqlConnection cnn = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = test2; Integrated Security = True");
+            SqlConnection cnn = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = BugTracker; Integrated Security = True");
 
             int IdUsuario = (int) oldKeys[0];
             int IdCurso = (int)oldKeys[1];

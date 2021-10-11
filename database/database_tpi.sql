@@ -1,7 +1,7 @@
-CREATE DATABASE [test2]
+CREATE DATABASE [BugTracker]
 GO
 
-USE [test2]
+USE [BugTracker]
 GO
 /****** Object:  Table [dbo].[Asignaciones]    Script Date: 10/10/2021 22:48:27 ******/
 SET ANSI_NULLS ON
