@@ -11,7 +11,7 @@ namespace BugTracker_TPI.Entidades
         public string Descripcion { get; set; }
         public DateTime FechaVigencia { get; set; }
         public Categoria Categoria { get; set; }
-        public string Borrado { get; set; } 
+        public string Disponible { get; set; } 
 
         public override string ToString()
         {

@@ -89,9 +89,9 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.lblUsuarioCursos.AutoSize = true;
             this.lblUsuarioCursos.Location = new System.Drawing.Point(54, 88);
             this.lblUsuarioCursos.Name = "lblUsuarioCursos";
-            this.lblUsuarioCursos.Size = new System.Drawing.Size(107, 15);
+            this.lblUsuarioCursos.Size = new System.Drawing.Size(115, 15);
             this.lblUsuarioCursos.TabIndex = 5;
-            this.lblUsuarioCursos.Text = "Usuario por Cursos";
+            this.lblUsuarioCursos.Text = "Cursado de Usuarios";
             // 
             // btnActualizarAvance
             // 
@@ -124,7 +124,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // frmActualizacionAvances
+            // frmActualizacionCursado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -138,8 +138,8 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblNombreUsuario);
             this.Controls.Add(this.txtNombre);
-            this.Name = "frmActualizacionAvances";
-            this.Text = "Actualización de Avances";
+            this.Name = "frmActualizacionCursado";
+            this.Text = "Actualización de Cursados";
             this.Load += new System.EventHandler(this.frmActualizacionAvances_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarioCurso)).EndInit();
             this.ResumeLayout(false);

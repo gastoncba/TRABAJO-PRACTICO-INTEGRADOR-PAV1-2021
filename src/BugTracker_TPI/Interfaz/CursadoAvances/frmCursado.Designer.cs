@@ -29,13 +29,14 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblPrincipal = new System.Windows.Forms.Label();
             this.btnAgregarAvance = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cboUsuarios = new System.Windows.Forms.ComboBox();
             this.cboCurso = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnSacarAvance = new System.Windows.Forms.Button();
             this.dgvAvances = new System.Windows.Forms.DataGridView();
             this.inicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fin = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,7 +47,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.lblFin = new System.Windows.Forms.Label();
             this.txtInicioAvance = new System.Windows.Forms.MaskedTextBox();
             this.lblInicio = new System.Windows.Forms.Label();
-            this.btnNuevoUsuarioCurso = new System.Windows.Forms.Button();
+            this.btnAceptar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtPuntuacion = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -59,14 +60,14 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvances)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lblPrincipal
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(197, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nuevo Cursado";
+            this.lblPrincipal.AutoSize = true;
+            this.lblPrincipal.Location = new System.Drawing.Point(197, 9);
+            this.lblPrincipal.Name = "lblPrincipal";
+            this.lblPrincipal.Size = new System.Drawing.Size(89, 15);
+            this.lblPrincipal.TabIndex = 0;
+            this.lblPrincipal.Text = "Nuevo Cursado";
             // 
             // btnAgregarAvance
             // 
@@ -81,7 +82,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(65, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 15);
@@ -91,7 +92,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(65, 89);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 15);
@@ -116,6 +117,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnSacarAvance);
             this.groupBox1.Controls.Add(this.dgvAvances);
             this.groupBox1.Controls.Add(this.txtPorc);
             this.groupBox1.Controls.Add(this.lblPorcentaje);
@@ -126,10 +128,21 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.groupBox1.Controls.Add(this.btnAgregarAvance);
             this.groupBox1.Location = new System.Drawing.Point(38, 281);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(386, 262);
+            this.groupBox1.Size = new System.Drawing.Size(386, 292);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Avances";
+            // 
+            // btnSacarAvance
+            // 
+            this.btnSacarAvance.Enabled = false;
+            this.btnSacarAvance.Location = new System.Drawing.Point(281, 263);
+            this.btnSacarAvance.Name = "btnSacarAvance";
+            this.btnSacarAvance.Size = new System.Drawing.Size(75, 23);
+            this.btnSacarAvance.TabIndex = 10;
+            this.btnSacarAvance.Text = "Sacar Avance";
+            this.btnSacarAvance.UseVisualStyleBackColor = true;
+            this.btnSacarAvance.Click += new System.EventHandler(this.btnSacarAvance_Click);
             // 
             // dgvAvances
             // 
@@ -144,19 +157,23 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.dgvAvances.RowTemplate.Height = 25;
             this.dgvAvances.Size = new System.Drawing.Size(344, 150);
             this.dgvAvances.TabIndex = 9;
+            this.dgvAvances.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAvances_CellClick);
             // 
             // inicio
             // 
+            this.inicio.DataPropertyName = "Inicio";
             this.inicio.HeaderText = "Inicio";
             this.inicio.Name = "inicio";
             // 
             // fin
             // 
+            this.fin.DataPropertyName = "Fin";
             this.fin.HeaderText = "Fin";
             this.fin.Name = "fin";
             // 
             // porc
             // 
+            this.porc.DataPropertyName = "Porcentaje";
             this.porc.HeaderText = "Porcentaje";
             this.porc.Name = "porc";
             // 
@@ -206,27 +223,27 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             // lblInicio
             // 
             this.lblInicio.AutoSize = true;
-            this.lblInicio.ForeColor = System.Drawing.Color.Red;
+            this.lblInicio.ForeColor = System.Drawing.Color.Black;
             this.lblInicio.Location = new System.Drawing.Point(27, 27);
             this.lblInicio.Name = "lblInicio";
             this.lblInicio.Size = new System.Drawing.Size(36, 15);
             this.lblInicio.TabIndex = 3;
             this.lblInicio.Text = "Inicio";
             // 
-            // btnNuevoUsuarioCurso
+            // btnAceptar
             // 
-            this.btnNuevoUsuarioCurso.Location = new System.Drawing.Point(38, 566);
-            this.btnNuevoUsuarioCurso.Name = "btnNuevoUsuarioCurso";
-            this.btnNuevoUsuarioCurso.Size = new System.Drawing.Size(75, 23);
-            this.btnNuevoUsuarioCurso.TabIndex = 8;
-            this.btnNuevoUsuarioCurso.Text = "Agregar";
-            this.btnNuevoUsuarioCurso.UseVisualStyleBackColor = true;
-            this.btnNuevoUsuarioCurso.Click += new System.EventHandler(this.btnNuevoUsuarioCurso_Click);
+            this.btnAceptar.Location = new System.Drawing.Point(37, 595);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.TabIndex = 8;
+            this.btnAceptar.Text = "Agregar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(50, 131);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 15);
@@ -296,7 +313,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(509, 601);
+            this.ClientSize = new System.Drawing.Size(466, 630);
             this.Controls.Add(this.txtFechaFin);
             this.Controls.Add(this.txtFechaInicio);
             this.Controls.Add(this.label7);
@@ -305,13 +322,13 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtPuntuacion);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnNuevoUsuarioCurso);
+            this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cboCurso);
             this.Controls.Add(this.cboUsuarios);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblPrincipal);
             this.Name = "frmCursado";
             this.Text = " ";
             this.Load += new System.EventHandler(this.frmAvances_Load);
@@ -325,7 +342,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblPrincipal;
         private System.Windows.Forms.Button btnAgregarAvance;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -338,7 +355,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
         private System.Windows.Forms.Label lblInicio;
         private System.Windows.Forms.TextBox txtPorc;
         private System.Windows.Forms.Label lblPorcentaje;
-        private System.Windows.Forms.Button btnNuevoUsuarioCurso;
+        private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.DataGridView dgvAvances;
         private System.Windows.Forms.DataGridViewTextBoxColumn inicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn fin;
@@ -351,5 +368,6 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.MaskedTextBox txtFechaInicio;
         private System.Windows.Forms.MaskedTextBox txtFechaFin;
+        private System.Windows.Forms.Button btnSacarAvance;
     }
 }

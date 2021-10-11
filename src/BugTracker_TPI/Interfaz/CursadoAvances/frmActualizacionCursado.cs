@@ -115,16 +115,26 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
 
         private void btnActualizarAvance_Click(object sender, EventArgs e)
         {
-            frmCursado avances = new frmCursado();
+            frmCursado PantallaAvances = new frmCursado();
             UsuarioCurso usuarioCursoSelect = (UsuarioCurso) dgvUsuarioCurso.CurrentRow.DataBoundItem;
 
-            avances.ShowDialog();
+            //inicializamos la pantalla en modo actualización
+            PantallaAvances.inicializarTransaccion(frmCursado.FormMode.modificar, usuarioCursoSelect);
+
+            PantallaAvances.ShowDialog();
+
+            //se actualiza grilla
+            btnConsultar_Click(sender, e);
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            frmCursado avances = new frmCursado();
-            avances.ShowDialog();
+            frmCursado PantallaAvances = new frmCursado();
+            PantallaAvances.ShowDialog();
+
+
+            //se actualiza grilla
+            btnConsultar_Click(sender, e);
         }
     }
 }

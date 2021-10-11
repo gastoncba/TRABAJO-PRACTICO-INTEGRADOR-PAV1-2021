@@ -60,7 +60,7 @@ namespace BugTracker_TPI.Interfaz.Cursos
             dgvCursos.Columns[3].DataPropertyName = "Categoria";
 
             dgvCursos.Columns[4].Name = "Disponible";
-            dgvCursos.Columns[4].DataPropertyName = "Borrado";
+            dgvCursos.Columns[4].DataPropertyName = "Disponible";
 
             // Se cambia el tamaño de la altura de los encabezados de columna.
             dgvCursos.AutoResizeColumnHeadersHeight();

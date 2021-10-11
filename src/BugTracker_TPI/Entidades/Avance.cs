@@ -8,7 +8,7 @@ namespace BugTracker_TPI.Entidades
     {
         public DateTime Inicio { get; set; }
         public DateTime Fin { get; set; }
-        public Double Porcentaje { get; set; }
-
+        public int Porcentaje { get; set; }
+        public bool Verificado {get; set;}
     }
 }

@@ -21,9 +21,14 @@ namespace BugTracker_TPI.Negocio
             return usuarioCursoDao.filter(parametros);
         }
 
-        public bool grabar(UsuarioCurso usuarioCurso)
+        public bool agregar(UsuarioCurso usuarioCurso)
         {
-            return usuarioCursoDao.save(usuarioCurso);
+            return usuarioCursoDao.add(usuarioCurso);
+        }
+
+        public bool actualizar(UsuarioCurso usuarioCurso, object[] oldKeys, IList<Avance> eliminados)
+        {
+            return usuarioCursoDao.update(usuarioCurso, oldKeys, eliminados);
         }
     }
 }

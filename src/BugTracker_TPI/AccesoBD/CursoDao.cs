@@ -95,7 +95,7 @@ namespace BugTracker_TPI.AccesoBD
                     id_categoria = Convert.ToInt32(row["id_categoria"].ToString()),
                     nombre = row["categoria"].ToString(),
                 },
-                Borrado = disponible
+                Disponible = disponible
             };
             return oCurso;
         }

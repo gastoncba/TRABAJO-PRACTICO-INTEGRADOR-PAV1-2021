@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using BugTracker_TPI.Interfaz.Cursos;
 using BugTracker_TPI.Entidades;
 using BugTracker_TPI.Interfaz.Categorias;
-using BugTracker_TPI.Interfaz.Avances;
+using BugTracker_TPI.Interfaz.CursadoAvances;
 
 namespace BugTracker_TPI.Interfaz
 {
@@ -60,7 +60,7 @@ namespace BugTracker_TPI.Interfaz
 
         private void btnActualizacionAvances_Click(object sender, EventArgs e)
         {
-            frmActualizacionAvances frmAvances = new frmActualizacionAvances();
+            frmActualizacionCursado frmAvances = new frmActualizacionCursado();
             frmAvances.ShowDialog();
         }
     }
