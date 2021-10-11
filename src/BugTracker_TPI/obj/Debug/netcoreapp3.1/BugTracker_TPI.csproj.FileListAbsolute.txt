@@ -120,3 +120,4 @@ C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-I
 C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\obj\Debug\netcoreapp3.1\BugTracker_TPI.pdb
 C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\obj\Debug\netcoreapp3.1\BugTracker_TPI.genruntimeconfig.cache
 >>>>>>> 63b2f51b087ca0b3c04e73ad9a3fc567a4458aeb
+C:\Users\Almacen Informatico\Downloads\FACULTAD\PAV 1\TPI\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\obj\Debug\netcoreapp3.1\BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso.frmActObjXCurso.resources
