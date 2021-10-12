@@ -23,6 +23,9 @@
     <Compile Update="Interfaz\Objetivos\FormObjetivos.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Interfaz\Objetivos\FormObjetivosABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Interfaz\PantallaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>

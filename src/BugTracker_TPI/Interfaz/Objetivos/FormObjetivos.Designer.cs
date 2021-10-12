@@ -99,6 +99,7 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             this.btnEliminar.Size = new System.Drawing.Size(75, 70);
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // dgvObjetivos
             // 
@@ -120,6 +121,7 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             this.btnModificar.Size = new System.Drawing.Size(75, 70);
             this.btnModificar.TabIndex = 3;
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // cbIncluirBajas
             // 
@@ -140,6 +142,7 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             this.btnNuevo.Size = new System.Drawing.Size(75, 70);
             this.btnNuevo.TabIndex = 4;
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnConsultar
             // 

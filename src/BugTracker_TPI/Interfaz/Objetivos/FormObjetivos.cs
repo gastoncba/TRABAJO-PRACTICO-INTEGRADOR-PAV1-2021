@@ -119,5 +119,21 @@ namespace BugTracker_TPI.Interfaz.Objetivos
                 return;
             }
         }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            FormObjetivosABM formABM = new FormObjetivosABM();
+            formABM.ShowDialog();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

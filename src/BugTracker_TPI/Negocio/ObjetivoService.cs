@@ -26,6 +26,11 @@ namespace BugTracker_TPI.Negocio
                 return objetivoDao.filter(parametros);
             }
         }
-       
+
+        public bool crearObjetivo(Objetivo objetivo)
+        {
+            return objetivoDao.create(objetivo);
+        }
+
     }
 }
