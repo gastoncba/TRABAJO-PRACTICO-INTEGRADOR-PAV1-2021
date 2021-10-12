@@ -339,3 +339,6 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+src/.vs/BugTracker_TPI/v16/.suo
+src/BugTracker_TPI/obj/Debug/netcoreapp3.1/BugTracker_TPI.csproj.GenerateResource.cache
+*.cache
