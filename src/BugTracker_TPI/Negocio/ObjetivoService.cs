@@ -37,11 +37,10 @@ namespace BugTracker_TPI.Negocio
             return objetivoDao.update(objetivo);
         }
 
-        /**
+        
         public bool eliminarObjetivo(Objetivo objetivo)
         {
             return objetivoDao.delete(objetivo);
         }
-        **/
     }
 }

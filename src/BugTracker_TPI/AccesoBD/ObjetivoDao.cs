@@ -97,17 +97,18 @@ namespace BugTracker_TPI.AccesoBD
 
             return (DataManager.GetInstance().EjecutarSQL(sentencia_sql, parametros) == 1);
         }
-        /**
-        public bool delete(Curso curso)
+
+
+        public bool delete(Objetivo objetivo)
         {
-            String sentencia_sql = " UPDATE Cursos SET borrado = 1 WHERE id_curso = @id_curso";
+            String sentencia_sql = " UPDATE Objetivos SET borrado = 1 WHERE id_objetivo = @id_objetivo";
 
             var parametros = new Dictionary<string, object>();
-            parametros.Add("id_curso", curso.IdCurso);
+            parametros.Add("id_objetivo", objetivo.IdObjetivo);
 
             return (DataManager.GetInstance().EjecutarSQL(sentencia_sql, parametros) == 1);
         }
-         **/
+
 
 
     }

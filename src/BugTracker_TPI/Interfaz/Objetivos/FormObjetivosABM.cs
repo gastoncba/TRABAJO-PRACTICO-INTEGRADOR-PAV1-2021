@@ -115,7 +115,7 @@ namespace BugTracker_TPI.Interfaz.Objetivos
                                 this.Close();
                             } else
                             {
-                                MessageBox.Show("Error al registrar el objetivo!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("Error al registrar el objetivo!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
                         break;
@@ -133,17 +133,22 @@ namespace BugTracker_TPI.Interfaz.Objetivos
                                 this.Dispose();
                             } else
                             {
-                                MessageBox.Show("Error al actualizar el objetivo!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("Error al actualizar el objetivo!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
                         break;
                     }
                 case FormMode.eliminar:
                     {
-                        this.Text = "Eliminar Objetivo";
-                        getDatosObjetivoSelected();
-                        txtNC.Enabled = false;
-                        txtNL.Enabled = false;
+                        if(MessageBox.Show("Seguro que desa eliminar el objetivo seleccionado?", "Aviso",MessageBoxButtons.OKCancel,MessageBoxIcon.Question) == DialogResult.OK){
+                            if (oObjetivoService.eliminarObjetivo(oObjetivoSeleccionado)){
+                                MessageBox.Show("Objetivo eliminado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Close();
+                            } else
+                            {
+                                MessageBox.Show("Error al eliminar el objetivo!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                        }
                         break;
                     }
             }
