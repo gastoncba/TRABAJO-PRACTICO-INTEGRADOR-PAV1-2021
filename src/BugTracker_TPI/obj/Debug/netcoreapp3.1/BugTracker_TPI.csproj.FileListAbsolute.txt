@@ -86,3 +86,4 @@ C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-I
 C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\obj\Debug\netcoreapp3.1\BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso.frmActObjXCurso.resources
 C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\obj\Debug\netcoreapp3.1\BugTracker_TPI.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\obj\Debug\netcoreapp3.1\BugTracker_TPI.Interfaz.Objetivos.FormObjetivos.resources
+C:\Users\Nacho\OneDrive\Documentos\utn-facultad\PAVI\2021\TPs\TRABAJO-PRACTICO-INTEGRADOR-PAV1-2021\src\BugTracker_TPI\obj\Debug\netcoreapp3.1\BugTracker_TPI.csproj.CopyComplete
