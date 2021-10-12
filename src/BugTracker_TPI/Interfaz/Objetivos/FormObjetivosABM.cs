@@ -89,7 +89,7 @@ namespace BugTracker_TPI.Interfaz.Objetivos
 
             if (string.IsNullOrEmpty(txtNL.Text) || txtNL.Text.Length > 50)
             {
-                MessageBox.Show("Ingrese nombre corto, no mas de 50 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ingrese nombre largo, no mas de 100 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNL.Focus();
                 return false;
             }
@@ -122,9 +122,20 @@ namespace BugTracker_TPI.Interfaz.Objetivos
                     }
                 case FormMode.modificar:
                     {
-                        this.Text = "Modificar Objetivo";
-                        //se recuperan los datos de curso que se selecciono 
-                        getDatosObjetivoSelected();
+                        if (validarDatos())
+                        {
+                            oObjetivoSeleccionado.NombreCorto = txtNC.Text;
+                            oObjetivoSeleccionado.NombreLargo = txtNL.Text;
+
+                            if (oObjetivoService.actualizarObjetivo(oObjetivoSeleccionado))
+                            {
+                                MessageBox.Show("Se actualizo el objetivo!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Dispose();
+                            } else
+                            {
+                                MessageBox.Show("Error al actualizar el objetivo!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
                         break;
                     }
                 case FormMode.eliminar:

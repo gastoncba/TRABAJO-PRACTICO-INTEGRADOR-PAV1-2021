@@ -80,28 +80,24 @@ namespace BugTracker_TPI.AccesoBD
 
         }
 
-        /**
-        public bool update(Curso curso)
+        
+        public bool update(Objetivo objetivo)
         {
 
-            String sentencia_sql = string.Concat("UPDATE Cursos ",
+            String sentencia_sql = string.Concat("UPDATE Objetivos ",
                                                  "SET ", 
-                                                 "nombre = @nombre, ", 
-                                                 "descripcion = @descripcion, ",
-                                                 "fecha_vigencia = @fecha_vigencia, ", 
-                                                 "id_categoria = @id_categoria ",
-                                                 "WHERE id_curso = @id_curso"); 
+                                                 "nombre_corto = @nombre_corto, ", 
+                                                 "nombre_largo = @nombre_largo ",
+                                                 "WHERE id_objetivo = @id_objetivo"); 
 
             var parametros = new Dictionary<string, object>();
-            parametros.Add("id_curso", curso.IdCurso);
-            parametros.Add("nombre", curso.NombreCurso);
-            parametros.Add("descripcion", curso.Descripcion);
-            parametros.Add("fecha_vigencia", curso.FechaVigencia);
-            parametros.Add("id_categoria", curso.Categoria.id_categoria);
+            parametros.Add("id_objetivo", objetivo.IdObjetivo);
+            parametros.Add("nombre_corto", objetivo.NombreCorto);
+            parametros.Add("nombre_largo", objetivo.NombreLargo);
 
             return (DataManager.GetInstance().EjecutarSQL(sentencia_sql, parametros) == 1);
         }
-
+        /**
         public bool delete(Curso curso)
         {
             String sentencia_sql = " UPDATE Cursos SET borrado = 1 WHERE id_curso = @id_curso";

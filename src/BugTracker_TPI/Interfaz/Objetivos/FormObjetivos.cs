@@ -124,16 +124,29 @@ namespace BugTracker_TPI.Interfaz.Objetivos
         {
             FormObjetivosABM formABM = new FormObjetivosABM();
             formABM.ShowDialog();
+
+            //se actualiza la grilla
+            btnConsultar_Click(sender, e);
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            FormObjetivosABM formABM = new FormObjetivosABM();
+            Objetivo objetivoSelected = (Objetivo)dgvObjetivos.CurrentRow.DataBoundItem;
+            formABM.InicializarFormulario(FormObjetivosABM.FormMode.modificar, objetivoSelected);
+            formABM.ShowDialog();
 
+            btnConsultar_Click(sender, e);
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            FormObjetivosABM formABM = new FormObjetivosABM();
+            Objetivo objetivoSelected = (Objetivo)dgvObjetivos.CurrentRow.DataBoundItem;
+            formABM.InicializarFormulario(FormObjetivosABM.FormMode.eliminar, objetivoSelected);
+            formABM.ShowDialog();
 
+            btnConsultar_Click(sender, e);
         }
     }
 }
