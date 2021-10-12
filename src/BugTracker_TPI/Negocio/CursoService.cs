@@ -27,6 +27,8 @@ namespace BugTracker_TPI.Negocio
             }
         }
 
+        
+
         public bool crearCurso(Curso curso)
         {
             return cursoDao.create(curso);
@@ -45,6 +47,13 @@ namespace BugTracker_TPI.Negocio
         public bool existeCurso(String cursoNombre)
         {
             return cursoDao.exist(cursoNombre);
+        }
+
+
+
+        public IList<Curso> obtenerTodas()
+        {
+            return cursoDao.obtenerCursos();
         }
     }
 

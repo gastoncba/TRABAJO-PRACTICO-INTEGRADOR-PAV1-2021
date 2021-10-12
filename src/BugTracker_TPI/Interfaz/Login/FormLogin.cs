@@ -56,6 +56,7 @@ namespace BugTracker_TPI
                 //si esta todo OK, lo que se hace cerrar el login 
                 this.Hide();
                 PantallaPrincipal pantalla = new PantallaPrincipal(UsuarioLogueado);
+
                 pantalla.Show();
 
 

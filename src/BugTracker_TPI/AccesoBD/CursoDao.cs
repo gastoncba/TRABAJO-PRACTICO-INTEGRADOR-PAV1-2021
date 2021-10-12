@@ -138,5 +138,39 @@ namespace BugTracker_TPI.AccesoBD
             return (DataManager.GetInstance().EjecutarSQL(sentencia_sql, parametros) == 1);
         }
 
+
+
+
+
+
+        public IList<Curso> obtenerCursos()
+        {
+            List<Curso> listadoCursos = new List<Curso>();
+
+            var strSql = "SELECT * FROM Cursos where borrado=0";
+
+            var resultadoConsulta = DataManager.GetInstance().ConsultaSQL(strSql);
+
+            foreach (DataRow row in resultadoConsulta.Rows)
+            {
+                listadoCursos.Add(ObjectMapping2(row));
+            }
+
+            return listadoCursos;
+        }
+
+        public Curso ObjectMapping2(DataRow row)
+        { 
+            Curso oCurso = new Curso
+            {
+                IdCurso = Convert.ToInt32(row["id_curso"].ToString()),
+                NombreCurso = row["nombre"].ToString(),
+                Descripcion = row["descripcion"].ToString(),
+                FechaVigencia = Convert.ToDateTime(row["fecha_vigencia"].ToString()),
+                
+            };
+            return oCurso;
+        }
+
     }
 }

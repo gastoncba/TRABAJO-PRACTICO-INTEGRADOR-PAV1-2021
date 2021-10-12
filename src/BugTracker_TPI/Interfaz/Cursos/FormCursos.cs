@@ -180,5 +180,10 @@ namespace BugTracker_TPI.Interfaz.Cursos
 
             
         }
+
+        private void cboCategorias_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

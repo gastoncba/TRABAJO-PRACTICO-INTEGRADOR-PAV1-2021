@@ -37,12 +37,15 @@ namespace BugTracker_TPI.Interfaz
             this.lblUsuario = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnObjCurso = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnCursos = new System.Windows.Forms.Button();
             this.btnCategorias = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -110,6 +113,7 @@ namespace BugTracker_TPI.Interfaz
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.button3);
             this.panel3.Controls.Add(this.btnCursos);
             this.panel3.Controls.Add(this.btnCategorias);
@@ -118,6 +122,29 @@ namespace BugTracker_TPI.Interfaz
             this.panel3.Size = new System.Drawing.Size(483, 347);
             this.panel3.TabIndex = 1;
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btnObjCurso);
+            this.panel4.Location = new System.Drawing.Point(0, 186);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(480, 161);
+            this.panel4.TabIndex = 3;
+            // 
+            // btnObjCurso
+            // 
+            this.btnObjCurso.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnObjCurso.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnObjCurso.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnObjCurso.Image = ((System.Drawing.Image)(resources.GetObject("btnObjCurso.Image")));
+            this.btnObjCurso.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnObjCurso.Location = new System.Drawing.Point(14, 19);
+            this.btnObjCurso.Name = "btnObjCurso";
+            this.btnObjCurso.Size = new System.Drawing.Size(452, 42);
+            this.btnObjCurso.TabIndex = 4;
+            this.btnObjCurso.Text = "Actualizacion de objetivo de curso";
+            this.btnObjCurso.UseVisualStyleBackColor = false;
+            this.btnObjCurso.Click += new System.EventHandler(this.btnObjCurso_Click);
+            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -125,12 +152,13 @@ namespace BugTracker_TPI.Interfaz
             this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(60, 233);
+            this.button3.Location = new System.Drawing.Point(14, 128);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(347, 60);
+            this.button3.Size = new System.Drawing.Size(452, 42);
             this.button3.TabIndex = 2;
             this.button3.Text = "Objetivos";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnCursos
             // 
@@ -139,9 +167,9 @@ namespace BugTracker_TPI.Interfaz
             this.btnCursos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCursos.Image = ((System.Drawing.Image)(resources.GetObject("btnCursos.Image")));
             this.btnCursos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCursos.Location = new System.Drawing.Point(60, 121);
+            this.btnCursos.Location = new System.Drawing.Point(14, 74);
             this.btnCursos.Name = "btnCursos";
-            this.btnCursos.Size = new System.Drawing.Size(347, 60);
+            this.btnCursos.Size = new System.Drawing.Size(452, 39);
             this.btnCursos.TabIndex = 1;
             this.btnCursos.Text = "Cursos";
             this.btnCursos.UseVisualStyleBackColor = false;
@@ -154,9 +182,9 @@ namespace BugTracker_TPI.Interfaz
             this.btnCategorias.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCategorias.Image = ((System.Drawing.Image)(resources.GetObject("btnCategorias.Image")));
             this.btnCategorias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCategorias.Location = new System.Drawing.Point(60, 19);
+            this.btnCategorias.Location = new System.Drawing.Point(14, 15);
             this.btnCategorias.Name = "btnCategorias";
-            this.btnCategorias.Size = new System.Drawing.Size(347, 60);
+            this.btnCategorias.Size = new System.Drawing.Size(452, 40);
             this.btnCategorias.TabIndex = 0;
             this.btnCategorias.Text = "Categorias";
             this.btnCategorias.UseVisualStyleBackColor = false;
@@ -182,6 +210,7 @@ namespace BugTracker_TPI.Interfaz
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -198,5 +227,7 @@ namespace BugTracker_TPI.Interfaz
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnObjCurso;
     }
 }
