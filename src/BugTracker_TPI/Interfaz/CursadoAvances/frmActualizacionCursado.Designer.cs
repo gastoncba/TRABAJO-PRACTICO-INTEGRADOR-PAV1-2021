@@ -40,6 +40,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.btnConsultar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.lblTotalCursados = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarioCurso)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,9 +102,9 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.btnActualizarAvance.Enabled = false;
             this.btnActualizarAvance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizarAvance.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizarAvance.Image")));
-            this.btnActualizarAvance.Location = new System.Drawing.Point(120, 288);
+            this.btnActualizarAvance.Location = new System.Drawing.Point(130, 280);
             this.btnActualizarAvance.Name = "btnActualizarAvance";
-            this.btnActualizarAvance.Size = new System.Drawing.Size(61, 61);
+            this.btnActualizarAvance.Size = new System.Drawing.Size(65, 69);
             this.btnActualizarAvance.TabIndex = 6;
             this.btnActualizarAvance.UseVisualStyleBackColor = true;
             this.btnActualizarAvance.Click += new System.EventHandler(this.btnActualizarAvance_Click);
@@ -122,9 +123,9 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             // 
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.Location = new System.Drawing.Point(54, 288);
+            this.btnNuevo.Location = new System.Drawing.Point(54, 280);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(60, 61);
+            this.btnNuevo.Size = new System.Drawing.Size(70, 69);
             this.btnNuevo.TabIndex = 8;
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
@@ -139,12 +140,25 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.lblTotalCursados.Text = "Total";
             this.lblTotalCursados.Visible = false;
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Enabled = false;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.Location = new System.Drawing.Point(201, 280);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 69);
+            this.btnEliminar.TabIndex = 10;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // frmActualizacionCursado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(683, 361);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.lblTotalCursados);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnConsultar);
@@ -176,5 +190,6 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Label lblTotalCursados;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }

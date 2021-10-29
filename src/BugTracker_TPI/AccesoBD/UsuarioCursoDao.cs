@@ -77,7 +77,6 @@ namespace BugTracker_TPI.AccesoBD
             avance.Inicio = Convert.ToDateTime(row["inicio"].ToString());
             avance.Fin = Convert.ToDateTime(row["fin"].ToString());
             avance.Porcentaje = Convert.ToInt32(row["porc_avance"].ToString());
-            avance.Verificado = true;
 
             return avance;
         }
@@ -185,46 +184,40 @@ namespace BugTracker_TPI.AccesoBD
             return flag;
         }
 
-        public bool update(UsuarioCurso usuarioCurso, object[] oldKeys, IList<Avance> eliminados)
+        public bool update(UsuarioCurso usuarioCurso, IList<Avance> eliminados)
         {
             SqlTransaction transaccion = null;
             SqlConnection cnn = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = BugTracker; Integrated Security = True");
 
-            int IdUsuario = (int) oldKeys[0];
-            int IdCurso = (int)oldKeys[1];
-
             bool flag = true;
-            String updateCursada = string.Concat("UPDATE UsuariosCurso SET id_usuario = @id_usuario, id_curso = @id_curso, ",
+            String updateCursada = string.Concat("UPDATE UsuariosCurso SET ",
                                             "puntuacion = @puntuacion, observaciones = @observaciones, ",
-                                            "fecha_inicio = @fecha_inicio, fecha_fin = @fecha_fin ",
-                                            "WHERE id_usuario = @IdUsuario AND ",
-                                            "id_curso = @IdCurso");
-
-
-            String deleteCursadaAvances = string.Concat("DELETE UsuariosCursoAvance WHERE id_usuario = @IdUsuario AND id_curso = @IdCurso and inicio = @inicio");
-                                                   
-
-            string insertCursadaAvances = string.Concat("INSERT INTO UsuariosCursoAvance (id_usuario, id_curso, inicio, fin, porc_avance) VALUES (@id_usuario, @id_curso, @inicio, @fin, @porc_avance)");
+                                            "WHERE id_usuario = @id_usuario AND ",
+                                            "id_curso = @id_curso");
 
             try
             {
                 cnn.Open();
                 transaccion = cnn.BeginTransaction();
 
-                foreach (Avance a in usuarioCurso.avances)
-                {
-                    Avance av = a;
-                    SqlCommand cmd = new SqlCommand(deleteCursadaAvances, cnn, transaccion);
+                SqlCommand cmdMaestro = new SqlCommand(updateCursada, cnn, transaccion);
 
+                cmdMaestro.Parameters.AddWithValue("@id_usuario", usuarioCurso.Usuario.IdUsuario);
+                cmdMaestro.Parameters.AddWithValue("@id_curso", usuarioCurso.Curso.IdCurso);
+                cmdMaestro.Parameters.AddWithValue("@puntuacion", usuarioCurso.Puntuacion);
+                cmdMaestro.Parameters.AddWithValue("@observaciones", usuarioCurso.Observaciones);
+
+                foreach(Avance av in usuarioCurso.avances)
+                {
+                    SqlCommand cmd = new SqlCommand("DELETE FROM UsuariosCursoAvance where id_usuario = @id_usuario AND id_curso = @id_curso AND inicio = @inicio", cnn, transaccion);
                     cmd.Transaction = transaccion;
-                    cmd.Parameters.AddWithValue("@IdUsuario", IdUsuario);
-                    cmd.Parameters.AddWithValue("@IdCurso", IdCurso);
+                    cmd.Parameters.AddWithValue("@id_usuario", usuarioCurso.Usuario.IdUsuario);
+                    cmd.Parameters.AddWithValue("@id_curso", usuarioCurso.Curso.IdCurso);
                     cmd.Parameters.AddWithValue("@inicio", av.Inicio);
 
                     cmd.ExecuteNonQuery();
 
-                    SqlCommand cmd2 = new SqlCommand(insertCursadaAvances, cnn, transaccion);
-
+                    SqlCommand cmd2= new SqlCommand("INSERT INTO UsuariosCursoAvance (id_usuario, id_curso, inicio, fin, porc_avance) VALUES (@id_usuario, @id_curso, @inicio, @fin, @porc_avance)", cnn, transaccion);
                     cmd2.Transaction = transaccion;
                     cmd2.Parameters.AddWithValue("@id_usuario", usuarioCurso.Usuario.IdUsuario);
                     cmd2.Parameters.AddWithValue("@id_curso", usuarioCurso.Curso.IdCurso);
@@ -235,36 +228,69 @@ namespace BugTracker_TPI.AccesoBD
                     cmd2.ExecuteNonQuery();
                 }
 
-                //verificamo si hay eliminados 
+                //verificamos si hay eliminados 
                 foreach(Avance del in eliminados)
                 {
-                    SqlCommand cmd = new SqlCommand("DELETE FROM UsuariosCursoAvance WHERE id_usuario = @id_usuario AND id_curso = @id_curso AND inicio = @inicio", cnn, transaccion);
-                    cmd.Transaction = transaccion;
-                    cmd.Parameters.AddWithValue("@id_usuario", usuarioCurso.Usuario.IdUsuario);
-                    cmd.Parameters.AddWithValue("@id_curso", usuarioCurso.Curso.IdCurso);
-                    cmd.Parameters.AddWithValue("@inicio", del.Inicio);
+                    SqlCommand cmd3 = new SqlCommand("DELETE FROM UsuariosCursoAvance WHERE id_usuario = @id_usuario AND id_curso = @id_curso AND inicio = @inicio", cnn, transaccion);
+                    cmd3.Transaction = transaccion;
+                    cmd3.Parameters.AddWithValue("@id_usuario", usuarioCurso.Usuario.IdUsuario);
+                    cmd3.Parameters.AddWithValue("@id_curso", usuarioCurso.Curso.IdCurso);
+                    cmd3.Parameters.AddWithValue("@inicio", del.Inicio);
 
-                    cmd.ExecuteNonQuery();
+                    cmd3.ExecuteNonQuery();
                 }
-
-                SqlCommand cmdMaestro = new SqlCommand(updateCursada, cnn, transaccion);
-
-                cmdMaestro.Parameters.AddWithValue("@id_usuario", usuarioCurso.Usuario.IdUsuario);
-                cmdMaestro.Parameters.AddWithValue("@id_curso", usuarioCurso.Curso.IdCurso);
-                cmdMaestro.Parameters.AddWithValue("@puntuacion", usuarioCurso.Puntuacion);
-                cmdMaestro.Parameters.AddWithValue("@observaciones", usuarioCurso.Observaciones);
-                cmdMaestro.Parameters.AddWithValue("@fecha_inicio", usuarioCurso.FechaInicio);
-                cmdMaestro.Parameters.AddWithValue("@fecha_fin", usuarioCurso.FechaFin);
-
-                cmdMaestro.Parameters.AddWithValue("@IdUsuario", IdUsuario);
-                cmdMaestro.Parameters.AddWithValue("@IdCurso", IdCurso);
-
-                cmdMaestro.ExecuteNonQuery();
 
                 transaccion.Commit();
 
             }
             catch (SqlException e)
+            {
+                transaccion.Rollback();
+                flag = false;
+            }
+            finally
+            {
+                if (cnn != null && cnn.State == ConnectionState.Open)
+                    cnn.Close();
+
+            }
+
+            return flag;
+        }
+
+        public bool delete(UsuarioCurso usuarioCurso)
+        {
+            SqlTransaction transaccion = null;
+            SqlConnection cnn = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = BugTracker; Integrated Security = True");
+
+            bool flag = true;
+
+            try
+            {
+                cnn.Open();
+                transaccion = cnn.BeginTransaction();
+
+                //primero eliminamos los avances
+                foreach (Avance av in usuarioCurso.avances)
+                {
+                    SqlCommand cmd = new SqlCommand("DELETE FROM UsuariosCursoAvance WHERE id_usuario = @id_usuario AND id_curso = @id_curso AND inicio = @inicio", cnn, transaccion);
+                    cmd.Transaction = transaccion;
+                    cmd.Parameters.AddWithValue("@id_usuario", usuarioCurso.Usuario.IdUsuario);
+                    cmd.Parameters.AddWithValue("@id_curso", usuarioCurso.Curso.IdCurso);
+                    cmd.Parameters.AddWithValue("@inicio", av.Inicio);
+                    cmd.ExecuteNonQuery();
+                }
+
+                //despues eliminamos la cursada
+                SqlCommand cmdMaestro = new SqlCommand("DELETE FROM UsuariosCurso WHERE id_usuario = @id_usuario and id_curso = @id_curso", cnn, transaccion);
+                cmdMaestro.Parameters.AddWithValue("@id_usuario", usuarioCurso.Usuario.IdUsuario);
+                cmdMaestro.Parameters.AddWithValue("@id_curso", usuarioCurso.Curso.IdCurso);
+                cmdMaestro.ExecuteNonQuery();
+
+                transaccion.Commit();
+
+            }
+            catch (SqlException)
             {
                 transaccion.Rollback();
                 flag = false;

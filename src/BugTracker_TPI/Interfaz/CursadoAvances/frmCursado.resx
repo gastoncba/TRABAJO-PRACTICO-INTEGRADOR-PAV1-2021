@@ -61,7 +61,7 @@
   <data name="btnSacarAvance.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        6gAAAOoB+Ss1JgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAP/SURBVFhHrVdJ
+        5wAAAOcB8BtYtQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAP/SURBVFhHrVdJ
         b9NQEM6d7cj6L0BAOQBiKUuTtqKtKJRNcIED2wkJURYhAT8ADkgg9QYHJCSubGKpCN2AtomdPD/baUvE
         UlEgaagoYph5tpPn5DlxSkf6xKs975sPz7x5k0i9lkqNrzRZJsaZddYw7G4CrTnPROmd6za/Ztv2cgxy
         mRu2joCqYLaGYi5ZlrXM3T53+/Th0wIkO4fEP+QgBrOApTmkUyb+a/oFlDCNom9wzpe4dPUZY3YDkmTL
@@ -91,16 +91,13 @@
   <metadata name="porc.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="btnAceptar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        6gAAAOoB+Ss1JgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAE0SURBVFhH7Zcx
-        TsNAEEVduUllKFMFSiSQq+ArQBFOgZA5QTgAAaUNSkHBYbgK5BrL/EGDzGZg15sxEsp+6RX2Tv58WxNp
-        XGR1VBKPxIZwRrwTDwS8g0KhZmLBgggKad3tunHL1wsT2qdGAsA7KC7WjHZBfNEgpKEDgF9nIjrA0dkB
-        o535iK+HOhN8qJn4pNTevJy7q7sTuVZnorepduYjtQgA5JrYEh9oJj4ptTlAUgBMutyPZXJaffOQ+38X
-        wPt7yv2kAD+RUpsD5ACmAY7rQ0Y78xFf0wB9EN9/EYBXMqxRmlEK7eqz4agqowJgSegWmFFfjqMCYE1C
-        CH4TFuDJ0fz6eRoVwBcXyg+tEF80CInfBNYozSiF2fxrJXtDg5AGmwningjKfCYIPDmaR32q7YOK4gOR
-        SG1ri5DqDQAAAABJRU5ErkJggg==
-</value>
-  </data>
+  <metadata name="inicio.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="fin.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="porc.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

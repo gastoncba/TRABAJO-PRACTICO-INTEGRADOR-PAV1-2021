@@ -78,16 +78,43 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
 
                         obtenerDatosCursadoSeleccionado();
 
-                        cboUsuarios.Enabled = true;
-                        cboCurso.Enabled = true;
-                        txtPuntuacion.Enabled = true;
-                        txtObser.Enabled = true;
-                        txtFechaInicio.Enabled = true;
-                        txtFechaFin.Enabled = true;
+                        //info del cursado del usuario 
+                        cboUsuarios.Enabled = false;
+                        cboCurso.Enabled = false;
+                        txtPuntuacion.Enabled = false;
+                        txtObser.Enabled = false;
+                        txtFechaInicio.Enabled = false;
+                        txtFechaFin.Enabled = false;
 
+                        //info de los avances
                         txtInicioAvance.Enabled = true;
                         txtFinAvance.Enabled = true;
                         txtPorc.Enabled = true;
+                        break;
+                    }
+                case FormMode.eliminar:
+                    {
+                        this.Text = "Eliminar Cursado";
+                        lblPrincipal.Text = "Eliminar Cursado";
+
+                        obtenerDatosCursadoSeleccionado();
+
+                        //info del cursado del usuario 
+                        cboUsuarios.Enabled = false;
+                        cboCurso.Enabled = false;
+                        txtPuntuacion.Enabled = false;
+                        txtObser.Enabled = false;
+                        txtFechaInicio.Enabled = false;
+                        txtFechaFin.Enabled = false;
+
+                        //info de los avances
+                        txtInicioAvance.Enabled = false;
+                        txtFinAvance.Enabled = false;
+                        txtPorc.Enabled = false;
+
+                        btnAgregarAvance.Enabled = false;
+                        btnSacarAvance.Enabled = false;
+
                         break;
                     }
 
@@ -139,7 +166,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
                 {
                     Inicio = Convert.ToDateTime(txtInicioAvance.Text),
                     Fin = Convert.ToDateTime(txtFinAvance.Text),
-                    Porcentaje = Convert.ToInt32(txtPorc.Text)
+                    Porcentaje = Convert.ToDouble(txtPorc.Text)
                 };
 
                 //agreamos el avance al objeto usuario curso
@@ -147,13 +174,11 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
                 {
                     case FormMode.nuevo:
                         {
-                            avanceDetail.Verificado = true;
                             usuarioCurso.agregarAvance(avanceDetail);
                             break;
                         }
                     case FormMode.modificar:
                         {
-                            avanceDetail.Verificado = false;
                             cursadoSelect.agregarAvance(avanceDetail);
                             break;
                         }
@@ -189,6 +214,18 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             }
         }
 
+        private bool verificarFechasAvance(DateTime fecha)
+        {
+            foreach (DataGridViewRow row in dgvAvances.Rows)
+            {
+                DateTime fin = (DateTime) row.Cells["fin"].Value;
+
+                if (fecha <= fin)
+                    return false;
+            }
+            return true;
+        }
+
         private bool ExisteAvanceEnGrilla(DateTime inicio)
         {
             foreach (DataGridViewRow row in dgvAvances.Rows)
@@ -217,12 +254,17 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
                         modificarCursado();
                         break;
                     }
+                case FormMode.eliminar:
+                    {
+                        eliminarCursado();
+                        break;
+                    }
             }
         }
 
         private void agregarCursado()
         {
-            if(validarCampos())
+            if(validarCamposCursado())
             {
                 //completamos los atriutos del objeto usuarioCurso
                 usuarioCurso.Usuario = (Usuario)cboUsuarios.SelectedItem;
@@ -248,14 +290,10 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
 
         private void modificarCursado()
         {
-            if(validarCampos())
+            if(validarCamposCursado())
             {
-                //se guardan los viejas keys del cursado  asi se pueden buscar
-                //ya que tambien vamos a reemplazar las keys 
 
-                Object[] oldKeys = { cursadoSelect.Usuario.IdUsuario, cursadoSelect.Curso.IdCurso};
-
-                //seteamos los atributos el  cursado o "usuariosCurso" seleccionado
+                //seteamos los atributos del cursado o "usuariosCurso" seleccionado
                 cursadoSelect.Usuario = (Usuario)cboUsuarios.SelectedItem;
                 cursadoSelect.Curso = (Curso)cboCurso.SelectedItem;
                 cursadoSelect.Puntuacion = Convert.ToInt32(txtPuntuacion.Text);
@@ -263,7 +301,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
                 cursadoSelect.FechaInicio = Convert.ToDateTime(txtFechaInicio.Text);
                 cursadoSelect.FechaFin = Convert.ToDateTime(txtFechaFin.Text);
 
-                if (usuarioCursoService.actualizar(cursadoSelect, oldKeys, eliminados))
+                if (usuarioCursoService.actualizar(cursadoSelect, eliminados))
                 {
                     MessageBox.Show("Cursado de usuario actiualizado con éxito!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Dispose();
@@ -275,56 +313,87 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             }
         }
 
+        private void eliminarCursado()
+        {
+            if (usuarioCursoService.eliminar(cursadoSelect))
+            {
+                MessageBox.Show("Cursado de usuario eliminado con éxito!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Dispose();
+            }
+            else
+            {
+                MessageBox.Show("Error al intentar eliminar el cursado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private bool validarCamposAvances()
         {
             //primero verificamos si los tres parametros fueron ingresador de manera correcta
             DateTime fechaInicioAvance;
             DateTime fechaFinAvance;
-            int porc;
+            double porc;
 
-            if(validarCampos())
+            //se calcula el porcentaje actual
+            double porcentajeActualDeCursado = cursadoSelect.calcularPorcentajeActual();
+
+
+            if (!DateTime.TryParse(txtInicioAvance.Text, out fechaInicioAvance) || !DateTime.TryParse(txtFinAvance.Text, out fechaFinAvance) || string.IsNullOrEmpty(txtPorc.Text))
             {
-                if (!DateTime.TryParse(txtInicioAvance.Text, out fechaInicioAvance) || !DateTime.TryParse(txtFinAvance.Text, out fechaFinAvance) || string.IsNullOrEmpty(txtPorc.Text))
-                {
-                    MessageBox.Show("Ingrese todos los campos requeridos para los avances", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return false;
-                }
-
-                if (fechaInicioAvance >= fechaFinAvance)
-                {
-                    MessageBox.Show("La fecha fin del avance debe ser mayor a la fecha de inicio", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return false;
-                }
-
-                if (!int.TryParse(txtPorc.Text, out porc))
-                {
-                    MessageBox.Show("El porcentaje debe ser un entero", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return false;
-                }
-
-                DateTime InicialCursado = Convert.ToDateTime(txtFechaInicio.Text);
-                DateTime FinalCursado = Convert.ToDateTime(txtFechaFin.Text);
-
-                if(!(fechaInicioAvance>=InicialCursado && fechaFinAvance<=FinalCursado))
-                {
-                    MessageBox.Show("Fechas de avance fuera de rango", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return false;
-                }
-
-                //aca verificamos si existe un avance con la fecha de inicio 
-                if (ExisteAvanceEnGrilla(Convert.ToDateTime(txtInicioAvance.Text)))
-                {
-                    MessageBox.Show("Ya hay un avance con esa fecha de inicio", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return false;
-                }
-
-                return true;
+                MessageBox.Show("Ingrese todos los campos requeridos para los avances", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
 
-            return false;
+            if (fechaInicioAvance >= fechaFinAvance)
+            {
+                MessageBox.Show("La fecha fin del avance debe ser mayor a la fecha de inicio", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (!double.TryParse(txtPorc.Text, out porc))
+            {
+                MessageBox.Show("ingrese un porcentaje", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            DateTime InicialCursado = Convert.ToDateTime(txtFechaInicio.Text);
+            DateTime FinalCursado = Convert.ToDateTime(txtFechaFin.Text);
+
+            if (!(fechaInicioAvance >= InicialCursado && fechaFinAvance <= FinalCursado))
+            {
+                MessageBox.Show("Fechas de avance fuera de rango", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (cursadoSelect.estaCompletado())
+            {
+                MessageBox.Show("Este curso ya se encuentra completado", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if ((porcentajeActualDeCursado + porc) > 100.0)
+            {
+                MessageBox.Show("Debe ingresar un porcentaje que no supere el 100%", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            //aca verificamos si existe un avance con la fecha de inicio 
+            if (ExisteAvanceEnGrilla(Convert.ToDateTime(txtInicioAvance.Text)))
+            {
+                MessageBox.Show("Ya hay un avance con esa fecha de inicio", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (!verificarFechasAvance(fechaInicioAvance))
+            {
+                MessageBox.Show("Rango de periodo de avance no valido", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            return true;
+
         }
 
-        private bool validarCampos()
+        private bool validarCamposCursado()
         {
             DateTime fechaInicio;
             DateTime fechaFin;
@@ -391,6 +460,11 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
 
             btnSacarAvance.Enabled = true;
 
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

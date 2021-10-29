@@ -26,9 +26,14 @@ namespace BugTracker_TPI.Negocio
             return usuarioCursoDao.add(usuarioCurso);
         }
 
-        public bool actualizar(UsuarioCurso usuarioCurso, object[] oldKeys, IList<Avance> eliminados)
+        public bool actualizar(UsuarioCurso usuarioCurso, IList<Avance> eliminados)
         {
-            return usuarioCursoDao.update(usuarioCurso, oldKeys, eliminados);
+            return usuarioCursoDao.update(usuarioCurso, eliminados);
+        }
+
+        public bool eliminar(UsuarioCurso usuarioCurso)
+        {
+            return usuarioCursoDao.delete(usuarioCurso);
         }
     }
 }

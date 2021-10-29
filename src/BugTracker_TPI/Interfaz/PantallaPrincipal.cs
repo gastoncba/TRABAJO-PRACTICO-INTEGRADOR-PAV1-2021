@@ -16,7 +16,7 @@ namespace BugTracker_TPI.Interfaz
 {
     public partial class PantallaPrincipal : Form
     {
-        public bool exit = false;
+        //public bool exit = false;
 
         public PantallaPrincipal(string usuario)
         {
@@ -32,16 +32,14 @@ namespace BugTracker_TPI.Interfaz
 
         private void PantallaPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (exit == false)
-            {
+            
                 DialogResult rpta = MessageBox.Show("Seguro que desea salir?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (rpta == DialogResult.Yes)
                 {
-                    exit = true;
                     e.Cancel = false;
                     Application.Exit();
                 }
-            }
+            
         }
 
         private void cursosToolStripMenuItem_Click(object sender, EventArgs e)
