@@ -29,6 +29,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCategoriaABMC));
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
@@ -41,10 +42,11 @@ namespace BugTracker_TPI.Interfaz.Categorias
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNombre.Location = new System.Drawing.Point(53, 49);
+            this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.lblNombre.Location = new System.Drawing.Point(40, 32);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(77, 23);
+            this.lblNombre.Size = new System.Drawing.Size(62, 19);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre:";
             // 
@@ -52,20 +54,22 @@ namespace BugTracker_TPI.Interfaz.Categorias
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblDescripcion.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDescripcion.Location = new System.Drawing.Point(28, 114);
+            this.lblDescripcion.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.lblDescripcion.Location = new System.Drawing.Point(21, 74);
+            this.lblDescripcion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(102, 23);
+            this.lblDescripcion.Size = new System.Drawing.Size(82, 19);
             this.lblDescripcion.TabIndex = 2;
             this.lblDescripcion.Text = "Descripción:";
             // 
             // btnAceptar
             // 
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnAceptar.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAceptar.Location = new System.Drawing.Point(146, 165);
+            this.btnAceptar.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.btnAceptar.Location = new System.Drawing.Point(110, 107);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(94, 29);
+            this.btnAceptar.Size = new System.Drawing.Size(70, 19);
             this.btnAceptar.TabIndex = 4;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -74,10 +78,11 @@ namespace BugTracker_TPI.Interfaz.Categorias
             // btnCancelar
             // 
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCancelar.Location = new System.Drawing.Point(268, 165);
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.btnCancelar.Location = new System.Drawing.Point(201, 107);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(94, 29);
+            this.btnCancelar.Size = new System.Drawing.Size(70, 19);
             this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -85,30 +90,34 @@ namespace BugTracker_TPI.Interfaz.Categorias
             // 
             // txtCatNueva
             // 
-            this.txtCatNueva.Location = new System.Drawing.Point(146, 45);
+            this.txtCatNueva.Location = new System.Drawing.Point(110, 29);
+            this.txtCatNueva.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCatNueva.Name = "txtCatNueva";
-            this.txtCatNueva.Size = new System.Drawing.Size(216, 27);
+            this.txtCatNueva.Size = new System.Drawing.Size(163, 20);
             this.txtCatNueva.TabIndex = 6;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(146, 110);
+            this.txtDescripcion.Location = new System.Drawing.Point(110, 71);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(216, 27);
+            this.txtDescripcion.Size = new System.Drawing.Size(163, 20);
             this.txtDescripcion.TabIndex = 7;
             // 
             // frmCategoriaABMC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(413, 206);
+            this.ClientSize = new System.Drawing.Size(310, 134);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtCatNueva);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblNombre);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmCategoriaABMC";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCategoriaABMC";

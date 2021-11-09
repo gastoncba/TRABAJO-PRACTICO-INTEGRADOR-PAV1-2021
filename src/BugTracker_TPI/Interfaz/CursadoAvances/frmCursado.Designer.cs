@@ -66,8 +66,8 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             // lblPrincipal
             // 
             this.lblPrincipal.AutoSize = true;
-            this.lblPrincipal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblPrincipal.Location = new System.Drawing.Point(180, 9);
+            this.lblPrincipal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblPrincipal.Location = new System.Drawing.Point(154, 8);
             this.lblPrincipal.Name = "lblPrincipal";
             this.lblPrincipal.Size = new System.Drawing.Size(127, 21);
             this.lblPrincipal.TabIndex = 0;
@@ -75,9 +75,9 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             // 
             // btnAgregarAvance
             // 
-            this.btnAgregarAvance.Location = new System.Drawing.Point(204, 62);
+            this.btnAgregarAvance.Location = new System.Drawing.Point(175, 54);
             this.btnAgregarAvance.Name = "btnAgregarAvance";
-            this.btnAgregarAvance.Size = new System.Drawing.Size(115, 23);
+            this.btnAgregarAvance.Size = new System.Drawing.Size(99, 20);
             this.btnAgregarAvance.TabIndex = 2;
             this.btnAgregarAvance.Text = "Agregar Avance";
             this.btnAgregarAvance.UseVisualStyleBackColor = true;
@@ -87,9 +87,9 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(153, 48);
+            this.label2.Location = new System.Drawing.Point(131, 42);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 15);
+            this.label2.Size = new System.Drawing.Size(43, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Usuario";
             // 
@@ -97,18 +97,18 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(153, 85);
+            this.label3.Location = new System.Drawing.Point(131, 74);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 15);
+            this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Curso";
             // 
             // cboCurso
             // 
             this.cboCurso.FormattingEnabled = true;
-            this.cboCurso.Location = new System.Drawing.Point(227, 82);
+            this.cboCurso.Location = new System.Drawing.Point(195, 71);
             this.cboCurso.Name = "cboCurso";
-            this.cboCurso.Size = new System.Drawing.Size(100, 23);
+            this.cboCurso.Size = new System.Drawing.Size(86, 21);
             this.cboCurso.TabIndex = 6;
             // 
             // groupBox1
@@ -123,9 +123,9 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.groupBox1.Controls.Add(this.txtInicioAvance);
             this.groupBox1.Controls.Add(this.lblInicio);
             this.groupBox1.Controls.Add(this.btnAgregarAvance);
-            this.groupBox1.Location = new System.Drawing.Point(38, 281);
+            this.groupBox1.Location = new System.Drawing.Point(33, 244);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(386, 292);
+            this.groupBox1.Size = new System.Drawing.Size(331, 253);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Avances";
@@ -133,9 +133,9 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(159, 68);
+            this.label1.Location = new System.Drawing.Point(136, 59);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(17, 15);
+            this.label1.Size = new System.Drawing.Size(15, 13);
             this.label1.TabIndex = 11;
             this.label1.Text = "%";
             // 
@@ -145,9 +145,9 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.btnSacarAvance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSacarAvance.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnSacarAvance.Image = ((System.Drawing.Image)(resources.GetObject("btnSacarAvance.Image")));
-            this.btnSacarAvance.Location = new System.Drawing.Point(317, 247);
+            this.btnSacarAvance.Location = new System.Drawing.Point(272, 214);
             this.btnSacarAvance.Name = "btnSacarAvance";
-            this.btnSacarAvance.Size = new System.Drawing.Size(39, 29);
+            this.btnSacarAvance.Size = new System.Drawing.Size(33, 25);
             this.btnSacarAvance.TabIndex = 10;
             this.btnSacarAvance.UseVisualStyleBackColor = true;
             this.btnSacarAvance.Click += new System.EventHandler(this.btnSacarAvance_Click);
@@ -160,10 +160,10 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.inicio,
             this.fin,
             this.porc});
-            this.dgvAvances.Location = new System.Drawing.Point(12, 91);
+            this.dgvAvances.Location = new System.Drawing.Point(10, 79);
             this.dgvAvances.Name = "dgvAvances";
             this.dgvAvances.RowTemplate.Height = 25;
-            this.dgvAvances.Size = new System.Drawing.Size(344, 150);
+            this.dgvAvances.Size = new System.Drawing.Size(295, 130);
             this.dgvAvances.TabIndex = 9;
             this.dgvAvances.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAvances_CellClick);
             // 
@@ -187,44 +187,44 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             // 
             // txtPorc
             // 
-            this.txtPorc.Location = new System.Drawing.Point(81, 62);
+            this.txtPorc.Location = new System.Drawing.Point(69, 54);
             this.txtPorc.Name = "txtPorc";
-            this.txtPorc.Size = new System.Drawing.Size(72, 23);
+            this.txtPorc.Size = new System.Drawing.Size(62, 20);
             this.txtPorc.TabIndex = 8;
             // 
             // lblPorcentaje
             // 
             this.lblPorcentaje.AutoSize = true;
-            this.lblPorcentaje.Location = new System.Drawing.Point(12, 68);
+            this.lblPorcentaje.Location = new System.Drawing.Point(10, 59);
             this.lblPorcentaje.Name = "lblPorcentaje";
-            this.lblPorcentaje.Size = new System.Drawing.Size(63, 15);
+            this.lblPorcentaje.Size = new System.Drawing.Size(58, 13);
             this.lblPorcentaje.TabIndex = 7;
             this.lblPorcentaje.Text = "Porcentaje";
             // 
             // txtFinAvance
             // 
-            this.txtFinAvance.Location = new System.Drawing.Point(204, 21);
+            this.txtFinAvance.Location = new System.Drawing.Point(175, 18);
             this.txtFinAvance.Mask = "00/00/0000";
             this.txtFinAvance.Name = "txtFinAvance";
-            this.txtFinAvance.Size = new System.Drawing.Size(115, 23);
+            this.txtFinAvance.Size = new System.Drawing.Size(99, 20);
             this.txtFinAvance.TabIndex = 6;
             this.txtFinAvance.ValidatingType = typeof(System.DateTime);
             // 
             // lblFin
             // 
             this.lblFin.AutoSize = true;
-            this.lblFin.Location = new System.Drawing.Point(175, 27);
+            this.lblFin.Location = new System.Drawing.Point(150, 23);
             this.lblFin.Name = "lblFin";
-            this.lblFin.Size = new System.Drawing.Size(23, 15);
+            this.lblFin.Size = new System.Drawing.Size(21, 13);
             this.lblFin.TabIndex = 5;
             this.lblFin.Text = "Fin";
             // 
             // txtInicioAvance
             // 
-            this.txtInicioAvance.Location = new System.Drawing.Point(81, 21);
+            this.txtInicioAvance.Location = new System.Drawing.Point(69, 18);
             this.txtInicioAvance.Mask = "00/00/0000";
             this.txtInicioAvance.Name = "txtInicioAvance";
-            this.txtInicioAvance.Size = new System.Drawing.Size(72, 23);
+            this.txtInicioAvance.Size = new System.Drawing.Size(62, 20);
             this.txtInicioAvance.TabIndex = 4;
             this.txtInicioAvance.ValidatingType = typeof(System.DateTime);
             // 
@@ -232,9 +232,9 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             // 
             this.lblInicio.AutoSize = true;
             this.lblInicio.ForeColor = System.Drawing.Color.Black;
-            this.lblInicio.Location = new System.Drawing.Point(27, 27);
+            this.lblInicio.Location = new System.Drawing.Point(23, 23);
             this.lblInicio.Name = "lblInicio";
-            this.lblInicio.Size = new System.Drawing.Size(36, 15);
+            this.lblInicio.Size = new System.Drawing.Size(32, 13);
             this.lblInicio.TabIndex = 3;
             this.lblInicio.Text = "Inicio";
             // 
@@ -242,9 +242,9 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             // 
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnAceptar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAceptar.Location = new System.Drawing.Point(38, 579);
+            this.btnAceptar.Location = new System.Drawing.Point(33, 502);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(82, 25);
+            this.btnAceptar.Size = new System.Drawing.Size(70, 22);
             this.btnAceptar.TabIndex = 8;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -254,84 +254,84 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(138, 127);
+            this.label4.Location = new System.Drawing.Point(118, 110);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 15);
+            this.label4.Size = new System.Drawing.Size(61, 13);
             this.label4.TabIndex = 9;
             this.label4.Text = "Puntuacion";
             // 
             // txtPuntuacion
             // 
-            this.txtPuntuacion.Location = new System.Drawing.Point(227, 124);
+            this.txtPuntuacion.Location = new System.Drawing.Point(195, 107);
             this.txtPuntuacion.Name = "txtPuntuacion";
-            this.txtPuntuacion.Size = new System.Drawing.Size(100, 23);
+            this.txtPuntuacion.Size = new System.Drawing.Size(86, 20);
             this.txtPuntuacion.TabIndex = 10;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(137, 169);
+            this.label5.Location = new System.Drawing.Point(117, 146);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 15);
+            this.label5.Size = new System.Drawing.Size(78, 13);
             this.label5.TabIndex = 11;
             this.label5.Text = "Observaciones";
             // 
             // txtObser
             // 
-            this.txtObser.Location = new System.Drawing.Point(227, 166);
+            this.txtObser.Location = new System.Drawing.Point(195, 144);
             this.txtObser.Name = "txtObser";
-            this.txtObser.Size = new System.Drawing.Size(100, 23);
+            this.txtObser.Size = new System.Drawing.Size(86, 20);
             this.txtObser.TabIndex = 12;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(138, 206);
+            this.label6.Location = new System.Drawing.Point(118, 179);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 15);
+            this.label6.Size = new System.Drawing.Size(65, 13);
             this.label6.TabIndex = 13;
             this.label6.Text = "Fecha Inicio";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(137, 243);
+            this.label7.Location = new System.Drawing.Point(117, 211);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 15);
+            this.label7.Size = new System.Drawing.Size(54, 13);
             this.label7.TabIndex = 14;
             this.label7.Text = "Fecha Fin";
             // 
             // txtFechaInicio
             // 
-            this.txtFechaInicio.Location = new System.Drawing.Point(227, 206);
+            this.txtFechaInicio.Location = new System.Drawing.Point(195, 179);
             this.txtFechaInicio.Mask = "00/00/0000";
             this.txtFechaInicio.Name = "txtFechaInicio";
-            this.txtFechaInicio.Size = new System.Drawing.Size(100, 23);
+            this.txtFechaInicio.Size = new System.Drawing.Size(86, 20);
             this.txtFechaInicio.TabIndex = 15;
             this.txtFechaInicio.ValidatingType = typeof(System.DateTime);
             // 
             // txtFechaFin
             // 
-            this.txtFechaFin.Location = new System.Drawing.Point(227, 243);
+            this.txtFechaFin.Location = new System.Drawing.Point(195, 211);
             this.txtFechaFin.Mask = "00/00/0000";
             this.txtFechaFin.Name = "txtFechaFin";
-            this.txtFechaFin.Size = new System.Drawing.Size(100, 23);
+            this.txtFechaFin.Size = new System.Drawing.Size(86, 20);
             this.txtFechaFin.TabIndex = 16;
             this.txtFechaFin.ValidatingType = typeof(System.DateTime);
             // 
             // cboUsuarios
             // 
             this.cboUsuarios.FormattingEnabled = true;
-            this.cboUsuarios.Location = new System.Drawing.Point(227, 45);
+            this.cboUsuarios.Location = new System.Drawing.Point(195, 39);
             this.cboUsuarios.Name = "cboUsuarios";
-            this.cboUsuarios.Size = new System.Drawing.Size(100, 23);
+            this.cboUsuarios.Size = new System.Drawing.Size(86, 21);
             this.cboUsuarios.TabIndex = 17;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(125, 580);
+            this.btnCancelar.Location = new System.Drawing.Point(107, 503);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 24);
+            this.btnCancelar.Size = new System.Drawing.Size(64, 21);
             this.btnCancelar.TabIndex = 18;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -339,10 +339,10 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             // 
             // frmCursado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(466, 609);
+            this.ClientSize = new System.Drawing.Size(399, 528);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.cboUsuarios);
             this.Controls.Add(this.txtFechaFin);
@@ -359,6 +359,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblPrincipal);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCursado";
             this.Text = " ";
             this.Load += new System.EventHandler(this.frmAvances_Load);

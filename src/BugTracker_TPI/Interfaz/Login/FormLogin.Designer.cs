@@ -29,6 +29,7 @@ namespace BugTracker_TPI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.lblUsuario = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
@@ -114,7 +115,7 @@ namespace BugTracker_TPI
             this.panel1.Controls.Add(this.txtPassword);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(9, 8);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(297, 162);
             this.panel1.TabIndex = 6;
@@ -126,6 +127,7 @@ namespace BugTracker_TPI
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(315, 177);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

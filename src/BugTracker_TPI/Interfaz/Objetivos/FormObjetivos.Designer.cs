@@ -29,6 +29,7 @@ namespace BugTracker_TPI.Interfaz.Objetivos
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormObjetivos));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblTotalObj = new System.Windows.Forms.Label();
@@ -50,7 +51,7 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 40);
+            this.label1.Location = new System.Drawing.Point(14, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 20);
             this.label1.TabIndex = 1;
@@ -71,10 +72,10 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtId);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.Location = new System.Drawing.Point(14, 12);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.groupBox1.Location = new System.Drawing.Point(12, 10);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(492, 505);
+            this.groupBox1.Size = new System.Drawing.Size(422, 438);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros";
@@ -82,7 +83,7 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             // lblTotalObj
             // 
             this.lblTotalObj.AutoSize = true;
-            this.lblTotalObj.Location = new System.Drawing.Point(16, 384);
+            this.lblTotalObj.Location = new System.Drawing.Point(14, 333);
             this.lblTotalObj.Name = "lblTotalObj";
             this.lblTotalObj.Size = new System.Drawing.Size(42, 20);
             this.lblTotalObj.TabIndex = 5;
@@ -92,11 +93,11 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             // btnEliminar
             // 
             this.btnEliminar.Enabled = false;
-            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.btnEliminar.Image = global::BugTracker_TPI.Properties.Resources.borrar;
-            this.btnEliminar.Location = new System.Drawing.Point(399, 412);
+            this.btnEliminar.Location = new System.Drawing.Point(342, 357);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 70);
+            this.btnEliminar.Size = new System.Drawing.Size(64, 61);
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -104,21 +105,21 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             // dgvObjetivos
             // 
             this.dgvObjetivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvObjetivos.Location = new System.Drawing.Point(16, 191);
+            this.dgvObjetivos.Location = new System.Drawing.Point(14, 166);
             this.dgvObjetivos.Name = "dgvObjetivos";
             this.dgvObjetivos.RowTemplate.Height = 25;
-            this.dgvObjetivos.Size = new System.Drawing.Size(439, 180);
+            this.dgvObjetivos.Size = new System.Drawing.Size(376, 156);
             this.dgvObjetivos.TabIndex = 4;
             this.dgvObjetivos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvObjetivos_CellClick);
             // 
             // btnModificar
             // 
             this.btnModificar.Enabled = false;
-            this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.btnModificar.Image = global::BugTracker_TPI.Properties.Resources.editar;
-            this.btnModificar.Location = new System.Drawing.Point(318, 412);
+            this.btnModificar.Location = new System.Drawing.Point(273, 357);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(75, 70);
+            this.btnModificar.Size = new System.Drawing.Size(64, 61);
             this.btnModificar.TabIndex = 3;
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
@@ -126,7 +127,7 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             // cbIncluirBajas
             // 
             this.cbIncluirBajas.AutoSize = true;
-            this.cbIncluirBajas.Location = new System.Drawing.Point(16, 140);
+            this.cbIncluirBajas.Location = new System.Drawing.Point(14, 121);
             this.cbIncluirBajas.Name = "cbIncluirBajas";
             this.cbIncluirBajas.Size = new System.Drawing.Size(167, 24);
             this.cbIncluirBajas.TabIndex = 3;
@@ -135,20 +136,20 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnNuevo.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.btnNuevo.Image = global::BugTracker_TPI.Properties.Resources.agregar_archivo;
-            this.btnNuevo.Location = new System.Drawing.Point(237, 412);
+            this.btnNuevo.Location = new System.Drawing.Point(203, 357);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(75, 70);
+            this.btnNuevo.Size = new System.Drawing.Size(64, 61);
             this.btnNuevo.TabIndex = 4;
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(380, 137);
+            this.btnConsultar.Location = new System.Drawing.Point(326, 119);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(75, 28);
+            this.btnConsultar.Size = new System.Drawing.Size(64, 24);
             this.btnConsultar.TabIndex = 0;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
@@ -156,15 +157,15 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             // 
             // txtNL
             // 
-            this.txtNL.Location = new System.Drawing.Point(143, 102);
+            this.txtNL.Location = new System.Drawing.Point(123, 88);
             this.txtNL.Name = "txtNL";
-            this.txtNL.Size = new System.Drawing.Size(224, 27);
+            this.txtNL.Size = new System.Drawing.Size(193, 27);
             this.txtNL.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 102);
+            this.label3.Location = new System.Drawing.Point(14, 88);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(106, 20);
             this.label3.TabIndex = 1;
@@ -172,15 +173,15 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             // 
             // txtNC
             // 
-            this.txtNC.Location = new System.Drawing.Point(143, 70);
+            this.txtNC.Location = new System.Drawing.Point(123, 61);
             this.txtNC.Name = "txtNC";
-            this.txtNC.Size = new System.Drawing.Size(224, 27);
+            this.txtNC.Size = new System.Drawing.Size(193, 27);
             this.txtNC.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 73);
+            this.label2.Location = new System.Drawing.Point(14, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 20);
             this.label2.TabIndex = 1;
@@ -188,18 +189,19 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(143, 37);
+            this.txtId.Location = new System.Drawing.Point(123, 32);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(100, 27);
+            this.txtId.Size = new System.Drawing.Size(86, 27);
             this.txtId.TabIndex = 2;
             // 
             // FormObjetivos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(521, 539);
+            this.ClientSize = new System.Drawing.Size(447, 467);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormObjetivos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Objetivo";

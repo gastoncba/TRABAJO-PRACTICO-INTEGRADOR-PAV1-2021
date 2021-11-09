@@ -151,6 +151,43 @@
     <Compile Include="Interfaz\PantallaPrincipal.Designer.cs">
       <DependentUpon>PantallaPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaz\Reportes\PorcCursos\DSReportPorcCursos.cs">
+      <DependentUpon>DSReportPorcCursos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\Reportes\PorcCursos\DSReportPorcCursos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSReportPorcCursos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\Reportes\PantallaReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz\Reportes\PantallaReportes.Designer.cs">
+      <DependentUpon>PantallaReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\Reportes\PorcCursos\FormPorcCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz\Reportes\PorcCursos\FormPorcCursos.Designer.cs">
+      <DependentUpon>FormPorcCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\Reportes\RankingCursos\DSReportes.cs">
+      <DependentUpon>DSReportes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\Reportes\RankingCursos\DSReportes.designer.cs">
+      <DependentUpon>DSReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\Reportes\RankingCursos\DSReportes1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSReportes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\Reportes\RankingCursos\FrmReportCursosXincrip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz\Reportes\RankingCursos\FrmReportCursosXincrip.designer.cs">
+      <DependentUpon>FrmReportCursosXincrip.cs</DependentUpon>
+    </Compile>
     <Compile Include="Negocio\CursoService.cs" />
     <Compile Include="Negocio\ObjetivoService.cs" />
     <Compile Include="Negocio\UsuarioCursoService.cs" />
@@ -191,6 +228,17 @@
     <EmbeddedResource Include="Interfaz\PantallaPrincipal.resx">
       <DependentUpon>PantallaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz\Reportes\PantallaReportes.resx">
+      <DependentUpon>PantallaReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz\Reportes\PorcCursos\FormPorcCursos.resx">
+      <DependentUpon>FormPorcCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz\Reportes\PorcCursos\ReportePorcCursos.rdlc" />
+    <EmbeddedResource Include="Interfaz\Reportes\RankingCursos\FrmReportCursosXincrip.resx">
+      <DependentUpon>FrmReportCursosXincrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz\Reportes\RankingCursos\Report_CantInscpCursos.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -200,6 +248,28 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Interfaz\Reportes\PorcCursos\DSReportPorcCursos.xsc">
+      <DependentUpon>DSReportPorcCursos.xsd</DependentUpon>
+    </None>
+    <None Include="Interfaz\Reportes\PorcCursos\DSReportPorcCursos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSReportPorcCursos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Interfaz\Reportes\PorcCursos\DSReportPorcCursos.xss">
+      <DependentUpon>DSReportPorcCursos.xsd</DependentUpon>
+    </None>
+    <None Include="Interfaz\Reportes\RankingCursos\DSReportes.xsc">
+      <DependentUpon>DSReportes.xsd</DependentUpon>
+    </None>
+    <None Include="Interfaz\Reportes\RankingCursos\DSReportes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSReportes1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Interfaz\Reportes\RankingCursos\DSReportes.xss">
+      <DependentUpon>DSReportes.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -246,5 +316,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

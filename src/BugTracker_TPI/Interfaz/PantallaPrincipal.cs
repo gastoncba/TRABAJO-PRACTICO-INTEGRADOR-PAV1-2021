@@ -11,6 +11,7 @@ using BugTracker_TPI.Interfaz.Categorias;
 using BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso;
 using BugTracker_TPI.Interfaz.CursadoAvances;
 using BugTracker_TPI.Interfaz.Objetivos;
+using BugTracker_TPI.Interfaz.Reportes;
 
 namespace BugTracker_TPI.Interfaz
 {
@@ -80,6 +81,12 @@ namespace BugTracker_TPI.Interfaz
         {
             FormObjetivos formObjetivos = new FormObjetivos();
             formObjetivos.ShowDialog();
+        }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            PantallaReportes reports = new PantallaReportes();
+            reports.ShowDialog();
         }
     }
 }

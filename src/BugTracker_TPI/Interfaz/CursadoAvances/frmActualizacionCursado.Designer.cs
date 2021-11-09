@@ -46,52 +46,52 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(176, 25);
+            this.txtNombre.Location = new System.Drawing.Point(151, 22);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 23);
+            this.txtNombre.Size = new System.Drawing.Size(86, 20);
             this.txtNombre.TabIndex = 0;
             // 
             // lblNombreUsuario
             // 
             this.lblNombreUsuario.AutoSize = true;
-            this.lblNombreUsuario.Location = new System.Drawing.Point(54, 28);
+            this.lblNombreUsuario.Location = new System.Drawing.Point(46, 24);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
-            this.lblNombreUsuario.Size = new System.Drawing.Size(116, 15);
+            this.lblNombreUsuario.Size = new System.Drawing.Size(103, 13);
             this.lblNombreUsuario.TabIndex = 1;
             this.lblNombreUsuario.Text = "Nombre del Usuario:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(438, 27);
+            this.label1.Location = new System.Drawing.Point(375, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 15);
+            this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Curso:";
             // 
             // cboCursos
             // 
             this.cboCursos.FormattingEnabled = true;
-            this.cboCursos.Location = new System.Drawing.Point(485, 24);
+            this.cboCursos.Location = new System.Drawing.Point(416, 21);
             this.cboCursos.Name = "cboCursos";
-            this.cboCursos.Size = new System.Drawing.Size(137, 23);
+            this.cboCursos.Size = new System.Drawing.Size(118, 21);
             this.cboCursos.TabIndex = 3;
             // 
             // dgvUsuarioCurso
             // 
             this.dgvUsuarioCurso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuarioCurso.Location = new System.Drawing.Point(54, 106);
+            this.dgvUsuarioCurso.Location = new System.Drawing.Point(46, 92);
             this.dgvUsuarioCurso.Name = "dgvUsuarioCurso";
             this.dgvUsuarioCurso.RowTemplate.Height = 25;
-            this.dgvUsuarioCurso.Size = new System.Drawing.Size(617, 143);
+            this.dgvUsuarioCurso.Size = new System.Drawing.Size(529, 124);
             this.dgvUsuarioCurso.TabIndex = 4;
             this.dgvUsuarioCurso.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarioCurso_CellClick);
             // 
             // lblUsuarioCursos
             // 
             this.lblUsuarioCursos.AutoSize = true;
-            this.lblUsuarioCursos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblUsuarioCursos.Location = new System.Drawing.Point(54, 88);
+            this.lblUsuarioCursos.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblUsuarioCursos.Location = new System.Drawing.Point(46, 76);
             this.lblUsuarioCursos.Name = "lblUsuarioCursos";
             this.lblUsuarioCursos.Size = new System.Drawing.Size(115, 15);
             this.lblUsuarioCursos.TabIndex = 5;
@@ -102,18 +102,18 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.btnActualizarAvance.Enabled = false;
             this.btnActualizarAvance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizarAvance.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizarAvance.Image")));
-            this.btnActualizarAvance.Location = new System.Drawing.Point(130, 280);
+            this.btnActualizarAvance.Location = new System.Drawing.Point(111, 243);
             this.btnActualizarAvance.Name = "btnActualizarAvance";
-            this.btnActualizarAvance.Size = new System.Drawing.Size(65, 69);
+            this.btnActualizarAvance.Size = new System.Drawing.Size(56, 60);
             this.btnActualizarAvance.TabIndex = 6;
             this.btnActualizarAvance.UseVisualStyleBackColor = true;
             this.btnActualizarAvance.Click += new System.EventHandler(this.btnActualizarAvance_Click);
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(547, 65);
+            this.btnConsultar.Location = new System.Drawing.Point(469, 56);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(75, 23);
+            this.btnConsultar.Size = new System.Drawing.Size(64, 20);
             this.btnConsultar.TabIndex = 7;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
@@ -123,9 +123,9 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             // 
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.Location = new System.Drawing.Point(54, 280);
+            this.btnNuevo.Location = new System.Drawing.Point(46, 243);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(70, 69);
+            this.btnNuevo.Size = new System.Drawing.Size(60, 60);
             this.btnNuevo.TabIndex = 8;
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
@@ -133,9 +133,9 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             // lblTotalCursados
             // 
             this.lblTotalCursados.AutoSize = true;
-            this.lblTotalCursados.Location = new System.Drawing.Point(54, 256);
+            this.lblTotalCursados.Location = new System.Drawing.Point(46, 222);
             this.lblTotalCursados.Name = "lblTotalCursados";
-            this.lblTotalCursados.Size = new System.Drawing.Size(32, 15);
+            this.lblTotalCursados.Size = new System.Drawing.Size(31, 13);
             this.lblTotalCursados.TabIndex = 9;
             this.lblTotalCursados.Text = "Total";
             this.lblTotalCursados.Visible = false;
@@ -145,19 +145,19 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.btnEliminar.Enabled = false;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.Location = new System.Drawing.Point(201, 280);
+            this.btnEliminar.Location = new System.Drawing.Point(172, 243);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 69);
+            this.btnEliminar.Size = new System.Drawing.Size(64, 60);
             this.btnEliminar.TabIndex = 10;
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // frmActualizacionCursado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(683, 361);
+            this.ClientSize = new System.Drawing.Size(585, 313);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.lblTotalCursados);
             this.Controls.Add(this.btnNuevo);
@@ -169,6 +169,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblNombreUsuario);
             this.Controls.Add(this.txtNombre);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmActualizacionCursado";
             this.Text = "Actualización de Cursados";
             this.Load += new System.EventHandler(this.frmActualizacionAvances_Load);
