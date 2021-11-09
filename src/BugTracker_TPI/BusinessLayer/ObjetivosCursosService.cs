@@ -21,5 +21,18 @@ namespace BugTracker_TPI.BusinessLayer
         {
             return objetivoCursosDao.Create(objetivosCursos);
         }
+        public IList<ObjetivosCursos> filtrar(Dictionary<string, object> parametros)
+        {
+            return objetivoCursosDao.filter(parametros);
+        }
+
+        public bool eliminarObjCurso (ObjetivosCursos objCurslSel)
+        {
+            return objetivoCursosDao.eliminarObjCur(objCurslSel);
+        }
+        internal bool actualizarObjCurso(ObjetivosCursos objCursoSel)
+        {
+            return objetivoCursosDao.actualizarObjCur(objCursoSel);
+        }
     }
 }

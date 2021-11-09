@@ -32,24 +32,6 @@ namespace BugTracker_TPI.Entidades
 
             return null;
         }
-
-        public double calcularPorcentajeActual()
-        {
-            double total = 0;
-
-            foreach(Avance av in avances)
-            {
-                total += av.Porcentaje;
-            }
-
-            return total;
-        }
-
-        public bool estaCompletado()
-        {
-            return calcularPorcentajeActual() == 100.0;
-        }
-
     }
 
 }

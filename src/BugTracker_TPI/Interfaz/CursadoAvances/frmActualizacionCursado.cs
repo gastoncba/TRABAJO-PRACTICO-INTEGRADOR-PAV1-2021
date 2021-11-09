@@ -126,7 +126,6 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
         private void dgvUsuarioCurso_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             btnActualizarAvance.Enabled = true;
-            btnEliminar.Enabled = true;
         }
 
         private void btnActualizarAvance_Click(object sender, EventArgs e)
@@ -148,20 +147,6 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             frmCursado PantallaAvances = new frmCursado();
             PantallaAvances.ShowDialog();
 
-
-            //se actualiza grilla
-            btnConsultar_Click(sender, e);
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            frmCursado PantallaAvances = new frmCursado();
-            UsuarioCurso usuarioCursoSelect = (UsuarioCurso)dgvUsuarioCurso.CurrentRow.DataBoundItem;
-
-            //inicializamos la pantalla en modo eliminar
-            PantallaAvances.inicializarTransaccion(frmCursado.FormMode.eliminar, usuarioCursoSelect);
-
-            PantallaAvances.ShowDialog();
 
             //se actualiza grilla
             btnConsultar_Click(sender, e);

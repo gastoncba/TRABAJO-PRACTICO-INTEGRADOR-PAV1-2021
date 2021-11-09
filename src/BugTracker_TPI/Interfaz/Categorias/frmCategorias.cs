@@ -169,5 +169,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
             btnConsultar_Click(sender, e);
 
         }
+
+        
     }
 }

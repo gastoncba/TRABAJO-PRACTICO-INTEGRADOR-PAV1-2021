@@ -34,9 +34,9 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.btnAgregarAvance = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.cboUsuarios = new System.Windows.Forms.ComboBox();
             this.cboCurso = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnSacarAvance = new System.Windows.Forms.Button();
             this.dgvAvances = new System.Windows.Forms.DataGridView();
             this.inicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,8 +57,6 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.label7 = new System.Windows.Forms.Label();
             this.txtFechaInicio = new System.Windows.Forms.MaskedTextBox();
             this.txtFechaFin = new System.Windows.Forms.MaskedTextBox();
-            this.cboUsuarios = new System.Windows.Forms.ComboBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvances)).BeginInit();
             this.SuspendLayout();
@@ -103,6 +101,14 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.label3.TabIndex = 4;
             this.label3.Text = "Curso";
             // 
+            // cboUsuarios
+            // 
+            this.cboUsuarios.FormattingEnabled = true;
+            this.cboUsuarios.Location = new System.Drawing.Point(227, 45);
+            this.cboUsuarios.Name = "cboUsuarios";
+            this.cboUsuarios.Size = new System.Drawing.Size(100, 23);
+            this.cboUsuarios.TabIndex = 5;
+            // 
             // cboCurso
             // 
             this.cboCurso.FormattingEnabled = true;
@@ -113,7 +119,6 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btnSacarAvance);
             this.groupBox1.Controls.Add(this.dgvAvances);
             this.groupBox1.Controls.Add(this.txtPorc);
@@ -129,15 +134,6 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Avances";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(159, 68);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(17, 15);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "%";
             // 
             // btnSacarAvance
             // 
@@ -189,7 +185,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             // 
             this.txtPorc.Location = new System.Drawing.Point(81, 62);
             this.txtPorc.Name = "txtPorc";
-            this.txtPorc.Size = new System.Drawing.Size(72, 23);
+            this.txtPorc.Size = new System.Drawing.Size(81, 23);
             this.txtPorc.TabIndex = 8;
             // 
             // lblPorcentaje
@@ -224,7 +220,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.txtInicioAvance.Location = new System.Drawing.Point(81, 21);
             this.txtInicioAvance.Mask = "00/00/0000";
             this.txtInicioAvance.Name = "txtInicioAvance";
-            this.txtInicioAvance.Size = new System.Drawing.Size(72, 23);
+            this.txtInicioAvance.Size = new System.Drawing.Size(81, 23);
             this.txtInicioAvance.TabIndex = 4;
             this.txtInicioAvance.ValidatingType = typeof(System.DateTime);
             // 
@@ -240,13 +236,13 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             // 
             // btnAceptar
             // 
-            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnAceptar.Image = ((System.Drawing.Image)(resources.GetObject("btnAceptar.Image")));
             this.btnAceptar.Location = new System.Drawing.Point(38, 579);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(82, 25);
+            this.btnAceptar.Size = new System.Drawing.Size(63, 39);
             this.btnAceptar.TabIndex = 8;
-            this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
@@ -319,32 +315,12 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.txtFechaFin.TabIndex = 16;
             this.txtFechaFin.ValidatingType = typeof(System.DateTime);
             // 
-            // cboUsuarios
-            // 
-            this.cboUsuarios.FormattingEnabled = true;
-            this.cboUsuarios.Location = new System.Drawing.Point(227, 45);
-            this.cboUsuarios.Name = "cboUsuarios";
-            this.cboUsuarios.Size = new System.Drawing.Size(100, 23);
-            this.cboUsuarios.TabIndex = 17;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(125, 580);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 24);
-            this.btnCancelar.TabIndex = 18;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
             // frmCursado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(466, 609);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.cboUsuarios);
+            this.ClientSize = new System.Drawing.Size(466, 630);
             this.Controls.Add(this.txtFechaFin);
             this.Controls.Add(this.txtFechaInicio);
             this.Controls.Add(this.label7);
@@ -356,6 +332,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cboCurso);
+            this.Controls.Add(this.cboUsuarios);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblPrincipal);
@@ -376,6 +353,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
         private System.Windows.Forms.Button btnAgregarAvance;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cboUsuarios;
         private System.Windows.Forms.ComboBox cboCurso;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.MaskedTextBox txtFinAvance;
@@ -398,8 +376,5 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
         private System.Windows.Forms.MaskedTextBox txtFechaInicio;
         private System.Windows.Forms.MaskedTextBox txtFechaFin;
         private System.Windows.Forms.Button btnSacarAvance;
-        private System.Windows.Forms.ComboBox cboUsuarios;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnCancelar;
     }
 }

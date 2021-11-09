@@ -14,6 +14,7 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
 {
     public partial class frmActObjXCurso : Form
     {
+        private FormMode formMode = FormMode.nuevo;
         //private readonly Curso curso;
         //private readonly Objetivo2 objetivo;
 
@@ -22,28 +23,49 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
         private readonly ObjetivosCursos objetivosCursos;
         private readonly BindingList<ObjetivosCursos> listaObjetivosCursos;
         private readonly ObjetivosCursosService objetivosCursosService;
-
+        int selectedVal;
+        
        
-        public frmActObjXCurso()
+        public frmActObjXCurso(int value)
         {
+            
             InitializeComponent();
             grdObjCurso.AutoGenerateColumns = false;
-            
+            selectedVal = value;
             listaObjetivosCursos = new BindingList<ObjetivosCursos>();
             cursoService = new CursoService();
             objetivoService = new ObjetivoService2();
             objetivosCursos = new ObjetivosCursos();
             objetivosCursosService = new ObjetivosCursosService();
+            
 
         }
-
+        public enum FormMode
+        {
+            nuevo,
+            eliminar,
+            modificar
+        }
+        
         private void frmActObjXCurso_Load(object sender, EventArgs e)
         {
             InicializarForm();
-
+            
             LlenarCombo(cmbCursos, cursoService.obtenerTodas(), "NombreCurso", "IdCurso");
             LlenarCombo(cmbObjetivos, objetivoService.obtenerTodas(), "nombre_corto", "id_objetivo");
+            this.cmbCursos.SelectedValue = selectedVal;
 
+            switch (formMode)
+            {
+                case FormMode.nuevo:
+                {
+
+                        cmbCursos.Enabled = false;
+                        //int asd = cmbCursos.SelectedIndex;
+                        //MessageBox.Show("valor"+ asd);
+                        break;
+                }
+            }
             grdObjCurso.DataSource = listaObjetivosCursos;
             grdObjCurso.AutoResizeColumns(DataGridViewAutoSizeColumnsMo‌​de.AllCells);
         }
@@ -58,21 +80,22 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
 
         private void InicializarForm()
         {
-            button2.Enabled = false;
+            agregarObjetivoCurso.Enabled = false;
             grdObjCurso.DataSource = null;
             btnQuitar.Enabled = false;
 
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void agregarObjGrid_Click(object sender, EventArgs e)
         {
+            
             var curso = (Curso)cmbCursos.SelectedItem;
             var objetivo = (Objetivo2)cmbObjetivos.SelectedItem;
-
+            
             if (cmbCursos.SelectedIndex.Equals(-1) || cmbObjetivos.SelectedIndex.Equals(-1))
             {
-                MessageBox.Show("Por favor, seleccione un curso y/o un objetivo para el mismo", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Por favor, seleccione un curso y/o un objetivo para el mismo", "Información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
@@ -82,13 +105,13 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
                     {
                         Cursos = curso,
                         Objetivos = objetivo
-                    });
+                    }) ;
                     btnQuitar.Enabled = true;
-                    button2.Enabled = true;
+                    agregarObjetivoCurso.Enabled = true;
                 }
                 else
                 {
-                    MessageBox.Show("El curso elegido ya se encuentra en la lista, por favor, seleccione otro", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("El curso elegido ya se encuentra en la lista, por favor, seleccione otro", "Información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
 
@@ -98,19 +121,13 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
         {
             foreach (DataGridViewRow fila in grdObjCurso.Rows)
             {
-                if (fila.Cells["NombreCurso"].Value.Equals(text))
+                if (fila.Cells["nombre_corto"].Value.Equals(text))
                     return true;
             }
             return false;
         }
 
-       
-
-        private void grdObjCurso_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
+     
         private void btnQuitar_Click(object sender, EventArgs e)
         {
             
@@ -121,32 +138,61 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
             }
             else
             {
-                MessageBox.Show("Por favor, seleccione un item del listado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Por favor, seleccione un item del listado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void agregarObjetivoCurso_Click(object sender, EventArgs e)
         {
             rellenarLista();
-            try
+
+            switch (formMode)
             {
-                if (objetivosCursos.objCursos.Count != 0)
-                {
-                    var objetivoCursos = new ObjetivosCursos
+                case FormMode.nuevo:
                     {
-                        Cursos = (Curso)cmbCursos.SelectedItem,
-                        Objetivos = (Objetivo2)cmbObjetivos.SelectedItem,
-                    };
+                        try
+                        {
+                            Objetivo2 valor = null;
+                            if (objetivosCursos.objCursos.Count != 0)
+                            {
+                                for (int fila = 0; fila < grdObjCurso.Rows.Count ; fila++)
+                                {
+                                    for (int col = 0; col < grdObjCurso.Rows[fila].Cells.Count; col++)
+                                    {
+                                         valor = (Objetivo2)grdObjCurso.Rows[fila].Cells[col].Value;
 
-                    objetivosCursosService.guardar(objetivoCursos);
-                    MessageBox.Show("Se guardo correctamente la actualizacion de objetivo del curso","Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
 
-            catch (Exception)
-            {
-                MessageBox.Show("Error al guardar la actualizacion de objetivo del curso ", "Información", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        MessageBox.Show(valor.ToString());
+
+                                        var objetivoCursos = new ObjetivosCursos
+                                        {
+                                            Cursos = (Curso)cmbCursos.SelectedItem,
+                                            Objetivos = valor,
+                                        };
+
+                                        objetivosCursosService.guardar(objetivoCursos);
+                                    }
+                                }
+
+                            }
+                            MessageBox.Show("Se guardo correctamente la actualizacion de objetivo del curso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            grdObjCurso.Refresh();
+                            grdObjCurso.Rows.Clear();
+                        
+                        }
+                        
+
+                        catch (Exception)
+                        {
+                            MessageBox.Show(" El objetivo seleccionado para el curso " + cmbCursos.SelectedItem + "ya existe, por favor, seleccione otro", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            grdObjCurso.Refresh();
+                            grdObjCurso.Rows.Clear();
+                        }
+                        break;
+                    }
+
             }
+            
         }
         public void rellenarLista()
         {
@@ -157,10 +203,25 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
             }
         }
 
+        
+
         private void btnEliminarTodo_Click(object sender, EventArgs e)
         {
             cmbCursos.SelectedIndex = -1;
             cmbObjetivos.SelectedIndex = -1;
+        }
+
+        
+
+        private void btnCerrarFormA_Click(object sender, EventArgs e)
+        {
+            
+            this.Close();
+        }
+
+        private void btnEliminarTodo_Click_1(object sender, EventArgs e)
+        {
+            grdObjCurso.Rows.Clear();
         }
     }
 
