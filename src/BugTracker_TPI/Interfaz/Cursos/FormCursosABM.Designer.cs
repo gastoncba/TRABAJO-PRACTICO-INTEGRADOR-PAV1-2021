@@ -45,77 +45,81 @@ namespace BugTracker_TPI.Interfaz.Cursos
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.lblNombre.Location = new System.Drawing.Point(69, 39);
+            this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblNombre.Location = new System.Drawing.Point(65, 34);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(64, 20);
+            this.lblNombre.Size = new System.Drawing.Size(66, 19);
             this.lblNombre.TabIndex = 0;
-            this.lblNombre.Text = "Nombre";
+            this.lblNombre.Text = "Nombre: ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.label2.Location = new System.Drawing.Point(68, 67);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label2.Location = new System.Drawing.Point(54, 68);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 20);
+            this.label2.Size = new System.Drawing.Size(86, 19);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Descripcion";
+            this.label2.Text = "Descripcion: ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.label3.Location = new System.Drawing.Point(68, 95);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label3.Location = new System.Drawing.Point(73, 99);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 20);
+            this.label3.Size = new System.Drawing.Size(67, 19);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Vigencia";
+            this.label3.Text = "Vigencia: ";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.label4.Location = new System.Drawing.Point(68, 121);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label4.Location = new System.Drawing.Point(65, 127);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 20);
+            this.label4.Size = new System.Drawing.Size(75, 19);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Categoria";
+            this.label4.Text = "Categoria: ";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(147, 39);
+            this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtNombre.Location = new System.Drawing.Point(146, 31);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(94, 20);
+            this.txtNombre.Size = new System.Drawing.Size(94, 25);
             this.txtNombre.TabIndex = 4;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(147, 68);
+            this.txtDescripcion.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtDescripcion.Location = new System.Drawing.Point(146, 62);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(94, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(94, 25);
             this.txtDescripcion.TabIndex = 5;
             // 
             // txtVigencia
             // 
-            this.txtVigencia.Location = new System.Drawing.Point(147, 96);
+            this.txtVigencia.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtVigencia.Location = new System.Drawing.Point(146, 93);
             this.txtVigencia.Mask = "00/00/0000";
             this.txtVigencia.Name = "txtVigencia";
-            this.txtVigencia.Size = new System.Drawing.Size(94, 20);
+            this.txtVigencia.Size = new System.Drawing.Size(94, 25);
             this.txtVigencia.TabIndex = 6;
             // 
             // cboCategorias
             // 
+            this.cboCategorias.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cboCategorias.FormattingEnabled = true;
-            this.cboCategorias.Location = new System.Drawing.Point(147, 121);
+            this.cboCategorias.Location = new System.Drawing.Point(146, 124);
             this.cboCategorias.Name = "cboCategorias";
-            this.cboCategorias.Size = new System.Drawing.Size(94, 21);
+            this.cboCategorias.Size = new System.Drawing.Size(94, 25);
             this.cboCategorias.TabIndex = 7;
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.btnAceptar.Location = new System.Drawing.Point(69, 180);
+            this.btnAceptar.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnAceptar.Location = new System.Drawing.Point(71, 166);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(70, 28);
             this.btnAceptar.TabIndex = 8;
@@ -125,10 +129,10 @@ namespace BugTracker_TPI.Interfaz.Cursos
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.btnCancelar.Location = new System.Drawing.Point(154, 180);
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnCancelar.Location = new System.Drawing.Point(146, 167);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(65, 28);
+            this.btnCancelar.Size = new System.Drawing.Size(74, 28);
             this.btnCancelar.TabIndex = 9;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -139,7 +143,7 @@ namespace BugTracker_TPI.Interfaz.Cursos
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(303, 240);
+            this.ClientSize = new System.Drawing.Size(303, 207);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.cboCategorias);

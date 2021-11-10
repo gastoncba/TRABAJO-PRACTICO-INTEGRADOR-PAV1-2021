@@ -42,11 +42,12 @@ namespace BugTracker_TPI.Interfaz.Reportes.PorcCursos
             // 
             // rpvPorcCurso
             // 
+            this.rpvPorcCurso.AutoSize = true;
             this.rpvPorcCurso.LocalReport.ReportEmbeddedResource = "BugTracker_TPI.Interfaz.Reportes.PorcCursos.ReportePorcCursos.rdlc";
             this.rpvPorcCurso.Location = new System.Drawing.Point(0, 75);
             this.rpvPorcCurso.Name = "rpvPorcCurso";
             this.rpvPorcCurso.ServerReport.BearerToken = null;
-            this.rpvPorcCurso.Size = new System.Drawing.Size(738, 240);
+            this.rpvPorcCurso.Size = new System.Drawing.Size(815, 460);
             this.rpvPorcCurso.TabIndex = 0;
             // 
             // txtDesde
@@ -54,25 +55,25 @@ namespace BugTracker_TPI.Interfaz.Reportes.PorcCursos
             this.txtDesde.Location = new System.Drawing.Point(56, 23);
             this.txtDesde.Mask = "00/00/0000";
             this.txtDesde.Name = "txtDesde";
-            this.txtDesde.Size = new System.Drawing.Size(150, 20);
+            this.txtDesde.Size = new System.Drawing.Size(150, 25);
             this.txtDesde.TabIndex = 1;
             this.txtDesde.ValidatingType = typeof(System.DateTime);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(219, 25);
+            this.label2.Location = new System.Drawing.Point(233, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.Size = new System.Drawing.Size(47, 19);
             this.label2.TabIndex = 3;
             this.label2.Text = "Hasta:";
             // 
             // txtHasta
             // 
-            this.txtHasta.Location = new System.Drawing.Point(263, 23);
+            this.txtHasta.Location = new System.Drawing.Point(286, 22);
             this.txtHasta.Mask = "00/00/0000";
             this.txtHasta.Name = "txtHasta";
-            this.txtHasta.Size = new System.Drawing.Size(150, 20);
+            this.txtHasta.Size = new System.Drawing.Size(150, 25);
             this.txtHasta.TabIndex = 4;
             this.txtHasta.ValidatingType = typeof(System.DateTime);
             // 
@@ -81,15 +82,16 @@ namespace BugTracker_TPI.Interfaz.Reportes.PorcCursos
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 13);
+            this.label1.Size = new System.Drawing.Size(50, 19);
             this.label1.TabIndex = 5;
             this.label1.Text = "Desde:";
             // 
             // btnGenerarPorcCursos
             // 
-            this.btnGenerarPorcCursos.Location = new System.Drawing.Point(612, 46);
+            this.btnGenerarPorcCursos.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnGenerarPorcCursos.Location = new System.Drawing.Point(665, 19);
             this.btnGenerarPorcCursos.Name = "btnGenerarPorcCursos";
-            this.btnGenerarPorcCursos.Size = new System.Drawing.Size(75, 23);
+            this.btnGenerarPorcCursos.Size = new System.Drawing.Size(79, 31);
             this.btnGenerarPorcCursos.TabIndex = 6;
             this.btnGenerarPorcCursos.Text = "Generar";
             this.btnGenerarPorcCursos.UseVisualStyleBackColor = true;
@@ -101,9 +103,10 @@ namespace BugTracker_TPI.Interfaz.Reportes.PorcCursos
             this.groupBox1.Controls.Add(this.txtDesde);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtHasta);
-            this.groupBox1.Location = new System.Drawing.Point(104, 12);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.groupBox1.Location = new System.Drawing.Point(160, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(466, 57);
+            this.groupBox1.Size = new System.Drawing.Size(455, 66);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Periodo de vigencia";
@@ -112,7 +115,8 @@ namespace BugTracker_TPI.Interfaz.Reportes.PorcCursos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(738, 315);
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ClientSize = new System.Drawing.Size(815, 532);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnGenerarPorcCursos);
             this.Controls.Add(this.rpvPorcCurso);
@@ -123,6 +127,7 @@ namespace BugTracker_TPI.Interfaz.Reportes.PorcCursos
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

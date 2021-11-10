@@ -8,7 +8,6 @@ using System.Windows.Forms;
 using BugTracker_TPI.Interfaz.Cursos;
 using BugTracker_TPI.Entidades;
 using BugTracker_TPI.Interfaz.Categorias;
-using BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso;
 using BugTracker_TPI.Interfaz.CursadoAvances;
 using BugTracker_TPI.Interfaz.Objetivos;
 using BugTracker_TPI.Interfaz.Reportes;
@@ -66,8 +65,7 @@ namespace BugTracker_TPI.Interfaz
 
         private void btnObjCurso_Click(object sender, EventArgs e)
         {
-            frmActObjXCurso formObjCurso = new frmActObjXCurso();
-            formObjCurso.ShowDialog();
+            //no implementado
 
         }
 

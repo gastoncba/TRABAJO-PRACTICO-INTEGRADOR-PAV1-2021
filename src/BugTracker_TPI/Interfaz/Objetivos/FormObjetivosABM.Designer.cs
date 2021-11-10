@@ -42,49 +42,55 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             // 
             // txtNL
             // 
-            this.txtNL.Location = new System.Drawing.Point(112, 94);
+            this.txtNL.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtNL.Location = new System.Drawing.Point(147, 97);
             this.txtNL.Name = "txtNL";
-            this.txtNL.Size = new System.Drawing.Size(159, 20);
+            this.txtNL.Size = new System.Drawing.Size(104, 25);
             this.txtNL.TabIndex = 15;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 97);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label3.Location = new System.Drawing.Point(36, 97);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 13);
+            this.label3.Size = new System.Drawing.Size(98, 19);
             this.label3.TabIndex = 14;
             this.label3.Text = "Nombre Largo";
             // 
             // txtNC
             // 
-            this.txtNC.Location = new System.Drawing.Point(112, 62);
+            this.txtNC.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtNC.Location = new System.Drawing.Point(147, 66);
             this.txtNC.Name = "txtNC";
-            this.txtNC.Size = new System.Drawing.Size(159, 20);
+            this.txtNC.Size = new System.Drawing.Size(104, 25);
             this.txtNC.TabIndex = 13;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 64);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label2.Location = new System.Drawing.Point(36, 65);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 13);
+            this.label2.Size = new System.Drawing.Size(105, 19);
             this.label2.TabIndex = 12;
-            this.label2.Text = "Nombre Corto";
+            this.label2.Text = "Nombre Corto: ";
             // 
             // txtId
             // 
             this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(112, 29);
+            this.txtId.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtId.Location = new System.Drawing.Point(147, 31);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(73, 20);
+            this.txtId.Size = new System.Drawing.Size(104, 25);
             this.txtId.TabIndex = 11;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(150, 144);
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnCancelar.Location = new System.Drawing.Point(150, 145);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(64, 20);
+            this.btnCancelar.Size = new System.Drawing.Size(76, 25);
             this.btnCancelar.TabIndex = 10;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -92,9 +98,10 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(81, 144);
+            this.btnAceptar.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnAceptar.Location = new System.Drawing.Point(64, 145);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(64, 20);
+            this.btnAceptar.Size = new System.Drawing.Size(80, 25);
             this.btnAceptar.TabIndex = 9;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -103,11 +110,12 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 31);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label1.Location = new System.Drawing.Point(36, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.Size = new System.Drawing.Size(84, 19);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Id Objetivo";
+            this.label1.Text = "Id Objetivo: ";
             // 
             // FormObjetivosABM
             // 

@@ -44,7 +44,7 @@ namespace BugTracker_TPI
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.lblUsuario.Location = new System.Drawing.Point(48, 44);
+            this.lblUsuario.Location = new System.Drawing.Point(48, 47);
             this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(62, 20);
@@ -55,7 +55,7 @@ namespace BugTracker_TPI
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.label1.Location = new System.Drawing.Point(14, 88);
+            this.label1.Location = new System.Drawing.Point(18, 93);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 20);
@@ -64,29 +64,31 @@ namespace BugTracker_TPI
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(110, 43);
+            this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtUsuario.Location = new System.Drawing.Point(116, 42);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(153, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(153, 25);
             this.txtUsuario.TabIndex = 2;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(110, 88);
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtPassword.Location = new System.Drawing.Point(116, 88);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(153, 20);
+            this.txtPassword.Size = new System.Drawing.Size(153, 25);
             this.txtPassword.TabIndex = 3;
             // 
             // btnIngresar
             // 
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIngresar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnIngresar.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnIngresar.Location = new System.Drawing.Point(116, 124);
             this.btnIngresar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(68, 25);
+            this.btnIngresar.Size = new System.Drawing.Size(80, 33);
             this.btnIngresar.TabIndex = 4;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = true;

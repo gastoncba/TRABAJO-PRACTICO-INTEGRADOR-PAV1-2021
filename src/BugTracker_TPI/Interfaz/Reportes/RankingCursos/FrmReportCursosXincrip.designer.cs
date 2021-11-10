@@ -63,6 +63,7 @@ namespace BugTracker_TPI.Interfaz.Reportes.RankingCursos
             this.Controls.Add(this.rpv_cursos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmReportCursosXincrip";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Inscripciones por curso";
             this.Load += new System.EventHandler(this.FrmReportCursosXincrip_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cursosBindingSource)).EndInit();
