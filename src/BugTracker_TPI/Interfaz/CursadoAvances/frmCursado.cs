@@ -69,6 +69,14 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
                     {
                         this.Text = "Nuevo Cursado";
                         lblPrincipal.Text = "Nuevo Cursado";
+
+                        //info de los avances
+                        txtInicioAvance.Enabled = false;
+                        txtFinAvance.Enabled = false;
+                        txtPorc.Enabled = false;
+
+                        btnAgregarAvance.Enabled = false;
+                        btnSacarAvance.Enabled = false;
                         break;
                     }
                 case FormMode.modificar:
@@ -276,6 +284,14 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
 
                 if (usuarioCursoService.agregar(usuarioCurso))
                 {
+                    //info de los avances
+                    txtInicioAvance.Enabled = true;
+                    txtFinAvance.Enabled = true;
+                    txtPorc.Enabled = true;
+
+                    btnAgregarAvance.Enabled = true;
+                    btnSacarAvance.Enabled = true;
+
                     MessageBox.Show("Cursado de usuario guardado con éxito!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Dispose();
                 }
@@ -303,7 +319,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
 
                 if (usuarioCursoService.actualizar(cursadoSelect, eliminados))
                 {
-                    MessageBox.Show("Cursado de usuario actiualizado con éxito!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Cursado de usuario actualizado con éxito!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Dispose();
                 }
                 else
@@ -332,10 +348,9 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             DateTime fechaInicioAvance;
             DateTime fechaFinAvance;
             double porc;
+            UsuarioCurso ElegidoUsuarioCurso = cursadoSelect;
 
-            //se calcula el porcentaje actual
-            double porcentajeActualDeCursado = cursadoSelect.calcularPorcentajeActual();
-
+            double porcentajeActualDeCursado = ElegidoUsuarioCurso.calcularPorcentajeActual();
 
             if (!DateTime.TryParse(txtInicioAvance.Text, out fechaInicioAvance) || !DateTime.TryParse(txtFinAvance.Text, out fechaFinAvance) || string.IsNullOrEmpty(txtPorc.Text))
             {
@@ -364,7 +379,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
                 return false;
             }
 
-            if (cursadoSelect.estaCompletado())
+            if (ElegidoUsuarioCurso.estaCompletado()) 
             {
                 MessageBox.Show("Este curso ya se encuentra completado", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
@@ -466,5 +481,6 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
         {
             this.Close();
         }
+
     }
 }

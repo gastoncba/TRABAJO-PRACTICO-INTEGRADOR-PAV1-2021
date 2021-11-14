@@ -66,7 +66,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label1.Location = new System.Drawing.Point(401, 29);
+            this.label1.Location = new System.Drawing.Point(514, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 19);
             this.label1.TabIndex = 2;
@@ -76,7 +76,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             // 
             this.cboCursos.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cboCursos.FormattingEnabled = true;
-            this.cboCursos.Location = new System.Drawing.Point(455, 23);
+            this.cboCursos.Location = new System.Drawing.Point(568, 20);
             this.cboCursos.Name = "cboCursos";
             this.cboCursos.Size = new System.Drawing.Size(152, 25);
             this.cboCursos.TabIndex = 3;
@@ -87,7 +87,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.dgvUsuarioCurso.Location = new System.Drawing.Point(46, 92);
             this.dgvUsuarioCurso.Name = "dgvUsuarioCurso";
             this.dgvUsuarioCurso.RowTemplate.Height = 25;
-            this.dgvUsuarioCurso.Size = new System.Drawing.Size(561, 124);
+            this.dgvUsuarioCurso.Size = new System.Drawing.Size(674, 124);
             this.dgvUsuarioCurso.TabIndex = 4;
             this.dgvUsuarioCurso.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarioCurso_CellClick);
             // 
@@ -116,7 +116,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             // btnConsultar
             // 
             this.btnConsultar.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnConsultar.Location = new System.Drawing.Point(513, 56);
+            this.btnConsultar.Location = new System.Drawing.Point(626, 56);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(94, 30);
             this.btnConsultar.TabIndex = 7;
@@ -163,7 +163,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(644, 310);
+            this.ClientSize = new System.Drawing.Size(732, 310);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.lblTotalCursados);
             this.Controls.Add(this.btnNuevo);

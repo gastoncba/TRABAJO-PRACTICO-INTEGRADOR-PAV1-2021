@@ -32,6 +32,8 @@ namespace BugTracker_TPI.AccesoBD
                 consulta += " AND (B.id_curso = @idCurso)";
             }
 
+            consulta += " order by fecha_inicio";
+
             var cursados = DataManager.GetInstance().ConsultaSQL(consulta, parametros);
 
             foreach (DataRow row in cursados.Rows)
