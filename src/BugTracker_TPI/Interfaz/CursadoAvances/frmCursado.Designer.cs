@@ -52,7 +52,6 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.label4 = new System.Windows.Forms.Label();
             this.txtPuntuacion = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtObser = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtFechaInicio = new System.Windows.Forms.MaskedTextBox();
@@ -65,6 +64,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.txtObser = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvances)).BeginInit();
             this.SuspendLayout();
@@ -118,7 +118,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.cboCurso.FormattingEnabled = true;
             this.cboCurso.Location = new System.Drawing.Point(218, 75);
             this.cboCurso.Name = "cboCurso";
-            this.cboCurso.Size = new System.Drawing.Size(86, 25);
+            this.cboCurso.Size = new System.Drawing.Size(130, 25);
             this.cboCurso.TabIndex = 6;
             // 
             // groupBox1
@@ -134,7 +134,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.groupBox1.Controls.Add(this.lblInicio);
             this.groupBox1.Controls.Add(this.btnAgregarAvance);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.groupBox1.Location = new System.Drawing.Point(33, 244);
+            this.groupBox1.Location = new System.Drawing.Point(33, 299);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(393, 274);
             this.groupBox1.TabIndex = 7;
@@ -254,7 +254,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnAceptar.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnAceptar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAceptar.Location = new System.Drawing.Point(33, 524);
+            this.btnAceptar.Location = new System.Drawing.Point(33, 597);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(101, 32);
             this.btnAceptar.TabIndex = 8;
@@ -278,7 +278,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.txtPuntuacion.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtPuntuacion.Location = new System.Drawing.Point(218, 110);
             this.txtPuntuacion.Name = "txtPuntuacion";
-            this.txtPuntuacion.Size = new System.Drawing.Size(86, 25);
+            this.txtPuntuacion.Size = new System.Drawing.Size(130, 25);
             this.txtPuntuacion.TabIndex = 10;
             // 
             // label5
@@ -291,19 +291,11 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.label5.TabIndex = 11;
             this.label5.Text = "Observaciones:";
             // 
-            // txtObser
-            // 
-            this.txtObser.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtObser.Location = new System.Drawing.Point(218, 146);
-            this.txtObser.Name = "txtObser";
-            this.txtObser.Size = new System.Drawing.Size(86, 25);
-            this.txtObser.TabIndex = 12;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label6.Location = new System.Drawing.Point(108, 182);
+            this.label6.Location = new System.Drawing.Point(108, 223);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(83, 19);
             this.label6.TabIndex = 13;
@@ -313,7 +305,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label7.Location = new System.Drawing.Point(108, 217);
+            this.label7.Location = new System.Drawing.Point(108, 258);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 19);
             this.label7.TabIndex = 14;
@@ -322,20 +314,20 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             // txtFechaInicio
             // 
             this.txtFechaInicio.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtFechaInicio.Location = new System.Drawing.Point(218, 179);
+            this.txtFechaInicio.Location = new System.Drawing.Point(218, 220);
             this.txtFechaInicio.Mask = "00/00/0000";
             this.txtFechaInicio.Name = "txtFechaInicio";
-            this.txtFechaInicio.Size = new System.Drawing.Size(86, 25);
+            this.txtFechaInicio.Size = new System.Drawing.Size(130, 25);
             this.txtFechaInicio.TabIndex = 15;
             this.txtFechaInicio.ValidatingType = typeof(System.DateTime);
             // 
             // txtFechaFin
             // 
             this.txtFechaFin.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtFechaFin.Location = new System.Drawing.Point(218, 211);
+            this.txtFechaFin.Location = new System.Drawing.Point(218, 252);
             this.txtFechaFin.Mask = "00/00/0000";
             this.txtFechaFin.Name = "txtFechaFin";
-            this.txtFechaFin.Size = new System.Drawing.Size(86, 25);
+            this.txtFechaFin.Size = new System.Drawing.Size(130, 25);
             this.txtFechaFin.TabIndex = 16;
             this.txtFechaFin.ValidatingType = typeof(System.DateTime);
             // 
@@ -345,13 +337,13 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.cboUsuarios.FormattingEnabled = true;
             this.cboUsuarios.Location = new System.Drawing.Point(218, 41);
             this.cboUsuarios.Name = "cboUsuarios";
-            this.cboUsuarios.Size = new System.Drawing.Size(86, 25);
+            this.cboUsuarios.Size = new System.Drawing.Size(130, 25);
             this.cboUsuarios.TabIndex = 17;
             // 
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnCancelar.Location = new System.Drawing.Point(147, 524);
+            this.btnCancelar.Location = new System.Drawing.Point(147, 597);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(99, 32);
             this.btnCancelar.TabIndex = 18;
@@ -408,7 +400,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(91, 182);
+            this.label12.Location = new System.Drawing.Point(91, 223);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(15, 19);
             this.label12.TabIndex = 23;
@@ -419,18 +411,27 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label13.ForeColor = System.Drawing.Color.Red;
-            this.label13.Location = new System.Drawing.Point(91, 217);
+            this.label13.Location = new System.Drawing.Point(91, 258);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(15, 19);
             this.label13.TabIndex = 24;
             this.label13.Text = "*";
+            // 
+            // txtObser
+            // 
+            this.txtObser.Location = new System.Drawing.Point(218, 149);
+            this.txtObser.Name = "txtObser";
+            this.txtObser.Size = new System.Drawing.Size(176, 55);
+            this.txtObser.TabIndex = 25;
+            this.txtObser.Text = "";
             // 
             // frmCursado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(438, 558);
+            this.ClientSize = new System.Drawing.Size(437, 636);
+            this.Controls.Add(this.txtObser);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -443,7 +444,6 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.Controls.Add(this.txtFechaInicio);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtObser);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtPuntuacion);
             this.Controls.Add(this.label4);
@@ -487,7 +487,6 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtPuntuacion;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtObser;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.MaskedTextBox txtFechaInicio;
@@ -502,5 +501,6 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.RichTextBox txtObser;
     }
 }
