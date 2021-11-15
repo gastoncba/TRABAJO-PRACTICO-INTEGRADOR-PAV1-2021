@@ -42,5 +42,10 @@ namespace BugTracker_TPI.Negocio
         {
             return objetivoDao.delete(objetivo);
         }
+
+        public IList<Objetivo2> obtenerTodas()
+        {
+            return objetivoDao.obtenerObjetivos();
+        }
     }
 }
