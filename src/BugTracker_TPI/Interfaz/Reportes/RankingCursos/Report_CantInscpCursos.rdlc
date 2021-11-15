@@ -28,7 +28,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ID</Value>
+                              <Value>Ranking</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -138,7 +138,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!id_curso.Value</Value>
+                              <Value>=RowNumber("Tablix4")</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -160,6 +160,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
