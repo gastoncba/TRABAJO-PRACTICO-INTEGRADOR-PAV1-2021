@@ -11,12 +11,13 @@ using BugTracker_TPI.Interfaz.Categorias;
 using BugTracker_TPI.Interfaz.CursadoAvances;
 using BugTracker_TPI.Interfaz.Objetivos;
 using BugTracker_TPI.Interfaz.Reportes;
+using BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso;
 
 namespace BugTracker_TPI.Interfaz
 {
     public partial class PantallaPrincipal : Form
     {
-        //public bool exit = false;
+        public bool exit = false;
 
         public PantallaPrincipal(string usuario)
         {
@@ -32,14 +33,16 @@ namespace BugTracker_TPI.Interfaz
 
         private void PantallaPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            
+            if (exit == false)
+            {
                 DialogResult rpta = MessageBox.Show("Seguro que desea salir?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (rpta == DialogResult.Yes)
                 {
+                    exit = true;
                     e.Cancel = false;
                     Application.Exit();
                 }
-            
+            }
         }
 
         private void cursosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -65,7 +68,8 @@ namespace BugTracker_TPI.Interfaz
 
         private void btnObjCurso_Click(object sender, EventArgs e)
         {
-            //no implementado
+            frmObjsCurso objsCurso = new frmObjsCurso();
+            objsCurso.ShowDialog();
 
         }
 
@@ -86,5 +90,6 @@ namespace BugTracker_TPI.Interfaz
             PantallaReportes reports = new PantallaReportes();
             reports.ShowDialog();
         }
+
     }
 }

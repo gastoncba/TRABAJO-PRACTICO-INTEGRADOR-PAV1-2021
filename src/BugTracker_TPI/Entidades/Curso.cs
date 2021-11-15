@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BugTracker_TPI.Entidades
 {
-    class Curso
+    public class Curso
     {
         public int IdCurso { get; set; }
         public string NombreCurso { get; set; }

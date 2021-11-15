@@ -6,13 +6,11 @@ using System.Text;
 namespace BugTracker_TPI.Entidades
 {
     
-    class ObjetivosCursos
+   public class ObjetivosCursos
     {
-        public int id_objetivo { get; set; }
-        public int id_curso { get; set; }
         public int puntos { get; set; }
         public bool borrado { get; set; }
-        
+
         public Curso Cursos { get; set; }
         public Objetivo2 Objetivos { get; set; }
 
@@ -23,21 +21,21 @@ namespace BugTracker_TPI.Entidades
             objCursos = new List<ObjetivosCursos>();
         }
 
-        public string nombreCurso
-        {
-            get
-            {
-                return Cursos.NombreCurso;
-            }
-        }
+        //public string nombreCurso
+        //{
+        //    get
+        //    {
+        //        return Cursos.NombreCurso;
+        //    }
+        //}
 
-        public string nombreObjetivo
-        {
-            get
-            {
-                return Objetivos.nombre_corto;
-            }
-        }
+        //public string nombreObjetivo
+        //{
+        //    get
+        //    {
+        //        return Objetivos.nombre_corto;
+        //    }
+        //}
 
         public bool validarDatos()
         {

@@ -20,14 +20,14 @@ namespace BugTracker_TPI.AccesoBD
 
             foreach (DataRow row in resultadoConsulta.Rows)
             {
-                listadoObjetivos.Add(ObjectMapping(row));
+                listadoObjetivos.Add(ObjectMapping2(row));
             }
 
             return listadoObjetivos;
         }
 
 
-        public Objetivo2 ObjectMapping(DataRow row)
+        public Objetivo2 ObjectMapping2(DataRow row)
         {
             
 
