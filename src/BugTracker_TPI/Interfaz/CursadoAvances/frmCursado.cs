@@ -481,6 +481,5 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
         {
             this.Close();
         }
-
     }
 }

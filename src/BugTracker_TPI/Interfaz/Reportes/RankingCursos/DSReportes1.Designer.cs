@@ -279,8 +279,6 @@ namespace BugTracker_TPI.Interfaz.Reportes.RankingCursos {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class DT_UsuariosCursoDataTable : global::System.Data.TypedTableBase<DT_UsuariosCursoRow> {
             
-            private global::System.Data.DataColumn columnid_curso;
-            
             private global::System.Data.DataColumn columnnombre;
             
             private global::System.Data.DataColumn columncant_inscriptos;
@@ -316,14 +314,6 @@ namespace BugTracker_TPI.Interfaz.Reportes.RankingCursos {
             protected DT_UsuariosCursoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn id_cursoColumn {
-                get {
-                    return this.columnid_curso;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -379,10 +369,9 @@ namespace BugTracker_TPI.Interfaz.Reportes.RankingCursos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DT_UsuariosCursoRow AddDT_UsuariosCursoRow(string id_curso, string nombre, string cant_inscriptos) {
+            public DT_UsuariosCursoRow AddDT_UsuariosCursoRow(string nombre, string cant_inscriptos) {
                 DT_UsuariosCursoRow rowDT_UsuariosCursoRow = ((DT_UsuariosCursoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        id_curso,
                         nombre,
                         cant_inscriptos};
                 rowDT_UsuariosCursoRow.ItemArray = columnValuesArray;
@@ -407,7 +396,6 @@ namespace BugTracker_TPI.Interfaz.Reportes.RankingCursos {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnid_curso = base.Columns["id_curso"];
                 this.columnnombre = base.Columns["nombre"];
                 this.columncant_inscriptos = base.Columns["cant_inscriptos"];
             }
@@ -415,8 +403,6 @@ namespace BugTracker_TPI.Interfaz.Reportes.RankingCursos {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnid_curso = new global::System.Data.DataColumn("id_curso", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_curso);
                 this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnombre);
                 this.columncant_inscriptos = new global::System.Data.DataColumn("cant_inscriptos", typeof(string), null, global::System.Data.MappingType.Element);
@@ -563,22 +549,6 @@ namespace BugTracker_TPI.Interfaz.Reportes.RankingCursos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string id_curso {
-                get {
-                    try {
-                        return ((string)(this[this.tableDT_UsuariosCurso.id_cursoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id_curso\' de la tabla \'DT_UsuariosCurso\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDT_UsuariosCurso.id_cursoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string nombre {
                 get {
                     try {
@@ -608,18 +578,6 @@ namespace BugTracker_TPI.Interfaz.Reportes.RankingCursos {
                 set {
                     this[this.tableDT_UsuariosCurso.cant_inscriptosColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isid_cursoNull() {
-                return this.IsNull(this.tableDT_UsuariosCurso.id_cursoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setid_cursoNull() {
-                this[this.tableDT_UsuariosCurso.id_cursoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

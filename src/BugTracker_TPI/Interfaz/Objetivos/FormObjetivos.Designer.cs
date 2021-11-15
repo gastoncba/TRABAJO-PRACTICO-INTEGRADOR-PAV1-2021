@@ -76,7 +76,7 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.groupBox1.Location = new System.Drawing.Point(12, 10);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(422, 425);
+            this.groupBox1.Size = new System.Drawing.Size(493, 421);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros";
@@ -98,7 +98,7 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.btnEliminar.Image = global::BugTracker_TPI.Properties.Resources.borrar;
-            this.btnEliminar.Location = new System.Drawing.Point(330, 346);
+            this.btnEliminar.Location = new System.Drawing.Point(404, 345);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(64, 61);
             this.btnEliminar.TabIndex = 2;
@@ -111,7 +111,7 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             this.dgvObjetivos.Location = new System.Drawing.Point(14, 166);
             this.dgvObjetivos.Name = "dgvObjetivos";
             this.dgvObjetivos.RowTemplate.Height = 25;
-            this.dgvObjetivos.Size = new System.Drawing.Size(376, 156);
+            this.dgvObjetivos.Size = new System.Drawing.Size(454, 156);
             this.dgvObjetivos.TabIndex = 4;
             this.dgvObjetivos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvObjetivos_CellClick);
             // 
@@ -121,7 +121,7 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.btnModificar.Image = global::BugTracker_TPI.Properties.Resources.editar;
-            this.btnModificar.Location = new System.Drawing.Point(261, 346);
+            this.btnModificar.Location = new System.Drawing.Point(335, 345);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(64, 61);
             this.btnModificar.TabIndex = 3;
@@ -145,7 +145,7 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.btnNuevo.Image = global::BugTracker_TPI.Properties.Resources.agregar_archivo;
-            this.btnNuevo.Location = new System.Drawing.Point(191, 346);
+            this.btnNuevo.Location = new System.Drawing.Point(265, 345);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(64, 61);
             this.btnNuevo.TabIndex = 4;
@@ -155,7 +155,7 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             // btnConsultar
             // 
             this.btnConsultar.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnConsultar.Location = new System.Drawing.Point(299, 123);
+            this.btnConsultar.Location = new System.Drawing.Point(377, 123);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(91, 25);
             this.btnConsultar.TabIndex = 0;
@@ -212,7 +212,7 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(447, 422);
+            this.ClientSize = new System.Drawing.Size(518, 437);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormObjetivos";

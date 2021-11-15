@@ -58,12 +58,12 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.txtFechaFin = new System.Windows.Forms.MaskedTextBox();
             this.cboUsuarios = new System.Windows.Forms.ComboBox();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblReqUser = new System.Windows.Forms.Label();
+            this.lblReqCurso = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblReqInicio = new System.Windows.Forms.Label();
+            this.lblReqFin = new System.Windows.Forms.Label();
             this.txtObser = new System.Windows.Forms.RichTextBox();
             this.groupAvances.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvances)).BeginInit();
@@ -351,27 +351,27 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // label8
+            // lblReqUser
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(71, 53);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(15, 19);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "*";
+            this.lblReqUser.AutoSize = true;
+            this.lblReqUser.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblReqUser.ForeColor = System.Drawing.Color.Red;
+            this.lblReqUser.Location = new System.Drawing.Point(71, 53);
+            this.lblReqUser.Name = "lblReqUser";
+            this.lblReqUser.Size = new System.Drawing.Size(15, 19);
+            this.lblReqUser.TabIndex = 19;
+            this.lblReqUser.Text = "*";
             // 
-            // label9
+            // lblReqCurso
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(71, 84);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(15, 19);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "*";
+            this.lblReqCurso.AutoSize = true;
+            this.lblReqCurso.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblReqCurso.ForeColor = System.Drawing.Color.Red;
+            this.lblReqCurso.Location = new System.Drawing.Point(71, 84);
+            this.lblReqCurso.Name = "lblReqCurso";
+            this.lblReqCurso.Size = new System.Drawing.Size(15, 19);
+            this.lblReqCurso.TabIndex = 20;
+            this.lblReqCurso.Text = "*";
             // 
             // label10
             // 
@@ -395,27 +395,27 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.label11.TabIndex = 22;
             this.label11.Text = "*";
             // 
-            // label12
+            // lblReqInicio
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(71, 226);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(15, 19);
-            this.label12.TabIndex = 23;
-            this.label12.Text = "*";
+            this.lblReqInicio.AutoSize = true;
+            this.lblReqInicio.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblReqInicio.ForeColor = System.Drawing.Color.Red;
+            this.lblReqInicio.Location = new System.Drawing.Point(71, 226);
+            this.lblReqInicio.Name = "lblReqInicio";
+            this.lblReqInicio.Size = new System.Drawing.Size(15, 19);
+            this.lblReqInicio.TabIndex = 23;
+            this.lblReqInicio.Text = "*";
             // 
-            // label13
+            // lblReqFin
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label13.ForeColor = System.Drawing.Color.Red;
-            this.label13.Location = new System.Drawing.Point(71, 261);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(15, 19);
-            this.label13.TabIndex = 24;
-            this.label13.Text = "*";
+            this.lblReqFin.AutoSize = true;
+            this.lblReqFin.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblReqFin.ForeColor = System.Drawing.Color.Red;
+            this.lblReqFin.Location = new System.Drawing.Point(71, 261);
+            this.lblReqFin.Name = "lblReqFin";
+            this.lblReqFin.Size = new System.Drawing.Size(15, 19);
+            this.lblReqFin.TabIndex = 24;
+            this.lblReqFin.Text = "*";
             // 
             // txtObser
             // 
@@ -433,12 +433,12 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(437, 636);
             this.Controls.Add(this.txtObser);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.lblReqFin);
+            this.Controls.Add(this.lblReqInicio);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lblReqCurso);
+            this.Controls.Add(this.lblReqUser);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.cboUsuarios);
             this.Controls.Add(this.txtFechaFin);
@@ -496,12 +496,12 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
         private System.Windows.Forms.ComboBox cboUsuarios;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblReqUser;
+        private System.Windows.Forms.Label lblReqCurso;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblReqInicio;
+        private System.Windows.Forms.Label lblReqFin;
         private System.Windows.Forms.RichTextBox txtObser;
     }
 }

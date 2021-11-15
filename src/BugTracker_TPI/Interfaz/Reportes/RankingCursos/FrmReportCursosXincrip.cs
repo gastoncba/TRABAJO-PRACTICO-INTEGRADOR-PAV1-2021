@@ -27,7 +27,7 @@ namespace BugTracker_TPI.Interfaz.Reportes.RankingCursos
 
         private void cargarReporte()
         {
-            string sql_string = "select c.id_curso, c.nombre, count(*) as cant_inscriptos " +
+            string sql_string = "select c.nombre, count(*) as cant_inscriptos " +
                 "from Cursos c inner join UsuariosCurso uc on " +
                 "c.id_curso = uc.id_curso " +
                 "group by c.id_curso, c.nombre " +

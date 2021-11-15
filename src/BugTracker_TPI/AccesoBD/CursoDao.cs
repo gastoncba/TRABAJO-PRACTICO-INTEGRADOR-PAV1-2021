@@ -32,8 +32,8 @@ namespace BugTracker_TPI.AccesoBD
                 consulta += " WHERE (C.borrado = 0) ";
             }
 
-            if (parametros.ContainsKey("vigencia"))
-                consulta += " AND (C.fecha_vigencia >= @vigencia) ";
+            if (parametros.ContainsKey("vigenciaDesde"))
+                consulta += " AND (C.fecha_vigencia between @vigenciaDesde and @vigenciaHasta) ";
     
             if (parametros.ContainsKey("idCategoria"))
                 consulta += " AND (C.id_categoria = @idCategoria) ";
