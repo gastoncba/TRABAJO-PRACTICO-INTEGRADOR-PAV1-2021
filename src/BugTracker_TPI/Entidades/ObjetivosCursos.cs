@@ -8,7 +8,6 @@ namespace BugTracker_TPI.Entidades
     
     class ObjetivosCursos
     {
-        
         public int id_objetivo { get; set; }
         public int id_curso { get; set; }
         public int puntos { get; set; }

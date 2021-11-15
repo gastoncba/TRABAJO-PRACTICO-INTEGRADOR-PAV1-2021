@@ -60,8 +60,6 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblReqUser = new System.Windows.Forms.Label();
             this.lblReqCurso = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.lblReqInicio = new System.Windows.Forms.Label();
             this.lblReqFin = new System.Windows.Forms.Label();
             this.txtObser = new System.Windows.Forms.RichTextBox();
@@ -373,28 +371,6 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.lblReqCurso.TabIndex = 20;
             this.lblReqCurso.Text = "*";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(71, 119);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(15, 19);
-            this.label10.TabIndex = 21;
-            this.label10.Text = "*";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(71, 149);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(15, 19);
-            this.label11.TabIndex = 22;
-            this.label11.Text = "*";
-            // 
             // lblReqInicio
             // 
             this.lblReqInicio.AutoSize = true;
@@ -435,8 +411,6 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.Controls.Add(this.txtObser);
             this.Controls.Add(this.lblReqFin);
             this.Controls.Add(this.lblReqInicio);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.lblReqCurso);
             this.Controls.Add(this.lblReqUser);
             this.Controls.Add(this.btnCancelar);
@@ -498,8 +472,6 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label lblReqUser;
         private System.Windows.Forms.Label lblReqCurso;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lblReqInicio;
         private System.Windows.Forms.Label lblReqFin;
         private System.Windows.Forms.RichTextBox txtObser;

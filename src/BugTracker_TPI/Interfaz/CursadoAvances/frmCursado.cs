@@ -75,6 +75,12 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
                         txtFinAvance.Enabled = false;
                         txtPorc.Enabled = false;
 
+                        //Asteriscos de datos requeridos
+                        lblReqUser.Visible = true;
+                        lblReqCurso.Visible = true;
+                        lblReqInicio.Visible = true;
+                        lblReqFin.Visible = true;
+
                         btnAgregarAvance.Enabled = false;
                         btnSacarAvance.Enabled = false;
                         break;
@@ -89,10 +95,16 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
                         //info del cursado del usuario 
                         cboUsuarios.Enabled = false;
                         cboCurso.Enabled = false;
-                        txtPuntuacion.Enabled = false;
-                        txtObser.Enabled = false;
+                        txtPuntuacion.Enabled = true;
+                        txtObser.Enabled = true;
                         txtFechaInicio.Enabled = false;
                         txtFechaFin.Enabled = false;
+
+                        //Asteriscos de datos requeridos
+                        lblReqUser.Visible = false;
+                        lblReqCurso.Visible = false;
+                        lblReqInicio.Visible = false;
+                        lblReqFin.Visible = false;
 
                         //info de los avances
                         txtInicioAvance.Enabled = true;
@@ -114,6 +126,12 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
                         txtObser.Enabled = false;
                         txtFechaInicio.Enabled = false;
                         txtFechaFin.Enabled = false;
+
+                        //Asteriscos de datos requeridos
+                        lblReqUser.Visible = false;
+                        lblReqCurso.Visible = false;
+                        lblReqInicio.Visible = false;
+                        lblReqFin.Visible = false;
 
                         //info de los avances
                         txtInicioAvance.Enabled = false;
@@ -271,13 +289,23 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
         }
 
         private void agregarCursado()
+
         {
+            int puntaje = 0;
+
             if(validarCamposCursado())
             {
                 //completamos los atriutos del objeto usuarioCurso
                 usuarioCurso.Usuario = (Usuario)cboUsuarios.SelectedItem;
                 usuarioCurso.Curso = (Curso)cboCurso.SelectedItem;
-                usuarioCurso.Puntuacion = Convert.ToInt32(txtPuntuacion.Text);
+
+                //verifica si el campo del puntaje se encuentra vacio.
+                if(!string.IsNullOrEmpty(txtPuntuacion.Text)) 
+                {
+                    puntaje = Convert.ToInt32(txtPuntuacion.Text);
+                }
+
+                usuarioCurso.Puntuacion = puntaje;
                 usuarioCurso.Observaciones = txtObser.Text;
                 usuarioCurso.FechaInicio = Convert.ToDateTime(txtFechaInicio.Text);
                 usuarioCurso.FechaFin = Convert.ToDateTime(txtFechaFin.Text);
@@ -426,22 +454,13 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
                 return false;
             }
 
-            if(string.IsNullOrEmpty(txtPuntuacion.Text))
+            if(!string.IsNullOrEmpty(txtPuntuacion.Text))
             {
-                MessageBox.Show("Debe ingresar una puntuación", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-
-            if (!int.TryParse(txtPuntuacion.Text, out puntaje))
-            {
-                MessageBox.Show("La puntuación debe ser un entero", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-
-            if (string.IsNullOrEmpty(txtObser.Text.Trim()))
-            {
-                MessageBox.Show("Debe ingresar una observación", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+                if (!int.TryParse(txtPuntuacion.Text, out puntaje))
+                {
+                    MessageBox.Show("La puntuación debe ser un entero", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
             }
 
             if (!DateTime.TryParse(txtFechaInicio.Text, out fechaInicio))
