@@ -106,10 +106,10 @@ namespace BugTracker_TPI.Interfaz.Categorias
             // 
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnConsultar.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnConsultar.Location = new System.Drawing.Point(257, 27);
+            this.btnConsultar.Location = new System.Drawing.Point(257, 30);
             this.btnConsultar.Margin = new System.Windows.Forms.Padding(2);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(82, 29);
+            this.btnConsultar.Size = new System.Drawing.Size(82, 26);
             this.btnConsultar.TabIndex = 6;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.TextAlign = System.Drawing.ContentAlignment.TopCenter;

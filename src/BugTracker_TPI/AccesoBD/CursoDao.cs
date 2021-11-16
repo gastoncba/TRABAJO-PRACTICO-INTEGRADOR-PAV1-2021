@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using BugTracker_TPI.Entidades;
 using System.Data;
+using BugTracker_TPI.Entidades;
+
 
 namespace BugTracker_TPI.AccesoBD
 {
@@ -32,9 +33,9 @@ namespace BugTracker_TPI.AccesoBD
                 consulta += " WHERE (C.borrado = 0) ";
             }
 
-            if (parametros.ContainsKey("vigencia"))
-                consulta += " AND (C.fecha_vigencia >= @vigencia) ";
-    
+            if (parametros.ContainsKey("vigenciaDesde"))
+                consulta += " AND (C.fecha_vigencia between @vigenciaDesde and @vigenciaHasta) ";
+
             if (parametros.ContainsKey("idCategoria"))
                 consulta += " AND (C.id_categoria = @idCategoria) ";
 

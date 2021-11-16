@@ -35,7 +35,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.txtCatNueva = new System.Windows.Forms.TextBox();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // lblNombre
@@ -66,7 +66,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
             // 
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnAceptar.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnAceptar.Location = new System.Drawing.Point(89, 108);
+            this.btnAceptar.Location = new System.Drawing.Point(99, 143);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(69, 28);
@@ -79,7 +79,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
             // 
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnCancelar.Location = new System.Drawing.Point(174, 108);
+            this.btnCancelar.Location = new System.Drawing.Point(184, 143);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(72, 28);
@@ -100,18 +100,18 @@ namespace BugTracker_TPI.Interfaz.Categorias
             // txtDescripcion
             // 
             this.txtDescripcion.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtDescripcion.Location = new System.Drawing.Point(136, 64);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDescripcion.Location = new System.Drawing.Point(136, 67);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(163, 25);
-            this.txtDescripcion.TabIndex = 7;
+            this.txtDescripcion.Size = new System.Drawing.Size(163, 60);
+            this.txtDescripcion.TabIndex = 8;
+            this.txtDescripcion.Text = "";
             // 
             // frmCategoriaABMC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(365, 148);
+            this.ClientSize = new System.Drawing.Size(367, 184);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtCatNueva);
             this.Controls.Add(this.btnCancelar);
@@ -136,6 +136,6 @@ namespace BugTracker_TPI.Interfaz.Categorias
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.TextBox txtCatNueva;
-        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.RichTextBox txtDescripcion;
     }
 }

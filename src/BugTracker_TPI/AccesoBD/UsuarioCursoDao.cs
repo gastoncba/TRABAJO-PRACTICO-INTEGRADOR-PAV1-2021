@@ -191,7 +191,7 @@ namespace BugTracker_TPI.AccesoBD
 
             bool flag = true;
             String updateCursada = string.Concat("UPDATE UsuariosCurso SET ",
-                                            "puntuacion = @puntuacion, observaciones = @observaciones, ",
+                                            "puntuacion = @puntuacion, observaciones = @observaciones ",
                                             "WHERE id_usuario = @id_usuario AND ",
                                             "id_curso = @id_curso");
 
@@ -206,6 +206,8 @@ namespace BugTracker_TPI.AccesoBD
                 cmdMaestro.Parameters.AddWithValue("@id_curso", usuarioCurso.Curso.IdCurso);
                 cmdMaestro.Parameters.AddWithValue("@puntuacion", usuarioCurso.Puntuacion);
                 cmdMaestro.Parameters.AddWithValue("@observaciones", usuarioCurso.Observaciones);
+
+                cmdMaestro.ExecuteNonQuery();
 
                 foreach(Avance av in usuarioCurso.avances)
                 {

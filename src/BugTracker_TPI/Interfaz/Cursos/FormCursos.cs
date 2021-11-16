@@ -60,7 +60,7 @@ namespace BugTracker_TPI.Interfaz.Cursos
             dgvCursos.Columns[3].DataPropertyName = "Categoria";
 
             dgvCursos.Columns[4].Name = "Disponible";
-            dgvCursos.Columns[4].DataPropertyName = "Borrado";
+            dgvCursos.Columns[4].DataPropertyName = "Disponible";
 
             // Se cambia el tamaño de la altura de los encabezados de columna.
             dgvCursos.AutoResizeColumnHeadersHeight();
@@ -83,13 +83,24 @@ namespace BugTracker_TPI.Interfaz.Cursos
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            DateTime fechaVigencia;
+            DateTime fechaVigenciaDesde;
+            DateTime fechaVigenciaHasta;
 
             Dictionary<string, object> parametros = new Dictionary<string, object>();
 
-            if (DateTime.TryParse(txtVigencia.Text, out fechaVigencia))
+            if (DateTime.TryParse(txtVigenciaDesde.Text, out fechaVigenciaDesde) && DateTime.TryParse(txtVigenciaHasta.Text, out fechaVigenciaHasta))
             {
-                parametros.Add("vigencia", fechaVigencia);
+                if (fechaVigenciaDesde >= fechaVigenciaHasta)
+                {
+                    MessageBox.Show("La fecha de inicio de vigencia debe ser menor que la final", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+
+                }
+                else
+                {
+                    parametros.Add("vigenciaDesde", fechaVigenciaDesde);
+                    parametros.Add("vigenciaHasta", fechaVigenciaHasta);
+                }
             }
 
             if (!string.IsNullOrEmpty(cboCategorias.Text))
@@ -185,5 +196,6 @@ namespace BugTracker_TPI.Interfaz.Cursos
         {
 
         }
+
     }
 }

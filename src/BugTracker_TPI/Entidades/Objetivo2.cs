@@ -15,7 +15,5 @@ namespace BugTracker_TPI.Entidades
             return nombre_corto;
         }
 
-
-
     }
 }
