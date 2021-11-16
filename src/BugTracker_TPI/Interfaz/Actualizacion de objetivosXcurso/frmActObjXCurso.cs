@@ -140,6 +140,11 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
             {
                 MessageBox.Show("Por favor, seleccione un item del listado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+
+            if(grdObjCurso.Rows.Count == 0)
+            {
+                agregarObjetivoCurso.Enabled = false;
+            }
         }
 
         private void agregarObjetivoCurso_Click(object sender, EventArgs e)
@@ -174,15 +179,16 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
 
                             }
                             MessageBox.Show("Se guardo correctamente la actualizacion de objetivo del curso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            grdObjCurso.Refresh();
-                            grdObjCurso.Rows.Clear();
+                            //grdObjCurso.Refresh();
+                            //grdObjCurso.Rows.Clear();
+                            this.Close();
                         
                         }
                         
 
                         catch (Exception)
                         {
-                            MessageBox.Show(" El objetivo seleccionado para el curso " + cmbCursos.SelectedItem + "ya existe, por favor, seleccione otro", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("El objetivo seleccionado para el curso " + cmbCursos.SelectedItem + " ya existe, por favor, seleccione otro", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             grdObjCurso.Refresh();
                             grdObjCurso.Rows.Clear();
                         }
@@ -220,6 +226,7 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
         private void btnEliminarTodo_Click_1(object sender, EventArgs e)
         {
             grdObjCurso.Rows.Clear();
+            agregarObjetivoCurso.Enabled = false;
         }
     }
 

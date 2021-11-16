@@ -5,7 +5,6 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-
 using BugTracker_TPI.Negocio;
 using BugTracker_TPI.Entidades;
 using BugTracker_TPI.BusinessLayer;
@@ -120,6 +119,13 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(cmb_Curso.Text))
+            {
+
+                MessageBox.Show("Seleccione un Curso", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+
+            }
             int sel = (int)cmb_Curso.SelectedValue;
             frmActObjXCurso agregarObjCurso = new frmActObjXCurso(sel);
            // agregarObjCurso.cmbCursos.Text = cmb_Curso.Text;
@@ -130,6 +136,14 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(cmb_Curso.Text))
+            {
+
+                MessageBox.Show("Seleccione un Curso", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+
+            }
+
             ObjetivosCursos objetivoCursoSelected = (ObjetivosCursos)grdObjsCurso.CurrentRow.DataBoundItem;
             int sel = (int)cmb_Curso.SelectedValue;
             
@@ -144,7 +158,13 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-           
+            if (string.IsNullOrEmpty(cmb_Curso.Text))
+            {
+
+                MessageBox.Show("Seleccione un Curso", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+
+            }
             //para obtener la categoria que selecciono en la grilla y modificarla:
             ObjetivosCursos objetivoCursoSelected = (ObjetivosCursos)grdObjsCurso.CurrentRow.DataBoundItem;
             int sel = (int)cmb_Curso.SelectedValue;
@@ -158,6 +178,12 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
 
             //esto es para que se actualice la grilla
             btnConsultar_Click(sender, e);
+        }
+
+        private void grdObjsCurso_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnModificar.Enabled = true;
+            btnEliminar.Enabled = true;
         }
     }
     }

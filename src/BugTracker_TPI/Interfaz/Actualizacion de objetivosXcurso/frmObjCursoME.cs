@@ -132,11 +132,11 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
             objCursoSel.Cursos = (Curso)cmb_EliminarCurso.SelectedItem;
             if (objetivosCursosService.actualizarObjCurso(objCursoSel))
             {
-                MessageBox.Show(" Objetivo del curso actualizado con exito", "Aviso", MessageBoxButtons.OK);
+                MessageBox.Show("Objetivo del curso actualizado con exito", "Aviso", MessageBoxButtons.OK);
             }
             else
             {
-                MessageBox.Show(" Ya existe un curso asociado al objetivo seleccionado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ya existe un curso asociado al objetivo seleccionado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
