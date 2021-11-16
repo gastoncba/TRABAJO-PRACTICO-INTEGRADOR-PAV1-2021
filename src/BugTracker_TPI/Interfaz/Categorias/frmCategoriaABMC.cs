@@ -95,7 +95,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
 
                             if (oCategoriaService.crearCategoria(oCategoria))
                                 {
-                                    MessageBox.Show(" Categoria agregada", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("Categoria agregada", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     this.Close();
                                 } 
                             }
@@ -113,7 +113,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
                             categoriaSelected.descripcion = txtDescripcion.Text;
                             if (oCategoriaService.actualizarCategoria(categoriaSelected))
                             {
-                                MessageBox.Show("Categoria actualizada", " Informacion");
+                                MessageBox.Show("Categoria actualizada", " Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Dispose();
                             }
                             else
@@ -127,7 +127,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
                         {
                             if (oCategoriaService.eliminarCategoria(categoriaSelected))
                             {
-                                MessageBox.Show("Categoria eliminada/deshabilitada", "Informacion");
+                                MessageBox.Show("Categoria eliminada/deshabilitada", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
                             }
                             else
