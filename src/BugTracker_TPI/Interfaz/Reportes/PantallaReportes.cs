@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BugTracker_TPI.Interfaz.Reportes.PorcCursos;
-using BugTracker_TPI.Interfaz.Reportes.RankingCursos;
+//using BugTracker_TPI.Interfaz.Reportes.RankingCursos;
 
 namespace BugTracker_TPI.Interfaz.Reportes
 {
@@ -27,8 +27,8 @@ namespace BugTracker_TPI.Interfaz.Reportes
 
         private void btnRanking_Click(object sender, EventArgs e)
         {
-            FrmReportCursosXincrip frmRanking = new FrmReportCursosXincrip();
-            frmRanking.ShowDialog();
+            //FrmReportCursosXincrip frmRanking = new FrmReportCursosXincrip();
+            //frmRanking.ShowDialog();
         }
     }
 }

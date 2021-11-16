@@ -182,23 +182,6 @@
     <Compile Include="Interfaz\Reportes\PorcCursos\FormPorcCursos.Designer.cs">
       <DependentUpon>FormPorcCursos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interfaz\Reportes\RankingCursos\DSReportes.cs">
-      <DependentUpon>DSReportes.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Interfaz\Reportes\RankingCursos\DSReportes.designer.cs">
-      <DependentUpon>DSReportes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Interfaz\Reportes\RankingCursos\DSReportes1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DSReportes.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Interfaz\Reportes\RankingCursos\FrmReportCursosXincrip.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interfaz\Reportes\RankingCursos\FrmReportCursosXincrip.designer.cs">
-      <DependentUpon>FrmReportCursosXincrip.cs</DependentUpon>
-    </Compile>
     <Compile Include="Negocio\CursoService.cs" />
     <Compile Include="Negocio\ObjetivoService.cs" />
     <Compile Include="Negocio\UsuarioCursoService.cs" />
@@ -252,10 +235,6 @@
       <DependentUpon>FormPorcCursos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaz\Reportes\PorcCursos\ReportePorcCursos.rdlc" />
-    <EmbeddedResource Include="Interfaz\Reportes\RankingCursos\FrmReportCursosXincrip.resx">
-      <DependentUpon>FrmReportCursosXincrip.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Interfaz\Reportes\RankingCursos\Report_CantInscpCursos.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -275,17 +254,6 @@
     </None>
     <None Include="Interfaz\Reportes\PorcCursos\DSReportPorcCursos.xss">
       <DependentUpon>DSReportPorcCursos.xsd</DependentUpon>
-    </None>
-    <None Include="Interfaz\Reportes\RankingCursos\DSReportes.xsc">
-      <DependentUpon>DSReportes.xsd</DependentUpon>
-    </None>
-    <None Include="Interfaz\Reportes\RankingCursos\DSReportes.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DSReportes1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Interfaz\Reportes\RankingCursos\DSReportes.xss">
-      <DependentUpon>DSReportes.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
