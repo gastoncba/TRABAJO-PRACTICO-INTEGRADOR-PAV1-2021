@@ -99,7 +99,7 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
             }
             else
             {
-                if (!existeCursoEnGrd(cmbCursos.Text))
+                if (!existeCursoEnGrd(cmbObjetivos.Text))
                 {
                     listaObjetivosCursos.Add(new ObjetivosCursos()
                     {
@@ -111,7 +111,7 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
                 }
                 else
                 {
-                    MessageBox.Show("El curso elegido ya se encuentra en la lista, por favor, seleccione otro", "Información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("El objetivo elegido ya se encuentra en la lista, por favor, seleccione otro", "Información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
 
@@ -121,7 +121,9 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
         {
             foreach (DataGridViewRow fila in grdObjCurso.Rows)
             {
-                if (fila.Cells["nombre_corto"].Value.Equals(text))
+                Objetivo2 obj = (Objetivo2) fila.Cells["nombre_corto"].Value;
+                //if (fila.Cells["nombre_corto"].Value.Equals(text))
+                if(obj.nombre_corto == text)
                     return true;
             }
             return false;

@@ -47,19 +47,19 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
             // cmbCursos
             // 
             this.cmbCursos.FormattingEnabled = true;
-            this.cmbCursos.Location = new System.Drawing.Point(201, 34);
-            this.cmbCursos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbCursos.Location = new System.Drawing.Point(151, 28);
+            this.cmbCursos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbCursos.Name = "cmbCursos";
-            this.cmbCursos.Size = new System.Drawing.Size(196, 24);
+            this.cmbCursos.Size = new System.Drawing.Size(148, 21);
             this.cmbCursos.TabIndex = 0;
             // 
             // cmbObjetivos
             // 
             this.cmbObjetivos.FormattingEnabled = true;
-            this.cmbObjetivos.Location = new System.Drawing.Point(201, 66);
-            this.cmbObjetivos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbObjetivos.Location = new System.Drawing.Point(151, 54);
+            this.cmbObjetivos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbObjetivos.Name = "cmbObjetivos";
-            this.cmbObjetivos.Size = new System.Drawing.Size(196, 24);
+            this.cmbObjetivos.Size = new System.Drawing.Size(148, 21);
             this.cmbObjetivos.TabIndex = 1;
             // 
             // grdObjCurso
@@ -71,12 +71,12 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
             this.grdObjCurso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdObjCurso.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nombre_corto});
-            this.grdObjCurso.Location = new System.Drawing.Point(22, 123);
-            this.grdObjCurso.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grdObjCurso.Location = new System.Drawing.Point(16, 100);
+            this.grdObjCurso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grdObjCurso.Name = "grdObjCurso";
             this.grdObjCurso.RowHeadersWidth = 51;
             this.grdObjCurso.RowTemplate.Height = 29;
-            this.grdObjCurso.Size = new System.Drawing.Size(576, 150);
+            this.grdObjCurso.Size = new System.Drawing.Size(432, 122);
             this.grdObjCurso.TabIndex = 2;
             // 
             // nombre_corto
@@ -91,10 +91,10 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(443, 42);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(332, 34);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(47, 39);
+            this.button1.Size = new System.Drawing.Size(35, 32);
             this.button1.TabIndex = 4;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.agregarObjGrid_Click);
@@ -103,10 +103,10 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
             // 
             this.btnQuitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuitar.Image = ((System.Drawing.Image)(resources.GetObject("btnQuitar.Image")));
-            this.btnQuitar.Location = new System.Drawing.Point(497, 42);
-            this.btnQuitar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnQuitar.Location = new System.Drawing.Point(373, 34);
+            this.btnQuitar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnQuitar.Name = "btnQuitar";
-            this.btnQuitar.Size = new System.Drawing.Size(47, 39);
+            this.btnQuitar.Size = new System.Drawing.Size(35, 32);
             this.btnQuitar.TabIndex = 5;
             this.btnQuitar.UseVisualStyleBackColor = true;
             this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
@@ -115,10 +115,10 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
             // 
             this.agregarObjetivoCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.agregarObjetivoCurso.Image = global::BugTracker_TPI.Properties.Resources.agregar_archivo;
-            this.agregarObjetivoCurso.Location = new System.Drawing.Point(22, 278);
-            this.agregarObjetivoCurso.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.agregarObjetivoCurso.Location = new System.Drawing.Point(16, 226);
+            this.agregarObjetivoCurso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.agregarObjetivoCurso.Name = "agregarObjetivoCurso";
-            this.agregarObjetivoCurso.Size = new System.Drawing.Size(74, 70);
+            this.agregarObjetivoCurso.Size = new System.Drawing.Size(56, 57);
             this.agregarObjetivoCurso.TabIndex = 6;
             this.agregarObjetivoCurso.UseVisualStyleBackColor = true;
             this.agregarObjetivoCurso.Click += new System.EventHandler(this.agregarObjetivoCurso_Click);
@@ -126,18 +126,20 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 34);
+            this.label1.Location = new System.Drawing.Point(16, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 17);
+            this.label1.Size = new System.Drawing.Size(107, 13);
             this.label1.TabIndex = 7;
             this.label1.Text = "Seleccione un curso:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 66);
+            this.label2.Location = new System.Drawing.Point(16, 54);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 17);
+            this.label2.Size = new System.Drawing.Size(114, 13);
             this.label2.TabIndex = 8;
             this.label2.Text = "Seleccione el objetivo:";
             // 
@@ -145,20 +147,20 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
             // 
             this.btnEliminarTodo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarTodo.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarTodo.Image")));
-            this.btnEliminarTodo.Location = new System.Drawing.Point(550, 42);
-            this.btnEliminarTodo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEliminarTodo.Location = new System.Drawing.Point(412, 34);
+            this.btnEliminarTodo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEliminarTodo.Name = "btnEliminarTodo";
-            this.btnEliminarTodo.Size = new System.Drawing.Size(48, 39);
+            this.btnEliminarTodo.Size = new System.Drawing.Size(36, 32);
             this.btnEliminarTodo.TabIndex = 9;
             this.btnEliminarTodo.UseVisualStyleBackColor = true;
             this.btnEliminarTodo.Click += new System.EventHandler(this.btnEliminarTodo_Click_1);
             // 
             // btnCerrarFormA
             // 
-            this.btnCerrarFormA.Location = new System.Drawing.Point(504, 310);
-            this.btnCerrarFormA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCerrarFormA.Location = new System.Drawing.Point(378, 252);
+            this.btnCerrarFormA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCerrarFormA.Name = "btnCerrarFormA";
-            this.btnCerrarFormA.Size = new System.Drawing.Size(94, 29);
+            this.btnCerrarFormA.Size = new System.Drawing.Size(70, 24);
             this.btnCerrarFormA.TabIndex = 10;
             this.btnCerrarFormA.Text = "Cerrar";
             this.btnCerrarFormA.UseVisualStyleBackColor = true;
@@ -166,10 +168,10 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
             // 
             // frmActObjXCurso
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(622, 358);
+            this.ClientSize = new System.Drawing.Size(466, 291);
             this.Controls.Add(this.btnCerrarFormA);
             this.Controls.Add(this.btnEliminarTodo);
             this.Controls.Add(this.label2);
@@ -180,7 +182,8 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
             this.Controls.Add(this.grdObjCurso);
             this.Controls.Add(this.cmbObjetivos);
             this.Controls.Add(this.cmbCursos);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmActObjXCurso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar objetivos de curso";

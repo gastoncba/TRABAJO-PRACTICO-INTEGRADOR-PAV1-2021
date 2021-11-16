@@ -198,5 +198,16 @@ namespace BugTracker_TPI.AccesoBD
             return listadoCursos;
         }
 
+        public bool habilitar(Curso curso)
+        {
+            String consulta = string.Concat("UPDATE Cursos SET borrado = 0 WHERE id_curso = @id_curso");
+
+            var parametros = new Dictionary<string, object>();
+
+            parametros.Add("id_curso", curso.IdCurso);
+
+            return (DataManager.GetInstance().EjecutarSQL(consulta, parametros) == 1);
+        }
+
     }
 }

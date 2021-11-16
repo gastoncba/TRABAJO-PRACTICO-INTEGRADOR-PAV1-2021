@@ -29,6 +29,7 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmObjsCurso));
             this.cmb_Curso = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.grdObjsCurso = new System.Windows.Forms.DataGridView();
@@ -45,7 +46,7 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
             // 
             this.cmb_Curso.FormattingEnabled = true;
             this.cmb_Curso.Location = new System.Drawing.Point(148, 25);
-            this.cmb_Curso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_Curso.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_Curso.Name = "cmb_Curso";
             this.cmb_Curso.Size = new System.Drawing.Size(195, 21);
             this.cmb_Curso.TabIndex = 0;
@@ -69,7 +70,7 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
             this.grdObjsCurso.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grdObjsCurso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdObjsCurso.Location = new System.Drawing.Point(32, 67);
-            this.grdObjsCurso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grdObjsCurso.Margin = new System.Windows.Forms.Padding(2);
             this.grdObjsCurso.Name = "grdObjsCurso";
             this.grdObjsCurso.RowHeadersWidth = 51;
             this.grdObjsCurso.RowTemplate.Height = 29;
@@ -81,7 +82,7 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
             // 
             this.btnConsultar.Font = new System.Drawing.Font("Segoe UI", 7.8F);
             this.btnConsultar.Location = new System.Drawing.Point(367, 22);
-            this.btnConsultar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(2);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(70, 27);
             this.btnConsultar.TabIndex = 3;
@@ -94,7 +95,7 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Image = global::BugTracker_TPI.Properties.Resources.agregar_archivo;
             this.btnAgregar.Location = new System.Drawing.Point(38, 210);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(70, 58);
             this.btnAgregar.TabIndex = 4;
@@ -107,7 +108,7 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Image = global::BugTracker_TPI.Properties.Resources.editar;
             this.btnModificar.Location = new System.Drawing.Point(112, 210);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(70, 58);
             this.btnModificar.TabIndex = 5;
@@ -121,7 +122,7 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Image = global::BugTracker_TPI.Properties.Resources.borrar;
             this.btnEliminar.Location = new System.Drawing.Point(186, 210);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(70, 58);
             this.btnEliminar.TabIndex = 6;
@@ -157,7 +158,8 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
             this.Controls.Add(this.grdObjsCurso);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmb_Curso);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmObjsCurso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Objetivos por Cursos";

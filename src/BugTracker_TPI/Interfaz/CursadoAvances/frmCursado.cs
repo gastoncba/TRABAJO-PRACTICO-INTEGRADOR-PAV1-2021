@@ -326,13 +326,19 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
 
         private void modificarCursado()
         {
+            int puntaje = 0;
             if(validarCamposCursado())
             {
 
                 //seteamos los atributos del cursado o "usuariosCurso" seleccionado
                 cursadoSelect.Usuario = (Usuario)cboUsuarios.SelectedItem;
                 cursadoSelect.Curso = (Curso)cboCurso.SelectedItem;
-                cursadoSelect.Puntuacion = Convert.ToInt32(txtPuntuacion.Text);
+                //verifica si el campo del puntaje se encuentra vacio.
+                if (!string.IsNullOrEmpty(txtPuntuacion.Text))
+                {
+                    puntaje = Convert.ToInt32(txtPuntuacion.Text);
+                }
+                cursadoSelect.Puntuacion = puntaje;
                 cursadoSelect.Observaciones = txtObser.Text;
                 cursadoSelect.FechaInicio = Convert.ToDateTime(txtFechaInicio.Text);
                 cursadoSelect.FechaFin = Convert.ToDateTime(txtFechaFin.Text);

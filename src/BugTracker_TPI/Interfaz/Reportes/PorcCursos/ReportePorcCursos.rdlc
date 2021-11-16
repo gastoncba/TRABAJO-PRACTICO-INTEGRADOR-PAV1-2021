@@ -334,6 +334,8 @@
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />
+                        <Label>#PERCENT</Label>
+                        <Visible>true</Visible>
                       </ChartDataLabel>
                       <Style />
                       <ChartMarker>
@@ -648,9 +650,9 @@
             </ChartNoDataMessage>
             <DataSetName>DSReportePorc</DataSetName>
             <Top>0.36724cm</Top>
-            <Left>10.28912cm</Left>
-            <Height>6.03188cm</Height>
-            <Width>9.405cm</Width>
+            <Left>7.11412cm</Left>
+            <Height>6.85209cm</Height>
+            <Width>12.58cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>

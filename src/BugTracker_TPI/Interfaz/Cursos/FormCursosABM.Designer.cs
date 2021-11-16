@@ -40,6 +40,7 @@ namespace BugTracker_TPI.Interfaz.Cursos
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.txtDescripcion = new System.Windows.Forms.RichTextBox();
+            this.btnHabilitar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblNombre
@@ -139,12 +140,25 @@ namespace BugTracker_TPI.Interfaz.Cursos
             this.txtDescripcion.TabIndex = 10;
             this.txtDescripcion.Text = "";
             // 
+            // btnHabilitar
+            // 
+            this.btnHabilitar.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnHabilitar.Location = new System.Drawing.Point(262, 238);
+            this.btnHabilitar.Name = "btnHabilitar";
+            this.btnHabilitar.Size = new System.Drawing.Size(87, 28);
+            this.btnHabilitar.TabIndex = 11;
+            this.btnHabilitar.Text = "Habilitar";
+            this.btnHabilitar.UseVisualStyleBackColor = true;
+            this.btnHabilitar.Visible = false;
+            this.btnHabilitar.Click += new System.EventHandler(this.btnHabilitar_Click);
+            // 
             // FormCursosABM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(361, 279);
+            this.Controls.Add(this.btnHabilitar);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
@@ -176,5 +190,6 @@ namespace BugTracker_TPI.Interfaz.Cursos
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.RichTextBox txtDescripcion;
+        private System.Windows.Forms.Button btnHabilitar;
     }
 }

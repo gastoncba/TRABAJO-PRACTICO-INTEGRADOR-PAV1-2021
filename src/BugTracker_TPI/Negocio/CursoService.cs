@@ -57,6 +57,12 @@ namespace BugTracker_TPI.Negocio
         {
             return cursoDao.getAll();
         }
+
+        public bool habilitar(Curso curso)
+        {
+
+            return cursoDao.habilitar(curso);
+        }
     }
 
 }

@@ -155,8 +155,16 @@ namespace BugTracker_TPI.Interfaz.Cursos
 
         private void dgvCursos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            Curso cursoSele = (Curso) dgvCursos.CurrentRow.DataBoundItem;
+            if(cursoSele.Disponible == "no")
+            {
+                btnEliminar.Enabled = false;
+            } else
+            {
+                btnEliminar.Enabled = true;
+            }
             btnModificar.Enabled = true;
-            btnEliminar.Enabled = true;
+            
         }
 
         private void btnModificar_Click(object sender, EventArgs e)

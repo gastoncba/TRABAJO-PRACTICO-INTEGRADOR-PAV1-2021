@@ -57,6 +57,25 @@ namespace BugTracker_TPI.Interfaz.Cursos
                         txtDescripcion.Enabled = true;
                         txtVigencia.Enabled = true;
                         cboCategorias.Enabled = true;
+
+                        btnAceptar.Enabled = true;
+
+                        if (oCursoSeleccionado != null)
+                        {
+                            if(oCursoSeleccionado.Disponible == "no")
+                            {
+                                btnHabilitar.Visible = true;
+
+                                //campos de mod bloqueados
+                                txtNombre.Enabled = false;
+                                txtDescripcion.Enabled = false;
+                                txtVigencia.Enabled = false;
+                                cboCategorias.Enabled = false;
+
+                                //botones aceptar bloqueado
+                                btnAceptar.Enabled = false;
+                            }
+                        }
                         break;
                     }
                 case FormMode.eliminar:
@@ -214,6 +233,21 @@ namespace BugTracker_TPI.Interfaz.Cursos
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnHabilitar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Seguro que desea habilitar el curso seleccionado?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+
+                if (oCursoService.habilitar(oCursoSeleccionado))
+                {
+                    MessageBox.Show("Curso Habilitado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                    MessageBox.Show("Error al habilitar el curso!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }
