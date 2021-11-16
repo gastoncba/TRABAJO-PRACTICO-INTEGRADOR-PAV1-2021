@@ -102,7 +102,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
 
                         }
                         else                       
-                            MessageBox.Show("La categoria insertada ya existe, ingrese otro nuevo");
+                            MessageBox.Show("La categoria insertada ya existe, ingrese otro nuevo", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;    
                     }
                 case FormMode.actualizar:
@@ -117,7 +117,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
                                 this.Dispose();
                             }
                             else
-                                MessageBox.Show("Error al actualizar la categoria", "Informacion");
+                                MessageBox.Show("Error al actualizar la categoria", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         break;
                     }
@@ -132,7 +132,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
                             }
                             else
                             {
-                                MessageBox.Show("Error al eliminar la categoria indicada");
+                                MessageBox.Show("Error al eliminar la categoria indicada", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
                     }

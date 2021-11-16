@@ -38,10 +38,6 @@ namespace BugTracker_TPI.Interfaz.Objetivos
                     {
                         this.Text = "Nuevo Objetivo";
 
-                        //el id lo crea la bd
-                        label1.Visible = false;
-                        txtId.Visible = false;
-
                         txtNC.Enabled = true;
                         txtNL.Enabled = true;
                         break;
@@ -59,7 +55,6 @@ namespace BugTracker_TPI.Interfaz.Objetivos
                                 btnHabilitar.Visible = true;
 
                                 //campos de mod bloqueados
-                                txtId.Enabled = false;
                                 txtNC.Enabled = false;
                                 txtNL.Enabled = false;
 
@@ -84,7 +79,6 @@ namespace BugTracker_TPI.Interfaz.Objetivos
         {
             if (oObjetivoSeleccionado != null)
             {
-                txtId.Text = oObjetivoSeleccionado.IdObjetivo.ToString();
                 txtNC.Text = oObjetivoSeleccionado.NombreCorto;
                 txtNL.Text = oObjetivoSeleccionado.NombreLargo;
             }
@@ -180,7 +174,17 @@ namespace BugTracker_TPI.Interfaz.Objetivos
 
         private void btnHabilitar_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Seguro que desea habilitar el objetivo seleccionado?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
 
+                if (oObjetivoService.habilitar(oObjetivoSeleccionado))
+                {
+                    MessageBox.Show("Objetivo Habilitado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                    MessageBox.Show("Error al habilitar el objetivo!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

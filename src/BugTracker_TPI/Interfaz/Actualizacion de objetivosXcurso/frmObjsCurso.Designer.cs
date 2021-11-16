@@ -44,21 +44,22 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
             // 
             // cmb_Curso
             // 
+            this.cmb_Curso.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmb_Curso.FormattingEnabled = true;
-            this.cmb_Curso.Location = new System.Drawing.Point(148, 25);
+            this.cmb_Curso.Location = new System.Drawing.Point(167, 29);
             this.cmb_Curso.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_Curso.Name = "cmb_Curso";
-            this.cmb_Curso.Size = new System.Drawing.Size(195, 21);
+            this.cmb_Curso.Size = new System.Drawing.Size(195, 25);
             this.cmb_Curso.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 7.8F);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label1.Location = new System.Drawing.Point(32, 29);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 13);
+            this.label1.Size = new System.Drawing.Size(131, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "Seleccione un curso:";
             // 
@@ -74,17 +75,17 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
             this.grdObjsCurso.Name = "grdObjsCurso";
             this.grdObjsCurso.RowHeadersWidth = 51;
             this.grdObjsCurso.RowTemplate.Height = 29;
-            this.grdObjsCurso.Size = new System.Drawing.Size(405, 122);
+            this.grdObjsCurso.Size = new System.Drawing.Size(421, 122);
             this.grdObjsCurso.TabIndex = 2;
             this.grdObjsCurso.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdObjsCurso_CellClick);
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Font = new System.Drawing.Font("Segoe UI", 7.8F);
-            this.btnConsultar.Location = new System.Drawing.Point(367, 22);
+            this.btnConsultar.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnConsultar.Location = new System.Drawing.Point(367, 29);
             this.btnConsultar.Margin = new System.Windows.Forms.Padding(2);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(70, 27);
+            this.btnConsultar.Size = new System.Drawing.Size(103, 25);
             this.btnConsultar.TabIndex = 3;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
@@ -150,7 +151,7 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(464, 289);
+            this.ClientSize = new System.Drawing.Size(481, 289);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);

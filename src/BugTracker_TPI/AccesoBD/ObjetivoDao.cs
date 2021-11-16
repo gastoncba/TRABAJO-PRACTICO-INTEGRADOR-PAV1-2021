@@ -17,10 +17,10 @@ namespace BugTracker_TPI.AccesoBD
 
             if (incluirBorrados)
             {
-                consulta += "WHERE O.borrado = 0 OR O.borrado = 1 ";
+                consulta += "WHERE (O.borrado = 0 OR O.borrado = 1) ";
             } else
             {
-                consulta += "WHERE O.borrado = 0 ";
+                consulta += "WHERE (O.borrado = 0) ";
             }
 
             if (parametros.ContainsKey("idObjetivo"))
@@ -138,6 +138,16 @@ namespace BugTracker_TPI.AccesoBD
 
             };
             return oObjetivo;
+        }
+
+        public bool habilitar(Objetivo objetivo)
+        {
+            String sentencia_sql = " UPDATE Objetivos SET borrado = 0 WHERE id_objetivo = @id_objetivo";
+
+            var parametros = new Dictionary<string, object>();
+            parametros.Add("id_objetivo", objetivo.IdObjetivo);
+
+            return (DataManager.GetInstance().EjecutarSQL(sentencia_sql, parametros) == 1);
         }
 
     }

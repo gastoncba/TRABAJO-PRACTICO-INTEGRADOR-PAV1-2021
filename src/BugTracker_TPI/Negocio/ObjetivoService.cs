@@ -47,5 +47,10 @@ namespace BugTracker_TPI.Negocio
         {
             return objetivoDao.obtenerObjetivos();
         }
+
+        public bool habilitar(Objetivo objetivo)
+        {
+            return objetivoDao.habilitar(objetivo);
+        }
     }
 }

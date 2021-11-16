@@ -29,7 +29,7 @@ namespace BugTracker_TPI.Interfaz.Objetivos
         {
             // declaramos la cant de columnas de la tabla.
             //4 columnas ya que de los cursos vamos a mostrar id, nombre corto, nombre largo y borrado
-            dgvObjetivos.ColumnCount = 4;
+            dgvObjetivos.ColumnCount = 3;
             dgvObjetivos.ColumnHeadersVisible = true;
 
             // Configuramos la AutoGenerateColumns en false para que no se autogeneren las columnas
@@ -45,17 +45,17 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             // Definimos el nombre de la columnas y el DataPropertyName que se asocia a DataSource
             //tener en cuenta que el nombre de DataPropertyName tiene que ser el mismo de la clase Curso que se 
             //encuentra en la capa "Entidad"
-            dgvObjetivos.Columns[0].Name = "Id";
-            dgvObjetivos.Columns[0].DataPropertyName = "IdObjetivo";
+            //dgvObjetivos.Columns[0].Name = "Id";
+            //dgvObjetivos.Columns[0].DataPropertyName = "IdObjetivo";
 
-            dgvObjetivos.Columns[1].Name = "Nombre Corto";
-            dgvObjetivos.Columns[1].DataPropertyName = "NombreCorto";
+            dgvObjetivos.Columns[0].Name = "Nombre Corto";
+            dgvObjetivos.Columns[0].DataPropertyName = "NombreCorto";
 
-            dgvObjetivos.Columns[2].Name = "Nombre Largo";
-            dgvObjetivos.Columns[2].DataPropertyName = "NombreLargo";
+            dgvObjetivos.Columns[1].Name = "Nombre Largo";
+            dgvObjetivos.Columns[1].DataPropertyName = "NombreLargo";
 
-            dgvObjetivos.Columns[3].Name = "Disponible";
-            dgvObjetivos.Columns[3].DataPropertyName = "Borrado";
+            dgvObjetivos.Columns[2].Name = "Disponible";
+            dgvObjetivos.Columns[2].DataPropertyName = "Borrado";
 
             // Se cambia el tamaño de la altura de los encabezados de columna.
             dgvObjetivos.AutoResizeColumnHeadersHeight();
@@ -91,11 +91,6 @@ namespace BugTracker_TPI.Interfaz.Objetivos
         private void btnConsultar_Click(object sender, EventArgs e)
         {
             Dictionary<string, object> parametros = new Dictionary<string, object>();
-
-            if (!string.IsNullOrEmpty(txtId.Text))
-            {
-                parametros.Add("idObjetivo", txtId.Text);
-            }
 
             if (!string.IsNullOrEmpty(txtNC.Text))
             {

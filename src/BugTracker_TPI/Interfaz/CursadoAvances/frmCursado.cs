@@ -385,6 +385,12 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
                 return false;
             }
 
+            if (!DateTime.TryParse(txtInicioAvance.Text, out fechaInicioAvance) || !DateTime.TryParse(txtFinAvance.Text, out fechaFinAvance))
+            {
+                MessageBox.Show("Fechas erroneas: " + fechaInicioAvance + " y " + fechaFinAvance, "Validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
             if (fechaInicioAvance >= fechaFinAvance)
             {
                 MessageBox.Show("La fecha fin del avance debe ser mayor a la fecha de inicio", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
