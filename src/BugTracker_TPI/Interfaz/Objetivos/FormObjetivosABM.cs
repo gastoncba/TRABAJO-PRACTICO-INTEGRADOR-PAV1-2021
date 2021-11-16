@@ -41,6 +41,9 @@ namespace BugTracker_TPI.Interfaz.Objetivos
                         //el id lo crea la bd
                         label1.Visible = false;
                         txtId.Visible = false;
+
+                        txtNC.Enabled = true;
+                        txtNL.Enabled = true;
                         break;
                     }
                 case FormMode.modificar:
@@ -48,6 +51,22 @@ namespace BugTracker_TPI.Interfaz.Objetivos
                         this.Text = "Modificar Objetivo";
                         //se recuperan los datos de curso que se selecciono 
                         getDatosObjetivoSelected();
+
+                        if (oObjetivoSeleccionado != null)
+                        {
+                            if (oObjetivoSeleccionado.Borrado == "no")
+                            {
+                                btnHabilitar.Visible = true;
+
+                                //campos de mod bloqueados
+                                txtId.Enabled = false;
+                                txtNC.Enabled = false;
+                                txtNL.Enabled = false;
+
+                                //botones aceptar bloqueado
+                                btnAceptar.Enabled = false;
+                            }
+                        }
                         break;
                     }
                 case FormMode.eliminar:
@@ -159,6 +178,9 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             this.Close();
         }
 
-        
+        private void btnHabilitar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

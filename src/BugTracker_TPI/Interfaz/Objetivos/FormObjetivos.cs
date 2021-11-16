@@ -76,8 +76,16 @@ namespace BugTracker_TPI.Interfaz.Objetivos
 
         private void dgvObjetivos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            Objetivo cursoSele = (Objetivo)dgvObjetivos.CurrentRow.DataBoundItem;
+            if (cursoSele.Borrado == "no")
+            {
+                btnEliminar.Enabled = false;
+            }
+            else
+            {
+                btnEliminar.Enabled = true;
+            }
             btnModificar.Enabled = true;
-            btnEliminar.Enabled = true;
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)

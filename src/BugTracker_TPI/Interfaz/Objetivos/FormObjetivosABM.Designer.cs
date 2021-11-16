@@ -38,6 +38,7 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnHabilitar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtNL
@@ -88,7 +89,7 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnCancelar.Location = new System.Drawing.Point(150, 145);
+            this.btnCancelar.Location = new System.Drawing.Point(147, 145);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(76, 25);
             this.btnCancelar.TabIndex = 10;
@@ -99,7 +100,7 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             // btnAceptar
             // 
             this.btnAceptar.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnAceptar.Location = new System.Drawing.Point(64, 145);
+            this.btnAceptar.Location = new System.Drawing.Point(61, 145);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(80, 25);
             this.btnAceptar.TabIndex = 9;
@@ -117,12 +118,25 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             this.label1.TabIndex = 8;
             this.label1.Text = "Id Objetivo: ";
             // 
+            // btnHabilitar
+            // 
+            this.btnHabilitar.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnHabilitar.Location = new System.Drawing.Point(229, 145);
+            this.btnHabilitar.Name = "btnHabilitar";
+            this.btnHabilitar.Size = new System.Drawing.Size(72, 25);
+            this.btnHabilitar.TabIndex = 16;
+            this.btnHabilitar.Text = "Habilitar";
+            this.btnHabilitar.UseVisualStyleBackColor = true;
+            this.btnHabilitar.Visible = false;
+            this.btnHabilitar.Click += new System.EventHandler(this.btnHabilitar_Click);
+            // 
             // FormObjetivosABM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(303, 192);
+            this.ClientSize = new System.Drawing.Size(313, 180);
+            this.Controls.Add(this.btnHabilitar);
             this.Controls.Add(this.txtNL);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtNC);
@@ -150,5 +164,6 @@ namespace BugTracker_TPI.Interfaz.Objetivos
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnHabilitar;
     }
 }
