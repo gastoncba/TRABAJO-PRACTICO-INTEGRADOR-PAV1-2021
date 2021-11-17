@@ -7,7 +7,6 @@ using System.Text;
 using System.Windows.Forms;
 using BugTracker_TPI.Negocio;
 using BugTracker_TPI.Entidades;
-using BugTracker_TPI.BusinessLayer;
 
 namespace BugTracker_TPI.Interfaz.CursadoAvances
 {

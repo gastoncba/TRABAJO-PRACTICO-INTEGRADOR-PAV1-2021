@@ -75,8 +75,8 @@
     <Compile Include="AccesoBD\ObjetivoDao2.cs" />
     <Compile Include="AccesoBD\UsuarioCursoDao.cs" />
     <Compile Include="AccesoBD\UsuarioDao.cs" />
-    <Compile Include="BusinessLayer\CategoriaService.cs" />
-    <Compile Include="BusinessLayer\ObjetivosCursosService.cs" />
+    <Compile Include="Negocio\CategoriaService.cs" />
+    <Compile Include="Negocio\ObjetivosCursosService.cs" />
     <Compile Include="Entidades\Avance.cs" />
     <Compile Include="Entidades\Categoria.cs" />
     <Compile Include="Entidades\Curso.cs" />

@@ -112,6 +112,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             // 
             // cboCurso
             // 
+            this.cboCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboCurso.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cboCurso.FormattingEnabled = true;
             this.cboCurso.Location = new System.Drawing.Point(208, 87);
@@ -171,6 +172,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.porc});
             this.dgvAvances.Location = new System.Drawing.Point(22, 107);
             this.dgvAvances.Name = "dgvAvances";
+            this.dgvAvances.RowHeadersWidth = 51;
             this.dgvAvances.RowTemplate.Height = 25;
             this.dgvAvances.Size = new System.Drawing.Size(340, 130);
             this.dgvAvances.TabIndex = 9;
@@ -180,19 +182,25 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             // 
             this.inicio.DataPropertyName = "Inicio";
             this.inicio.HeaderText = "Inicio";
+            this.inicio.MinimumWidth = 6;
             this.inicio.Name = "inicio";
+            this.inicio.Width = 125;
             // 
             // fin
             // 
             this.fin.DataPropertyName = "Fin";
             this.fin.HeaderText = "Fin";
+            this.fin.MinimumWidth = 6;
             this.fin.Name = "fin";
+            this.fin.Width = 125;
             // 
             // porc
             // 
             this.porc.DataPropertyName = "Porcentaje";
             this.porc.HeaderText = "Porcentaje";
+            this.porc.MinimumWidth = 6;
             this.porc.Name = "porc";
+            this.porc.Width = 125;
             // 
             // txtPorc
             // 
@@ -269,7 +277,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 19);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Puntuacion:";
+            this.label4.Text = "Puntuación:";
             // 
             // txtPuntuacion
             // 
@@ -331,6 +339,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             // 
             // cboUsuarios
             // 
+            this.cboUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboUsuarios.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cboUsuarios.FormattingEnabled = true;
             this.cboUsuarios.Location = new System.Drawing.Point(208, 50);
@@ -429,7 +438,10 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblPrincipal);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmCursado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.Load += new System.EventHandler(this.frmAvances_Load);
             this.groupBox1.ResumeLayout(false);

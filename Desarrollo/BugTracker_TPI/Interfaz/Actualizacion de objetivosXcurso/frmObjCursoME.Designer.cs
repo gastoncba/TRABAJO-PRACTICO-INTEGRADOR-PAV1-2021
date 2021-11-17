@@ -43,7 +43,7 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label1.Location = new System.Drawing.Point(52, 44);
+            this.label1.Location = new System.Drawing.Point(43, 44);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 19);
@@ -66,7 +66,7 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
             this.cmb_EliminarCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmb_EliminarCurso.FormattingEnabled = true;
             this.cmb_EliminarCurso.Location = new System.Drawing.Point(111, 40);
-            this.cmb_EliminarCurso.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_EliminarCurso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmb_EliminarCurso.Name = "cmb_EliminarCurso";
             this.cmb_EliminarCurso.Size = new System.Drawing.Size(138, 21);
             this.cmb_EliminarCurso.TabIndex = 2;
@@ -76,7 +76,7 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
             this.cmb_eliminarObj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmb_eliminarObj.FormattingEnabled = true;
             this.cmb_eliminarObj.Location = new System.Drawing.Point(111, 71);
-            this.cmb_eliminarObj.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_eliminarObj.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmb_eliminarObj.Name = "cmb_eliminarObj";
             this.cmb_eliminarObj.Size = new System.Drawing.Size(138, 21);
             this.cmb_eliminarObj.TabIndex = 3;
@@ -86,9 +86,9 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.button1.Location = new System.Drawing.Point(75, 107);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 24);
+            this.button1.Size = new System.Drawing.Size(69, 28);
             this.button1.TabIndex = 4;
             this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = true;
@@ -98,10 +98,10 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.button2.Location = new System.Drawing.Point(166, 107);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(180, 107);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(83, 24);
+            this.button2.Size = new System.Drawing.Size(69, 28);
             this.button2.TabIndex = 5;
             this.button2.Text = "Cerrar";
             this.button2.UseVisualStyleBackColor = true;
@@ -111,7 +111,7 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.label3.Location = new System.Drawing.Point(44, 13);
+            this.label3.Location = new System.Drawing.Point(29, 9);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 19);
@@ -124,9 +124,8 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(350, 139);
+            this.ClientSize = new System.Drawing.Size(313, 139);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -135,7 +134,7 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmObjCursoME";

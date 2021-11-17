@@ -44,7 +44,7 @@ namespace BugTracker_TPI
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.lblUsuario.Location = new System.Drawing.Point(48, 47);
+            this.lblUsuario.Location = new System.Drawing.Point(37, 47);
             this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(62, 20);
@@ -55,7 +55,7 @@ namespace BugTracker_TPI
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.label1.Location = new System.Drawing.Point(18, 93);
+            this.label1.Location = new System.Drawing.Point(20, 93);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 20);
@@ -68,7 +68,7 @@ namespace BugTracker_TPI
             this.txtUsuario.Location = new System.Drawing.Point(116, 42);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(153, 25);
+            this.txtUsuario.Size = new System.Drawing.Size(157, 25);
             this.txtUsuario.TabIndex = 2;
             // 
             // txtPassword
@@ -78,7 +78,7 @@ namespace BugTracker_TPI
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(153, 25);
+            this.txtPassword.Size = new System.Drawing.Size(157, 25);
             this.txtPassword.TabIndex = 3;
             // 
             // btnIngresar
@@ -100,7 +100,7 @@ namespace BugTracker_TPI
             this.label2.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.label2.Location = new System.Drawing.Point(57, 12);
+            this.label2.Location = new System.Drawing.Point(51, 11);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(211, 19);
@@ -131,6 +131,8 @@ namespace BugTracker_TPI
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar Sesión";

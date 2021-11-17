@@ -185,6 +185,7 @@ namespace BugTracker_TPI.Interfaz.Cursos
             // 
             // cboCategorias
             // 
+            this.cboCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboCategorias.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cboCategorias.FormattingEnabled = true;
             this.cboCategorias.Location = new System.Drawing.Point(96, 72);
@@ -199,10 +200,10 @@ namespace BugTracker_TPI.Interfaz.Cursos
             this.btnEliminar.Enabled = false;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Image = global::BugTracker_TPI.Properties.Resources.borrar;
-            this.btnEliminar.Location = new System.Drawing.Point(517, 387);
+            this.btnEliminar.Location = new System.Drawing.Point(497, 382);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(64, 60);
+            this.btnEliminar.Size = new System.Drawing.Size(70, 79);
             this.btnEliminar.TabIndex = 11;
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -212,10 +213,10 @@ namespace BugTracker_TPI.Interfaz.Cursos
             this.btnModificar.Enabled = false;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Image = global::BugTracker_TPI.Properties.Resources.editar;
-            this.btnModificar.Location = new System.Drawing.Point(449, 387);
+            this.btnModificar.Location = new System.Drawing.Point(425, 382);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(64, 60);
+            this.btnModificar.Size = new System.Drawing.Size(70, 79);
             this.btnModificar.TabIndex = 10;
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
@@ -225,10 +226,10 @@ namespace BugTracker_TPI.Interfaz.Cursos
             this.btnNuevo.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Image = global::BugTracker_TPI.Properties.Resources.agregar_archivo;
-            this.btnNuevo.Location = new System.Drawing.Point(381, 387);
+            this.btnNuevo.Location = new System.Drawing.Point(353, 382);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(64, 60);
+            this.btnNuevo.Size = new System.Drawing.Size(70, 79);
             this.btnNuevo.TabIndex = 9;
             this.btnNuevo.Text = " ";
             this.btnNuevo.UseVisualStyleBackColor = true;
@@ -237,12 +238,12 @@ namespace BugTracker_TPI.Interfaz.Cursos
             // btnConsultar
             // 
             this.btnConsultar.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnConsultar.Location = new System.Drawing.Point(478, 126);
+            this.btnConsultar.Location = new System.Drawing.Point(467, 131);
             this.btnConsultar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(87, 31);
+            this.btnConsultar.Size = new System.Drawing.Size(82, 26);
             this.btnConsultar.TabIndex = 8;
-            this.btnConsultar.Text = "consultar";
+            this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
@@ -268,7 +269,10 @@ namespace BugTracker_TPI.Interfaz.Cursos
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormCursos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cursos";
             this.Load += new System.EventHandler(this.FormCursos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).EndInit();

@@ -180,7 +180,7 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
                                 }
 
                             }
-                            MessageBox.Show("Se guardo correctamente la actualizacion de objetivo del curso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Se guardó correctamente la actualización del objetivo del curso "+cmbCursos.SelectedItem, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             //grdObjCurso.Refresh();
                             //grdObjCurso.Rows.Clear();
                             this.Close();
@@ -190,7 +190,7 @@ namespace BugTracker_TPI.Interfaz.Actualizacion_de_objetivosXcurso
 
                         catch (Exception)
                         {
-                            MessageBox.Show("El objetivo seleccionado para el curso " + cmbCursos.SelectedItem + " ya existe, por favor, seleccione otro", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Uno o varios de los objetivos seleccionados para el curso " + cmbCursos.SelectedItem + " ya existe, por favor, seleccione otro", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             grdObjCurso.Refresh();
                             grdObjCurso.Rows.Clear();
                         }

@@ -124,6 +124,8 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormObjetivosABM";
             this.Text = "FormObjetivosABM";
             this.Load += new System.EventHandler(this.FormObjetivosABM_Load);

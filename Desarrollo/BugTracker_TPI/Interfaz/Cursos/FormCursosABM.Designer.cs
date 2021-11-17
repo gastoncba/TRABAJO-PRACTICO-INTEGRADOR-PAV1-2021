@@ -47,7 +47,7 @@ namespace BugTracker_TPI.Interfaz.Cursos
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblNombre.Location = new System.Drawing.Point(73, 35);
+            this.lblNombre.Location = new System.Drawing.Point(53, 38);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(66, 19);
             this.lblNombre.TabIndex = 0;
@@ -61,13 +61,13 @@ namespace BugTracker_TPI.Interfaz.Cursos
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 19);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Descripcion: ";
+            this.label2.Text = "Descripción: ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label3.Location = new System.Drawing.Point(72, 150);
+            this.label3.Location = new System.Drawing.Point(53, 150);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 19);
             this.label3.TabIndex = 2;
@@ -77,7 +77,7 @@ namespace BugTracker_TPI.Interfaz.Cursos
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label4.Location = new System.Drawing.Point(64, 191);
+            this.label4.Location = new System.Drawing.Point(53, 191);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 19);
             this.label4.TabIndex = 3;
@@ -102,6 +102,7 @@ namespace BugTracker_TPI.Interfaz.Cursos
             // 
             // cboCategorias
             // 
+            this.cboCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboCategorias.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cboCategorias.FormattingEnabled = true;
             this.cboCategorias.Location = new System.Drawing.Point(145, 188);
@@ -112,7 +113,7 @@ namespace BugTracker_TPI.Interfaz.Cursos
             // btnAceptar
             // 
             this.btnAceptar.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnAceptar.Location = new System.Drawing.Point(106, 238);
+            this.btnAceptar.Location = new System.Drawing.Point(101, 239);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(70, 28);
             this.btnAceptar.TabIndex = 8;
@@ -123,9 +124,9 @@ namespace BugTracker_TPI.Interfaz.Cursos
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnCancelar.Location = new System.Drawing.Point(182, 238);
+            this.btnCancelar.Location = new System.Drawing.Point(181, 239);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(74, 28);
+            this.btnCancelar.Size = new System.Drawing.Size(70, 28);
             this.btnCancelar.TabIndex = 9;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -143,9 +144,9 @@ namespace BugTracker_TPI.Interfaz.Cursos
             // btnHabilitar
             // 
             this.btnHabilitar.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnHabilitar.Location = new System.Drawing.Point(262, 238);
+            this.btnHabilitar.Location = new System.Drawing.Point(257, 239);
             this.btnHabilitar.Name = "btnHabilitar";
-            this.btnHabilitar.Size = new System.Drawing.Size(87, 28);
+            this.btnHabilitar.Size = new System.Drawing.Size(70, 28);
             this.btnHabilitar.TabIndex = 11;
             this.btnHabilitar.Text = "Habilitar";
             this.btnHabilitar.UseVisualStyleBackColor = true;
@@ -170,6 +171,8 @@ namespace BugTracker_TPI.Interfaz.Cursos
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblNombre);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormCursosABM";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FormCursosABM_Load);
