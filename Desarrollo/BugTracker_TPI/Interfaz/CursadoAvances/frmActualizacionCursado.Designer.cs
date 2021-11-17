@@ -86,6 +86,7 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.dgvUsuarioCurso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuarioCurso.Location = new System.Drawing.Point(46, 92);
             this.dgvUsuarioCurso.Name = "dgvUsuarioCurso";
+            this.dgvUsuarioCurso.RowHeadersWidth = 51;
             this.dgvUsuarioCurso.RowTemplate.Height = 25;
             this.dgvUsuarioCurso.Size = new System.Drawing.Size(646, 198);
             this.dgvUsuarioCurso.TabIndex = 4;
@@ -106,9 +107,9 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.btnActualizarAvance.Enabled = false;
             this.btnActualizarAvance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizarAvance.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizarAvance.Image")));
-            this.btnActualizarAvance.Location = new System.Drawing.Point(111, 325);
+            this.btnActualizarAvance.Location = new System.Drawing.Point(123, 318);
             this.btnActualizarAvance.Name = "btnActualizarAvance";
-            this.btnActualizarAvance.Size = new System.Drawing.Size(56, 60);
+            this.btnActualizarAvance.Size = new System.Drawing.Size(70, 79);
             this.btnActualizarAvance.TabIndex = 6;
             this.btnActualizarAvance.UseVisualStyleBackColor = true;
             this.btnActualizarAvance.Click += new System.EventHandler(this.btnActualizarAvance_Click);
@@ -116,9 +117,9 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             // btnConsultar
             // 
             this.btnConsultar.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnConsultar.Location = new System.Drawing.Point(598, 56);
+            this.btnConsultar.Location = new System.Drawing.Point(610, 60);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(94, 30);
+            this.btnConsultar.Size = new System.Drawing.Size(82, 26);
             this.btnConsultar.TabIndex = 7;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
@@ -128,9 +129,9 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             // 
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.Location = new System.Drawing.Point(46, 325);
+            this.btnNuevo.Location = new System.Drawing.Point(47, 318);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(60, 60);
+            this.btnNuevo.Size = new System.Drawing.Size(70, 79);
             this.btnNuevo.TabIndex = 8;
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
@@ -151,9 +152,9 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.btnEliminar.Enabled = false;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.Location = new System.Drawing.Point(172, 325);
+            this.btnEliminar.Location = new System.Drawing.Point(199, 318);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(64, 60);
+            this.btnEliminar.Size = new System.Drawing.Size(70, 79);
             this.btnEliminar.TabIndex = 10;
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -176,6 +177,8 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
             this.Controls.Add(this.lblNombreUsuario);
             this.Controls.Add(this.txtNombre);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmActualizacionCursado";
             this.Text = "Actualización de Cursados";
             this.Load += new System.EventHandler(this.frmActualizacionAvances_Load);

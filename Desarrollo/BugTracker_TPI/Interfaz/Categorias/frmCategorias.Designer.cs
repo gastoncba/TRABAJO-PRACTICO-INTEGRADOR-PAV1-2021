@@ -45,7 +45,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label1.Location = new System.Drawing.Point(18, 30);
+            this.label1.Location = new System.Drawing.Point(24, 35);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 19);
@@ -71,10 +71,10 @@ namespace BugTracker_TPI.Interfaz.Categorias
             // 
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
-            this.btnAgregar.Location = new System.Drawing.Point(138, 323);
+            this.btnAgregar.Location = new System.Drawing.Point(118, 323);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(70, 68);
+            this.btnAgregar.Size = new System.Drawing.Size(70, 79);
             this.btnAgregar.TabIndex = 3;
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -84,10 +84,10 @@ namespace BugTracker_TPI.Interfaz.Categorias
             this.btnModificar.Enabled = false;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
-            this.btnModificar.Location = new System.Drawing.Point(213, 324);
+            this.btnModificar.Location = new System.Drawing.Point(192, 323);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(52, 67);
+            this.btnModificar.Size = new System.Drawing.Size(70, 79);
             this.btnModificar.TabIndex = 4;
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
@@ -97,10 +97,10 @@ namespace BugTracker_TPI.Interfaz.Categorias
             this.btnEliminar.Enabled = false;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.Location = new System.Drawing.Point(270, 323);
+            this.btnEliminar.Location = new System.Drawing.Point(266, 323);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(62, 68);
+            this.btnEliminar.Size = new System.Drawing.Size(70, 79);
             this.btnEliminar.TabIndex = 5;
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -124,7 +124,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
             this.ckdCategorias.AutoSize = true;
             this.ckdCategorias.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.ckdCategorias.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.ckdCategorias.Location = new System.Drawing.Point(22, 70);
+            this.ckdCategorias.Location = new System.Drawing.Point(206, 61);
             this.ckdCategorias.Margin = new System.Windows.Forms.Padding(2);
             this.ckdCategorias.Name = "ckdCategorias";
             this.ckdCategorias.Size = new System.Drawing.Size(160, 24);
@@ -135,7 +135,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
             // txtCategoria
             // 
             this.txtCategoria.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtCategoria.Location = new System.Drawing.Point(84, 27);
+            this.txtCategoria.Location = new System.Drawing.Point(90, 32);
             this.txtCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.txtCategoria.Name = "txtCategoria";
             this.txtCategoria.Size = new System.Drawing.Size(148, 25);
@@ -146,7 +146,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(377, 404);
+            this.ClientSize = new System.Drawing.Size(364, 412);
             this.Controls.Add(this.txtCategoria);
             this.Controls.Add(this.ckdCategorias);
             this.Controls.Add(this.btnConsultar);
@@ -157,6 +157,8 @@ namespace BugTracker_TPI.Interfaz.Categorias
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmCategorias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Categorias";

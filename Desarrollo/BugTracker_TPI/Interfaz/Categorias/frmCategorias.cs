@@ -83,6 +83,12 @@ namespace BugTracker_TPI.Interfaz.Categorias
             }
 
 
+            if (txtCategoria.Text == "")
+            {
+                MessageBox.Show("Por favor, ingrese la categoria a buscar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
+
         }
         private void InitializeDataGridView()
         {

@@ -42,7 +42,12 @@ namespace BugTracker_TPI.Interfaz
                     e.Cancel = false;
                     Application.Exit();
                 }
+                else
+                {
+                    e.Cancel = true;
+                }
             }
+            
         }
 
         private void cursosToolStripMenuItem_Click(object sender, EventArgs e)

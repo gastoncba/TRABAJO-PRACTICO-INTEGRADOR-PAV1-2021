@@ -117,7 +117,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
 
                         }
                         else                       
-                            MessageBox.Show("La categoria insertada ya existe, ingrese otro nuevo", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("La categoria insertada ya existe, por favor, ingrese otra nuevo", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;    
                     }
                 case FormMode.actualizar:

@@ -84,9 +84,9 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.btnEliminar.Image = global::BugTracker_TPI.Properties.Resources.borrar;
-            this.btnEliminar.Location = new System.Drawing.Point(294, 328);
+            this.btnEliminar.Location = new System.Drawing.Point(288, 321);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(64, 61);
+            this.btnEliminar.Size = new System.Drawing.Size(70, 79);
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -107,9 +107,9 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.btnModificar.Image = global::BugTracker_TPI.Properties.Resources.editar;
-            this.btnModificar.Location = new System.Drawing.Point(224, 328);
+            this.btnModificar.Location = new System.Drawing.Point(212, 320);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(64, 61);
+            this.btnModificar.Size = new System.Drawing.Size(70, 79);
             this.btnModificar.TabIndex = 3;
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
@@ -131,9 +131,9 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.btnNuevo.Image = global::BugTracker_TPI.Properties.Resources.agregar_archivo;
-            this.btnNuevo.Location = new System.Drawing.Point(154, 328);
+            this.btnNuevo.Location = new System.Drawing.Point(136, 320);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(64, 61);
+            this.btnNuevo.Size = new System.Drawing.Size(70, 79);
             this.btnNuevo.TabIndex = 4;
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
@@ -141,9 +141,9 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             // btnConsultar
             // 
             this.btnConsultar.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnConsultar.Location = new System.Drawing.Point(263, 87);
+            this.btnConsultar.Location = new System.Drawing.Point(276, 95);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(95, 31);
+            this.btnConsultar.Size = new System.Drawing.Size(82, 26);
             this.btnConsultar.TabIndex = 0;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
@@ -193,6 +193,8 @@ namespace BugTracker_TPI.Interfaz.Objetivos
             this.ClientSize = new System.Drawing.Size(400, 416);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormObjetivos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Objetivo";
