@@ -199,17 +199,17 @@ namespace BugTracker_TPI.Interfaz.Cursos
 
         private bool validarCampos()
         {
-            if(string.IsNullOrEmpty(txtNombre.Text) || txtNombre.Text.Length > 15)
+            if(string.IsNullOrEmpty(txtNombre.Text) || txtNombre.Text.Length > 30)
             {
                 txtNombre.Focus();
-                MessageBox.Show("Ingrese un nombre para el curso, no mas de 15 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ingrese un nombre para el curso, no mas de 30 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
             if (string.IsNullOrEmpty(txtDescripcion.Text) || txtDescripcion.Text.Length > 50)
             {
                 txtNombre.Focus();
-                MessageBox.Show("Ingrese una descripción para el curso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ingrese una descripción para el curso, de no mas de 50 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 

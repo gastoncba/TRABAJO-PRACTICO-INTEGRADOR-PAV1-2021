@@ -468,6 +468,15 @@ namespace BugTracker_TPI.Interfaz.CursadoAvances
                 }
             }
 
+            if(!string.IsNullOrEmpty(txtObser.Text))
+            {
+                if(txtObser.Text.Length > 120)
+                {
+                    MessageBox.Show("La observación no debe ser mayor a 120 caracteres", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
+
             if (!DateTime.TryParse(txtFechaInicio.Text, out fechaInicio))
             {
                 MessageBox.Show("Debe ingresar una fecha de inicio con formato dd/mm/yyyy", "", MessageBoxButtons.OK, MessageBoxIcon.Error);

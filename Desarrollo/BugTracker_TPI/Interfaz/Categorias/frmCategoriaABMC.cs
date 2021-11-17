@@ -164,7 +164,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
 
         private bool ValidarCampos()
         {
-            if (txtCatNueva.Text == string.Empty)
+            if (txtCatNueva.Text == string.Empty || txtCatNueva.Text.Length > 50)
             {
                 txtCatNueva.BackColor = Color.Red;
                 txtCatNueva.Focus();
@@ -175,7 +175,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
                 txtCatNueva.BackColor = Color.White;
                 
             }
-            if (lblDescripcion.Text == string.Empty)
+            if (lblDescripcion.Text == string.Empty || txtCatNueva.Text.Length > 50)
             {
                 lblDescripcion.BackColor = Color.Red;
                 lblDescripcion.Focus();

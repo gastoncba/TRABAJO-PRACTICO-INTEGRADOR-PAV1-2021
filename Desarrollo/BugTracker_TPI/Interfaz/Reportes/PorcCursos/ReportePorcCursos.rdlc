@@ -768,7 +768,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Bug Tracker System</Value>
+                      <Value>Bug Tracking System</Value>
                       <Style>
                         <FontFamily>Segoe Print</FontFamily>
                         <FontSize>11pt</FontSize>
