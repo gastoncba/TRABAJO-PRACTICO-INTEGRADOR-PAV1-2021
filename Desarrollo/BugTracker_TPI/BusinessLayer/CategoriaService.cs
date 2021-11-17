@@ -43,5 +43,15 @@ namespace BugTracker_TPI.BusinessLayer
         {
             return oCategoriaDao.eliminarCategoria(categoriaSelected);
         }
+
+        internal IList<Categoria> obtenerConEliminadas(Dictionary<string, object> filtro)
+        {
+            return oCategoriaDao.obtenerConEliminadas(filtro);
+        }
+
+        internal bool habilitar(Categoria categoria)
+        {
+            return oCategoriaDao.habilitarCategoria(categoria);
+        }
     }
 }

@@ -55,26 +55,31 @@ namespace BugTracker_TPI.Interfaz.Categorias
                     filtros.Add("nombre", txtCategoria.Text);
                 }
 
-                if (filtros.Count > 0)
-                {
+                //if (filtros.Count > 0)
+                //{
                     grdCategorias.DataSource = oCategoriaService.obtenerConFiltros(filtros);
                     if (grdCategorias.Rows.Count == 0)
                     {
                         MessageBox.Show("No se han encontrado resultados para tu búsqueda", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                     }
-                    else
-                    {
-                        btnEliminar.Enabled = true;
-                        btnModificar.Enabled = true;
-                    }
-                }
+                //}
             }
             else
-            {
-                grdCategorias.DataSource = oCategoriaService.obtenerTodas();
-                btnEliminar.Enabled = true;
-                btnModificar.Enabled = true;
+            {   
+                
+                if (txtCategoria.Text != string.Empty)
+                {
+                    filtros.Add("nombre", txtCategoria.Text);
+                }
+
+                //grdCategorias.DataSource = oCategoriaService.obtenerTodas();
+                grdCategorias.DataSource = oCategoriaService.obtenerConEliminadas(filtros);
+                if (grdCategorias.Rows.Count == 0)
+                {
+                    MessageBox.Show("No se han encontrado resultados para tu búsqueda", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                }
             }
 
 
@@ -82,7 +87,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
         private void InitializeDataGridView()
         {
             //defino la cantiddad de columnas
-            grdCategorias.ColumnCount = 2;
+            grdCategorias.ColumnCount = 3;
             grdCategorias.ColumnHeadersVisible = true;
 
 
@@ -99,6 +104,9 @@ namespace BugTracker_TPI.Interfaz.Categorias
             grdCategorias.Columns[1].Name = "Descripción";
             grdCategorias.Columns[1].DataPropertyName = "descripcion";
 
+            grdCategorias.Columns[2].Name = "Disponible";
+            grdCategorias.Columns[2].DataPropertyName = "disponible";
+
             //Cambia el tamaño de la altura de los ancabezados de columna
 
             grdCategorias.AutoResizeColumnHeadersHeight();
@@ -109,19 +117,6 @@ namespace BugTracker_TPI.Interfaz.Categorias
             //grdCategorias.AutoResizeRows(
             //    DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
             grdCategorias.AutoResizeColumns(DataGridViewAutoSizeColumnsMo‌​de.AllCells);
-        }
-        
-
-        private void ckdCategorias_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ckdCategorias.Checked)
-            {
-                txtCategoria.Enabled = false;
-            }
-            else
-            {
-                txtCategoria.Enabled = true;
-            }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -168,6 +163,19 @@ namespace BugTracker_TPI.Interfaz.Categorias
             //esto es para que se actualice la grilla
             btnConsultar_Click(sender, e);
 
+        }
+
+        private void grdCategorias_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Categoria catSelec = (Categoria)grdCategorias.CurrentRow.DataBoundItem;
+            if(catSelec.disponible == "no")
+            {
+                btnEliminar.Enabled = false;
+            } else
+            {
+                btnEliminar.Enabled = true;
+            }
+            btnModificar.Enabled = true;
         }
     }
 }

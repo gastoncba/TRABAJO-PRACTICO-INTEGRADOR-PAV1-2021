@@ -65,6 +65,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
             this.grdCategorias.RowTemplate.Height = 29;
             this.grdCategorias.Size = new System.Drawing.Size(314, 209);
             this.grdCategorias.TabIndex = 2;
+            this.grdCategorias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdCategorias_CellClick);
             // 
             // btnAgregar
             // 
@@ -80,6 +81,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
             // 
             // btnModificar
             // 
+            this.btnModificar.Enabled = false;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
             this.btnModificar.Location = new System.Drawing.Point(213, 324);
@@ -92,6 +94,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Enabled = false;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.Location = new System.Drawing.Point(270, 323);
@@ -121,14 +124,13 @@ namespace BugTracker_TPI.Interfaz.Categorias
             this.ckdCategorias.AutoSize = true;
             this.ckdCategorias.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.ckdCategorias.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.ckdCategorias.Location = new System.Drawing.Point(270, 60);
+            this.ckdCategorias.Location = new System.Drawing.Point(22, 70);
             this.ckdCategorias.Margin = new System.Windows.Forms.Padding(2);
             this.ckdCategorias.Name = "ckdCategorias";
-            this.ckdCategorias.Size = new System.Drawing.Size(69, 24);
+            this.ckdCategorias.Size = new System.Drawing.Size(160, 24);
             this.ckdCategorias.TabIndex = 7;
-            this.ckdCategorias.Text = "Todas";
+            this.ckdCategorias.Text = "Incluir dados de baja";
             this.ckdCategorias.UseVisualStyleBackColor = true;
-            this.ckdCategorias.CheckedChanged += new System.EventHandler(this.ckdCategorias_CheckedChanged);
             // 
             // txtCategoria
             // 

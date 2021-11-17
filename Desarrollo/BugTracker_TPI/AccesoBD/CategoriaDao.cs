@@ -28,7 +28,7 @@ namespace BugTracker_TPI.AccesoBD
         {
             List<Categoria> categoriaFilt = new List<Categoria>();
 
-            string strSql = string.Concat("SELECT c.id_categoria, c.nombre, c.descripcion FROM Categorias c WHERE borrado = 0");
+            string strSql = string.Concat("SELECT c.id_categoria, c.nombre, c.descripcion, c.borrado FROM Categorias c WHERE borrado = 0");
 
             if(filtro.ContainsKey("nombre"))
             {
@@ -55,6 +55,15 @@ namespace BugTracker_TPI.AccesoBD
             // Si una fila es afectada por la actualización retorna TRUE. Caso contrario FALSE
             return (DataManager.GetInstance().EjecutarSQL(strSql, parametros) == 1);
 
+        }
+
+        internal bool habilitarCategoria(Categoria categoria)
+        {
+            string strSql = "UPDATE Categorias SET borrado = 0 WHERE id_categoria = @id_categoria";
+            var parametros = new Dictionary<string, object>();
+            parametros.Add("id_categoria", categoria.id_categoria);
+
+            return (DataManager.GetInstance().EjecutarSQL(strSql, parametros) == 1);
         }
 
         internal bool actualizarCategoria(Categoria categoriaSelected)
@@ -89,11 +98,19 @@ namespace BugTracker_TPI.AccesoBD
 
         private Categoria MappingCategoria(DataRow row)
         {
+            string dispo = "si";
+
+            if (row["borrado"].ToString() == "True")
+            {
+                dispo = "no";
+            }
+
             Categoria oCategoria = new Categoria
             {
                 id_categoria = Convert.ToInt32(row["id_categoria"].ToString()),
                 nombre = row["nombre"].ToString(),
                 descripcion = row["descripcion"].ToString(),
+                disponible = dispo
 
             };
             return oCategoria;
@@ -114,7 +131,26 @@ namespace BugTracker_TPI.AccesoBD
 
         }
 
+        internal IList<Categoria> obtenerConEliminadas(Dictionary<string, object> filtro)
+        {
+            List<Categoria> categoriaFilt = new List<Categoria>();
 
+            string strSql = string.Concat("SELECT c.id_categoria, c.nombre, c.descripcion, c.borrado FROM Categorias c WHERE (borrado = 0 or borrado = 1)");
+
+            if (filtro.ContainsKey("nombre"))
+            {
+                strSql += "AND (c.nombre LIKE '%' + @nombre + '%')";
+            }
+
+            var resultado = DataManager.GetInstance().ConsultaSQL(strSql, filtro);
+
+            foreach (DataRow row in resultado.Rows)
+            {
+                categoriaFilt.Add(MappingCategoria(row));
+            }
+
+            return categoriaFilt;
+        }
 
 
 

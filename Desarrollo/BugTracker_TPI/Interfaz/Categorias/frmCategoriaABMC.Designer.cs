@@ -36,6 +36,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
             this.btnCancelar = new System.Windows.Forms.Button();
             this.txtCatNueva = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.RichTextBox();
+            this.btnHabilitar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblNombre
@@ -79,7 +80,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
             // 
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnCancelar.Location = new System.Drawing.Point(184, 143);
+            this.btnCancelar.Location = new System.Drawing.Point(172, 143);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(72, 28);
@@ -106,12 +107,25 @@ namespace BugTracker_TPI.Interfaz.Categorias
             this.txtDescripcion.TabIndex = 8;
             this.txtDescripcion.Text = "";
             // 
+            // btnHabilitar
+            // 
+            this.btnHabilitar.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnHabilitar.Location = new System.Drawing.Point(249, 143);
+            this.btnHabilitar.Name = "btnHabilitar";
+            this.btnHabilitar.Size = new System.Drawing.Size(77, 29);
+            this.btnHabilitar.TabIndex = 9;
+            this.btnHabilitar.Text = "Habilitar";
+            this.btnHabilitar.UseVisualStyleBackColor = true;
+            this.btnHabilitar.Visible = false;
+            this.btnHabilitar.Click += new System.EventHandler(this.btnHabilitar_Click);
+            // 
             // frmCategoriaABMC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(367, 184);
+            this.Controls.Add(this.btnHabilitar);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtCatNueva);
             this.Controls.Add(this.btnCancelar);
@@ -137,5 +151,6 @@ namespace BugTracker_TPI.Interfaz.Categorias
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.TextBox txtCatNueva;
         private System.Windows.Forms.RichTextBox txtDescripcion;
+        private System.Windows.Forms.Button btnHabilitar;
     }
 }

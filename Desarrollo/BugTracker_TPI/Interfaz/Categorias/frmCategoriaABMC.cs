@@ -42,6 +42,21 @@ namespace BugTracker_TPI.Interfaz.Categorias
                         MostrarDatos();
                         txtCatNueva.Enabled = true;
                         txtDescripcion.Enabled = true;
+
+                        if (categoriaSelected != null)
+                        {
+                            if (categoriaSelected.disponible == "no")
+                            {
+                                btnHabilitar.Visible = true;
+
+                                //campos de mod bloqueados
+                                txtCatNueva.Enabled = false;
+                                txtDescripcion.Enabled = false;
+
+                                //botones aceptar bloqueado
+                                btnAceptar.Enabled = false;
+                            }
+                        }
                         break;
                     }
 
@@ -171,8 +186,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
                 lblDescripcion.BackColor = Color.White;
                 return true;
             }
-                
-
+               
         }
         private bool existeCategoria()
         {
@@ -182,6 +196,22 @@ namespace BugTracker_TPI.Interfaz.Categorias
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnHabilitar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Seguro que desea habilitar el curso seleccionado?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+
+                if (oCategoriaService.habilitar(categoriaSelected               ))
+                {
+                    MessageBox.Show("Categoria Habilitada", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                    MessageBox.Show("Error al habilitar la catogoria!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
         }
     }
 }

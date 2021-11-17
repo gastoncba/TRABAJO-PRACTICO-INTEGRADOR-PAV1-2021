@@ -10,7 +10,7 @@ namespace BugTracker_TPI.Entidades
         public int id_categoria { get; set; }
         public string nombre { get; set; }
         public string descripcion { get; set; }
-        //public bool borrado { get; set; }
+        public string disponible { get; set; }
 
         public override string ToString()
         {
