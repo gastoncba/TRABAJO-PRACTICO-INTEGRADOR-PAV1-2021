@@ -2,14 +2,15 @@ USE [master]
 
 -------------------------------------------------------------------------------------------
 /*-------------------------------------------------------------------------------------------
-NOTA: SI USTED QUIERE PONER OTRO NOMBRE CAMBIAR --> BugTracker POR EL NOMBRE QUE QUIERA*/
+NOTA: Si usted desea cambiar el nombre de la base, cambie "BugTracker" por el  nombre que quiera*/
 
 CREATE [BugTracker] 
 GO
 
+
 USE [BugTracker]
 GO
-/****** Object:  Table [dbo].[Asignaciones]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[Asignaciones]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -24,7 +25,7 @@ CREATE TABLE [dbo].[Asignaciones](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[AsistenciaUsuarios]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[AsistenciaUsuarios]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -43,7 +44,7 @@ CREATE TABLE [dbo].[AsistenciaUsuarios](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Barrios]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[Barrios]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -58,7 +59,7 @@ CREATE TABLE [dbo].[Barrios](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Bugs]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[Bugs]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -81,7 +82,7 @@ CREATE TABLE [dbo].[Bugs](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[BugsHistorico]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[BugsHistorico]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -105,7 +106,7 @@ CREATE TABLE [dbo].[BugsHistorico](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[CasosDePrueba]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[CasosDePrueba]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -123,7 +124,7 @@ CREATE TABLE [dbo].[CasosDePrueba](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Categorias]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[Categorias]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -139,7 +140,7 @@ CREATE TABLE [dbo].[Categorias](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[CiclosPrueba]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[CiclosPrueba]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -158,7 +159,7 @@ CREATE TABLE [dbo].[CiclosPrueba](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[CiclosPruebaDetalle]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[CiclosPruebaDetalle]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -178,7 +179,7 @@ CREATE TABLE [dbo].[CiclosPruebaDetalle](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Clientes]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[Clientes]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -199,7 +200,7 @@ CREATE TABLE [dbo].[Clientes](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Contactos]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[Contactos]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -217,7 +218,7 @@ CREATE TABLE [dbo].[Contactos](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Criticidades]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[Criticidades]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -232,7 +233,7 @@ CREATE TABLE [dbo].[Criticidades](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Cursos]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[Cursos]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -250,7 +251,7 @@ CREATE TABLE [dbo].[Cursos](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Descuentos]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[Descuentos]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -265,7 +266,7 @@ CREATE TABLE [dbo].[Descuentos](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Estados]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[Estados]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -280,7 +281,7 @@ CREATE TABLE [dbo].[Estados](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[EstadosAsistencia]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[EstadosAsistencia]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -294,7 +295,7 @@ CREATE TABLE [dbo].[EstadosAsistencia](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[EstadosUsuarios]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[EstadosUsuarios]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -308,7 +309,7 @@ CREATE TABLE [dbo].[EstadosUsuarios](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Facturas]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[Facturas]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -326,7 +327,7 @@ CREATE TABLE [dbo].[Facturas](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[FacturasDetalle]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[FacturasDetalle]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -346,7 +347,7 @@ CREATE TABLE [dbo].[FacturasDetalle](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Formularios]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[Formularios]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -361,7 +362,7 @@ CREATE TABLE [dbo].[Formularios](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Objetivos]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[Objetivos]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -377,7 +378,7 @@ CREATE TABLE [dbo].[Objetivos](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[ObjetivosCursos]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[ObjetivosCursos]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -394,7 +395,7 @@ CREATE TABLE [dbo].[ObjetivosCursos](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Perfiles]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[Perfiles]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -409,7 +410,7 @@ CREATE TABLE [dbo].[Perfiles](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Permisos]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[Permisos]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -425,7 +426,7 @@ CREATE TABLE [dbo].[Permisos](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[PlanesDePrueba]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[PlanesDePrueba]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -443,7 +444,7 @@ CREATE TABLE [dbo].[PlanesDePrueba](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Prioridades]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[Prioridades]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -458,7 +459,7 @@ CREATE TABLE [dbo].[Prioridades](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Productos]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[Productos]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -473,7 +474,7 @@ CREATE TABLE [dbo].[Productos](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Proyectos]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[Proyectos]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -492,7 +493,7 @@ CREATE TABLE [dbo].[Proyectos](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[SueldoAsignaciones]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[SueldoAsignaciones]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -511,7 +512,7 @@ CREATE TABLE [dbo].[SueldoAsignaciones](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[SueldoDescuentos]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[SueldoDescuentos]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -530,7 +531,7 @@ CREATE TABLE [dbo].[SueldoDescuentos](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[SueldoPerfilHistorico]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[SueldoPerfilHistorico]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -546,7 +547,7 @@ CREATE TABLE [dbo].[SueldoPerfilHistorico](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Sueldos]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[Sueldos]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -562,7 +563,7 @@ CREATE TABLE [dbo].[Sueldos](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Usuarios]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[Usuarios]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -581,7 +582,7 @@ CREATE TABLE [dbo].[Usuarios](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[UsuariosCurso]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[UsuariosCurso]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -600,7 +601,7 @@ CREATE TABLE [dbo].[UsuariosCurso](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[UsuariosCursoAvance]    Script Date: 16/11/2021 20:52:39 ******/
+/****** Object:  Table [dbo].[UsuariosCursoAvance]    Script Date: 17/11/2021 18:44:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -661,9 +662,9 @@ SET IDENTITY_INSERT [dbo].[BugsHistorico] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Categorias] ON 
 GO
-INSERT [dbo].[Categorias] ([id_categoria], [nombre], [descripcion], [borrado]) VALUES (1, N'Idioma', N'Aprende idiomas!', 0)
+INSERT [dbo].[Categorias] ([id_categoria], [nombre], [descripcion], [borrado]) VALUES (1, N'Idioma', N'Aprende idiomas YA!', 0)
 GO
-INSERT [dbo].[Categorias] ([id_categoria], [nombre], [descripcion], [borrado]) VALUES (2, N'Programación ', N'Se modifica', 0)
+INSERT [dbo].[Categorias] ([id_categoria], [nombre], [descripcion], [borrado]) VALUES (2, N'Programación', N'Se modifica', 0)
 GO
 INSERT [dbo].[Categorias] ([id_categoria], [nombre], [descripcion], [borrado]) VALUES (3, N'Telecomunicaciónes', N'Aprende YA!', 0)
 GO
@@ -678,6 +679,12 @@ GO
 INSERT [dbo].[Categorias] ([id_categoria], [nombre], [descripcion], [borrado]) VALUES (9, N'Ciencia de Datos', N'Análisis y Técnicas de datos ', 0)
 GO
 INSERT [dbo].[Categorias] ([id_categoria], [nombre], [descripcion], [borrado]) VALUES (10, N'Inteligencia Artificial ', N'Cursos sobre IA', 0)
+GO
+INSERT [dbo].[Categorias] ([id_categoria], [nombre], [descripcion], [borrado]) VALUES (11, N'E-Business', N'Aprende mas sobre E-Bussines', 0)
+GO
+INSERT [dbo].[Categorias] ([id_categoria], [nombre], [descripcion], [borrado]) VALUES (12, N'Diseño web', N'Diseño Web', 0)
+GO
+INSERT [dbo].[Categorias] ([id_categoria], [nombre], [descripcion], [borrado]) VALUES (13, N'test2', N'test2', 0)
 GO
 SET IDENTITY_INSERT [dbo].[Categorias] OFF
 GO
@@ -719,9 +726,11 @@ INSERT [dbo].[Cursos] ([id_curso], [nombre], [descripcion], [fecha_vigencia], [i
 GO
 INSERT [dbo].[Cursos] ([id_curso], [nombre], [descripcion], [fecha_vigencia], [id_categoria], [borrado]) VALUES (13, N'Python', N'Aprende python YA!', CAST(N'2022-10-10T00:00:00.000' AS DateTime), 2, 0)
 GO
-INSERT [dbo].[Cursos] ([id_curso], [nombre], [descripcion], [fecha_vigencia], [id_categoria], [borrado]) VALUES (14, N'test', N'test', CAST(N'2022-09-19T00:00:00.000' AS DateTime), 7, 0)
+INSERT [dbo].[Cursos] ([id_curso], [nombre], [descripcion], [fecha_vigencia], [id_categoria], [borrado]) VALUES (14, N'Kanban', N'Aprender Kanban', CAST(N'2022-09-19T00:00:00.000' AS DateTime), 8, 0)
 GO
 INSERT [dbo].[Cursos] ([id_curso], [nombre], [descripcion], [fecha_vigencia], [id_categoria], [borrado]) VALUES (15, N'Curso prueba', N'Una descripción', CAST(N'2021-10-10T00:00:00.000' AS DateTime), 7, 0)
+GO
+INSERT [dbo].[Cursos] ([id_curso], [nombre], [descripcion], [fecha_vigencia], [id_categoria], [borrado]) VALUES (16, N'Ingles II', N'Nuevo Curso de git', CAST(N'2022-10-10T00:00:00.000' AS DateTime), 1, 0)
 GO
 SET IDENTITY_INSERT [dbo].[Cursos] OFF
 GO
@@ -777,6 +786,8 @@ INSERT [dbo].[Objetivos] ([id_objetivo], [nombre_corto], [nombre_largo], [borrad
 GO
 INSERT [dbo].[Objetivos] ([id_objetivo], [nombre_corto], [nombre_largo], [borrado]) VALUES (10, N'Capacitar', N'Capacitar', 0)
 GO
+INSERT [dbo].[Objetivos] ([id_objetivo], [nombre_corto], [nombre_largo], [borrado]) VALUES (11, N'Ayudar', N'AYUDAR', 0)
+GO
 SET IDENTITY_INSERT [dbo].[Objetivos] OFF
 GO
 INSERT [dbo].[ObjetivosCursos] ([id_objetivo], [id_curso], [puntos], [borrado]) VALUES (1, 1, 0, 0)
@@ -788,8 +799,6 @@ GO
 INSERT [dbo].[ObjetivosCursos] ([id_objetivo], [id_curso], [puntos], [borrado]) VALUES (2, 2, 0, 0)
 GO
 INSERT [dbo].[ObjetivosCursos] ([id_objetivo], [id_curso], [puntos], [borrado]) VALUES (2, 4, 0, 0)
-GO
-INSERT [dbo].[ObjetivosCursos] ([id_objetivo], [id_curso], [puntos], [borrado]) VALUES (3, 1, 10, 0)
 GO
 INSERT [dbo].[ObjetivosCursos] ([id_objetivo], [id_curso], [puntos], [borrado]) VALUES (3, 2, 0, 0)
 GO
@@ -806,8 +815,6 @@ GO
 INSERT [dbo].[ObjetivosCursos] ([id_objetivo], [id_curso], [puntos], [borrado]) VALUES (5, 7, 0, 0)
 GO
 INSERT [dbo].[ObjetivosCursos] ([id_objetivo], [id_curso], [puntos], [borrado]) VALUES (5, 9, 10, 0)
-GO
-INSERT [dbo].[ObjetivosCursos] ([id_objetivo], [id_curso], [puntos], [borrado]) VALUES (6, 1, 10, 0)
 GO
 INSERT [dbo].[ObjetivosCursos] ([id_objetivo], [id_curso], [puntos], [borrado]) VALUES (6, 7, 0, 0)
 GO
@@ -873,9 +880,7 @@ SET IDENTITY_INSERT [dbo].[Usuarios] OFF
 GO
 INSERT [dbo].[UsuariosCurso] ([id_usuario], [id_curso], [puntuacion], [observaciones], [fecha_inicio], [fecha_fin]) VALUES (1, 1, 9, N'Logrado', CAST(N'2021-10-08T00:00:00.000' AS DateTime), CAST(N'2021-12-12T00:00:00.000' AS DateTime))
 GO
-INSERT [dbo].[UsuariosCurso] ([id_usuario], [id_curso], [puntuacion], [observaciones], [fecha_inicio], [fecha_fin]) VALUES (1, 2, 6, N'Logrado', CAST(N'2021-10-08T00:00:00.000' AS DateTime), CAST(N'2021-12-12T00:00:00.000' AS DateTime))
-GO
-INSERT [dbo].[UsuariosCurso] ([id_usuario], [id_curso], [puntuacion], [observaciones], [fecha_inicio], [fecha_fin]) VALUES (2, 1, 10, N'Hace las cosas', CAST(N'2021-10-08T00:00:00.000' AS DateTime), CAST(N'2021-12-12T00:00:00.000' AS DateTime))
+INSERT [dbo].[UsuariosCurso] ([id_usuario], [id_curso], [puntuacion], [observaciones], [fecha_inicio], [fecha_fin]) VALUES (1, 14, 0, N'', CAST(N'2020-01-01T00:00:00.000' AS DateTime), CAST(N'2020-05-10T00:00:00.000' AS DateTime))
 GO
 INSERT [dbo].[UsuariosCurso] ([id_usuario], [id_curso], [puntuacion], [observaciones], [fecha_inicio], [fecha_fin]) VALUES (2, 2, 8, N'dfsaf', CAST(N'2021-10-08T00:00:00.000' AS DateTime), CAST(N'2021-12-12T00:00:00.000' AS DateTime))
 GO
@@ -891,6 +896,8 @@ INSERT [dbo].[UsuariosCurso] ([id_usuario], [id_curso], [puntuacion], [observaci
 GO
 INSERT [dbo].[UsuariosCurso] ([id_usuario], [id_curso], [puntuacion], [observaciones], [fecha_inicio], [fecha_fin]) VALUES (5, 9, 10, N'Una descripción', CAST(N'2021-10-10T00:00:00.000' AS DateTime), CAST(N'2022-03-11T00:00:00.000' AS DateTime))
 GO
+INSERT [dbo].[UsuariosCurso] ([id_usuario], [id_curso], [puntuacion], [observaciones], [fecha_inicio], [fecha_fin]) VALUES (5, 14, 10, N'Excelente', CAST(N'2021-10-10T00:00:00.000' AS DateTime), CAST(N'2022-09-10T00:00:00.000' AS DateTime))
+GO
 INSERT [dbo].[UsuariosCurso] ([id_usuario], [id_curso], [puntuacion], [observaciones], [fecha_inicio], [fecha_fin]) VALUES (6, 1, 8, N'Muy Bien', CAST(N'2021-11-09T00:00:00.000' AS DateTime), CAST(N'2022-01-10T00:00:00.000' AS DateTime))
 GO
 INSERT [dbo].[UsuariosCurso] ([id_usuario], [id_curso], [puntuacion], [observaciones], [fecha_inicio], [fecha_fin]) VALUES (6, 13, 10, N'Excelente', CAST(N'2020-05-20T00:00:00.000' AS DateTime), CAST(N'2020-12-19T00:00:00.000' AS DateTime))
@@ -903,9 +910,9 @@ INSERT [dbo].[UsuariosCursoAvance] ([id_usuario], [id_curso], [inicio], [fin], [
 GO
 INSERT [dbo].[UsuariosCursoAvance] ([id_usuario], [id_curso], [inicio], [fin], [porc_avance]) VALUES (1, 1, CAST(N'2021-11-14T00:00:00.000' AS DateTime), CAST(N'2021-12-11T00:00:00.000' AS DateTime), 95)
 GO
-INSERT [dbo].[UsuariosCursoAvance] ([id_usuario], [id_curso], [inicio], [fin], [porc_avance]) VALUES (1, 2, CAST(N'2021-10-10T00:00:00.000' AS DateTime), CAST(N'2021-10-15T00:00:00.000' AS DateTime), 100)
+INSERT [dbo].[UsuariosCursoAvance] ([id_usuario], [id_curso], [inicio], [fin], [porc_avance]) VALUES (1, 14, CAST(N'2020-01-02T00:00:00.000' AS DateTime), CAST(N'2020-01-04T00:00:00.000' AS DateTime), 50)
 GO
-INSERT [dbo].[UsuariosCursoAvance] ([id_usuario], [id_curso], [inicio], [fin], [porc_avance]) VALUES (2, 1, CAST(N'2021-10-31T00:00:00.000' AS DateTime), CAST(N'2021-12-29T00:00:00.000' AS DateTime), 100)
+INSERT [dbo].[UsuariosCursoAvance] ([id_usuario], [id_curso], [inicio], [fin], [porc_avance]) VALUES (1, 14, CAST(N'2020-01-05T00:00:00.000' AS DateTime), CAST(N'2020-05-01T00:00:00.000' AS DateTime), 50)
 GO
 INSERT [dbo].[UsuariosCursoAvance] ([id_usuario], [id_curso], [inicio], [fin], [porc_avance]) VALUES (2, 2, CAST(N'2021-09-16T00:00:00.000' AS DateTime), CAST(N'2021-11-10T00:00:00.000' AS DateTime), 40)
 GO
@@ -920,6 +927,10 @@ GO
 INSERT [dbo].[UsuariosCursoAvance] ([id_usuario], [id_curso], [inicio], [fin], [porc_avance]) VALUES (5, 7, CAST(N'2021-10-16T00:00:00.000' AS DateTime), CAST(N'2021-10-21T00:00:00.000' AS DateTime), 5)
 GO
 INSERT [dbo].[UsuariosCursoAvance] ([id_usuario], [id_curso], [inicio], [fin], [porc_avance]) VALUES (5, 7, CAST(N'2021-10-22T00:00:00.000' AS DateTime), CAST(N'2021-10-25T00:00:00.000' AS DateTime), 95)
+GO
+INSERT [dbo].[UsuariosCursoAvance] ([id_usuario], [id_curso], [inicio], [fin], [porc_avance]) VALUES (5, 14, CAST(N'2021-10-11T00:00:00.000' AS DateTime), CAST(N'2021-12-20T00:00:00.000' AS DateTime), 50)
+GO
+INSERT [dbo].[UsuariosCursoAvance] ([id_usuario], [id_curso], [inicio], [fin], [porc_avance]) VALUES (5, 14, CAST(N'2022-01-12T00:00:00.000' AS DateTime), CAST(N'2022-01-19T00:00:00.000' AS DateTime), 50)
 GO
 INSERT [dbo].[UsuariosCursoAvance] ([id_usuario], [id_curso], [inicio], [fin], [porc_avance]) VALUES (6, 1, CAST(N'2021-11-11T00:00:00.000' AS DateTime), CAST(N'2021-11-20T00:00:00.000' AS DateTime), 100)
 GO
