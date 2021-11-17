@@ -68,7 +68,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnAceptar.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnAceptar.Location = new System.Drawing.Point(99, 143);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(69, 28);
             this.btnAceptar.TabIndex = 4;
@@ -80,10 +80,8 @@ namespace BugTracker_TPI.Interfaz.Categorias
             // 
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 10F);
-
             this.btnCancelar.Location = new System.Drawing.Point(184, 143);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(72, 28);
             this.btnCancelar.TabIndex = 5;
@@ -95,7 +93,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
             // 
             this.txtCatNueva.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtCatNueva.Location = new System.Drawing.Point(136, 22);
-            this.txtCatNueva.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCatNueva.Margin = new System.Windows.Forms.Padding(2);
             this.txtCatNueva.Name = "txtCatNueva";
             this.txtCatNueva.Size = new System.Drawing.Size(163, 25);
             this.txtCatNueva.TabIndex = 6;
@@ -112,7 +110,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
             // btnHabilitar
             // 
             this.btnHabilitar.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnHabilitar.Location = new System.Drawing.Point(249, 143);
+            this.btnHabilitar.Location = new System.Drawing.Point(261, 143);
             this.btnHabilitar.Name = "btnHabilitar";
             this.btnHabilitar.Size = new System.Drawing.Size(77, 29);
             this.btnHabilitar.TabIndex = 9;
@@ -135,7 +133,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblNombre);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmCategoriaABMC";

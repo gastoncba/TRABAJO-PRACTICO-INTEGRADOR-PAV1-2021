@@ -63,6 +63,8 @@ namespace BugTracker_TPI.Interfaz.Categorias
                         MessageBox.Show("No se han encontrado resultados para tu búsqueda", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                     }
+                lblTotalCat.Visible = true;
+                lblTotalCat.Text = "Total de categorias encontradas: " + grdCategorias.Rows.Count + " Categorias";
                 //}
             }
             else
@@ -80,13 +82,15 @@ namespace BugTracker_TPI.Interfaz.Categorias
                     MessageBox.Show("No se han encontrado resultados para tu búsqueda", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                 }
+                lblTotalCat.Visible = true;
+                lblTotalCat.Text = "Total de categorias encontradas: " + grdCategorias.Rows.Count + " categorias";
             }
 
 
-            if (txtCategoria.Text == "")
-            {
-                MessageBox.Show("Por favor, ingrese la categoria a buscar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            //if (txtCategoria.Text == "")
+            //{
+              //  MessageBox.Show("Por favor, ingrese la categoria a buscar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //}
             
 
         }

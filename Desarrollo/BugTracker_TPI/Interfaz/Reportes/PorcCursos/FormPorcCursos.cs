@@ -48,6 +48,12 @@ namespace BugTracker_TPI.Interfaz.Reportes.PorcCursos
             if (DateTime.TryParse(txtDesde.Text, out fechaDesde) &&
                  DateTime.TryParse(txtHasta.Text, out fechaHasta))
             {
+                if(fechaDesde >= fechaHasta)
+                {
+                    MessageBox.Show("La fecha de inicio del periodo debe ser menor.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+
                 parametros.Add("fechaDesde", fechaDesde);
                 parametros.Add("fechaHasta", fechaHasta);
 

@@ -38,6 +38,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
             this.btnConsultar = new System.Windows.Forms.Button();
             this.ckdCategorias = new System.Windows.Forms.CheckBox();
             this.txtCategoria = new System.Windows.Forms.TextBox();
+            this.lblTotalCat = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grdCategorias)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,7 +72,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
             // 
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
-            this.btnAgregar.Location = new System.Drawing.Point(118, 323);
+            this.btnAgregar.Location = new System.Drawing.Point(118, 336);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(70, 79);
@@ -84,7 +85,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
             this.btnModificar.Enabled = false;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
-            this.btnModificar.Location = new System.Drawing.Point(192, 323);
+            this.btnModificar.Location = new System.Drawing.Point(192, 336);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(70, 79);
@@ -97,7 +98,7 @@ namespace BugTracker_TPI.Interfaz.Categorias
             this.btnEliminar.Enabled = false;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.Location = new System.Drawing.Point(266, 323);
+            this.btnEliminar.Location = new System.Drawing.Point(266, 336);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(70, 79);
@@ -141,12 +142,24 @@ namespace BugTracker_TPI.Interfaz.Categorias
             this.txtCategoria.Size = new System.Drawing.Size(148, 25);
             this.txtCategoria.TabIndex = 8;
             // 
+            // lblTotalCat
+            // 
+            this.lblTotalCat.AutoSize = true;
+            this.lblTotalCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblTotalCat.Location = new System.Drawing.Point(22, 313);
+            this.lblTotalCat.Name = "lblTotalCat";
+            this.lblTotalCat.Size = new System.Drawing.Size(40, 17);
+            this.lblTotalCat.TabIndex = 9;
+            this.lblTotalCat.Text = "Total";
+            this.lblTotalCat.Visible = false;
+            // 
             // frmCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(364, 412);
+            this.ClientSize = new System.Drawing.Size(364, 426);
+            this.Controls.Add(this.lblTotalCat);
             this.Controls.Add(this.txtCategoria);
             this.Controls.Add(this.ckdCategorias);
             this.Controls.Add(this.btnConsultar);
@@ -179,5 +192,6 @@ namespace BugTracker_TPI.Interfaz.Categorias
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.CheckBox ckdCategorias;
         private System.Windows.Forms.TextBox txtCategoria;
+        private System.Windows.Forms.Label lblTotalCat;
     }
 }
